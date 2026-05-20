@@ -84,7 +84,7 @@
     <div class="container">
       <div style="margin-bottom: var(--s-7);"><span class="eyebrow">Benefits</span><h2>Quantified outcomes.</h2></div>
       <div class="grid grid--4">
-        <article class="card"><div style="font-size:28px; font-weight:600; color:#8557C2; letter-spacing:-0.02em;">SRE pod</div><p class="muted" style="margin-top:8px;">Dedicated Agent Fabric pod operating Registry, Broker, Visualizer, and Flex Gateway end to end.</p></article>
+        <article class="card"><div style="font-size:28px; font-weight:600; color:#8557C2; letter-spacing:-0.02em;">SRE pod</div><p class="muted" style="margin-top:8px;">Dedicated Agent Fabric pod operating Registry, Broker, Visualizer, and Flex Gateway across all four layers.</p></article>
         <article class="card"><div style="font-size:28px; font-weight:600; color:#8557C2; letter-spacing:-0.02em;">Continuous</div><p class="muted" style="margin-top:8px;">Registry hygiene as Agent Scanners discover new agents across all four clouds weekly.</p></article>
         <article class="card"><div style="font-size:28px; font-weight:600; color:#8557C2; letter-spacing:-0.02em;">5-day SLA</div><p class="muted" style="margin-top:8px;">Every new agent gets a Flex Gateway policy review and onboarding within five business days.</p></article>
         <article class="card"><div style="font-size:28px; font-weight:600; color:#8557C2; letter-spacing:-0.02em;">Audit-ready</div><p class="muted" style="margin-top:8px;">Monthly Agent Fabric health report — auth events, rate limits, data-exposure alerts, lineage.</p></article>
@@ -114,6 +114,30 @@
         <p><strong>Problem.</strong> Agent Fabric live with agents in Agentforce, Bedrock, and Copilot Studio; the customer SRE team could not operate the Visualizer and Broker on its own.</p>
         <p><strong>Solution.</strong> Prowess EnterpriseFLOW Run pod took ownership of Registry hygiene, Broker uptime, Flex Gateway policy, and Visualizer alerting.</p>
         <p><strong>Outcome.</strong> New-agent onboarding standardized to under five business days; zero data-exposure incidents in the first 90 days.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div style="margin-bottom: var(--s-7);"><span class="eyebrow">Why Prowess</span><h2>Why Prowess.</h2></div>
+      <div class="grid grid--2">
+        <article class="card"><strong>Built the fabric — not just watching it.</strong><p class="muted">Prowess architects have stood up Agent Fabric on production programmes. They know the failure modes — Registry drift, Broker routing gaps, Flex Gateway policy gaps — before they appear in the Visualizer.</p></article>
+        <article class="card"><strong>MCP and A2A policy from day one.</strong><p class="muted">Flex Gateway configuration for both protocols, with auth, encryption, rate limiting, and compliance logging set in week one. Not bolted on after the first policy incident.</p></article>
+        <article class="card"><strong>New agent onboarding in under five business days.</strong><p class="muted">Every new agent that Agent Scanner discovers gets a policy review, Registry entry, and Broker configuration within the SLA window. No agent goes to production without a governed entry point.</p></article>
+        <article class="card"><strong>Named architect, no rotation.</strong><p class="muted">The same architect owns your fabric week over week. No context reset. No catching up after a handover. The person on the P1 bridge is the person who stood up the Registry.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="surface">
+    <div class="container">
+      <div style="margin-bottom: var(--s-7);"><span class="eyebrow">FAQ</span><h2>Questions we get on the scoping call.</h2></div>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Do we need Managed Operations Sprint first?</summary><div class="faq-item__body">No. EnterpriseFLOW Run is a standalone service for the Agent Fabric layer. If you already have managed operations for your MuleSoft and Informatica footprint from another provider, EF Run covers the Agent Fabric layer separately.</div></details>
+        <details class="faq-item"><summary>Which agent clouds do you support?</summary><div class="faq-item__body">Salesforce Agentforce, AWS Bedrock, Google Vertex AI, and Microsoft Copilot Studio — all discoverable via Agent Scanner, which reached GA in January 2026.</div></details>
+        <details class="faq-item"><summary>What does Flex Gateway policy management cover?</summary><div class="faq-item__body">MCP and A2A protocol policy, OAuth 2.0 and JWT authentication, TLS encryption, rate limiting, and compliance logging against your defined data classification policy.</div></details>
+        <details class="faq-item"><summary>How do you handle Agent Fabric version upgrades?</summary><div class="faq-item__body">Prowess manages Agent Fabric and Anypoint version upgrades within the engagement. Upgrade windows are scheduled monthly with the customer architecture team to avoid disruption to production agents.</div></details>
       </div>
     </div>
   </section>
