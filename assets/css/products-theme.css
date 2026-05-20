@@ -327,54 +327,48 @@
 
 /* ===== v2 — Elevated wins section (dark numbered list) ===== */
 .pb-wins-elevated {
-  background: #0A1828; padding: 100px 32px; position: relative; overflow: hidden;
+  background: #fff; padding: 100px 32px; position: relative; overflow: hidden;
+  border-top: 1px solid #E2E8F0;
 }
-.pb-wins-elevated::before {
-  content: ""; position: absolute; inset: 0;
-  background-image: linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: radial-gradient(ellipse 90% 85% at 50% 50%, black, transparent 90%);
-  pointer-events: none;
-}
+.pb-wins-elevated::before { display: none; }
 .pb-wins-elevated::after {
   content: ""; position: absolute; top: -120px; right: -120px;
-  width: 520px; height: 520px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,180,84,0.09), transparent 70%);
-  filter: blur(70px); pointer-events: none;
+  width: 480px; height: 480px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,180,84,0.07), transparent 70%);
+  filter: blur(60px); pointer-events: none;
 }
 .pb-wins-elevated__inner { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; }
 .pb-wins-elevated__layout { display: grid; grid-template-columns: 360px 1fr; gap: 88px; align-items: start; }
 .pb-wins-elevated__intro { }
 .pb-wins-elevated__eyebrow {
   font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700;
-  color: #FFB454; margin-bottom: 20px;
+  color: #2E5C8A; margin-bottom: 20px;
   display: inline-flex; align-items: center; gap: 8px;
 }
 .pb-wins-elevated__eyebrow::before { content: ""; width: 20px; height: 2px; background: currentColor; }
 .pb-wins-elevated__h2 {
   font-size: clamp(24px, 2.8vw, 38px); line-height: 1.1; letter-spacing: -0.02em;
-  font-weight: 560; color: #fff; margin: 0 0 20px;
+  font-weight: 560; color: #0A1828; margin: 0 0 20px;
 }
-.pb-wins-elevated__sub { font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.52); margin: 0; }
+.pb-wins-elevated__sub { font-size: 15px; line-height: 1.7; color: #64748B; margin: 0; }
 .pb-wins-elevated__items { display: flex; flex-direction: column; }
 .pb-wins-item {
   display: grid; grid-template-columns: 60px 1fr; gap: 24px; align-items: start;
-  padding: 32px 0; border-bottom: 1px solid rgba(255,255,255,0.07);
+  padding: 32px 0; border-bottom: 1px solid #E2E8F0;
   transition: border-color 240ms ease;
 }
 .pb-wins-item:last-child { border-bottom: none; padding-bottom: 0; }
-.pb-wins-item:hover { border-bottom-color: rgba(255,180,84,0.22); }
+.pb-wins-item:hover { border-bottom-color: rgba(255,180,84,0.5); }
 .pb-wins-item__num {
   font-size: 44px; font-weight: 700; line-height: 1;
-  color: rgba(255,180,84,0.18); letter-spacing: -0.04em;
+  color: rgba(255,180,84,0.35); letter-spacing: -0.04em;
   user-select: none; padding-top: 4px;
 }
 .pb-wins-item__title {
-  font-size: 18px; font-weight: 580; line-height: 1.25; color: #fff; margin: 0 0 10px;
+  font-size: 18px; font-weight: 580; line-height: 1.25; color: #0A1828; margin: 0 0 10px;
   letter-spacing: -0.01em;
 }
-.pb-wins-item__text { font-size: 14.5px; line-height: 1.65; color: rgba(255,255,255,0.6); margin: 0; }
+.pb-wins-item__text { font-size: 14.5px; line-height: 1.65; color: #475569; margin: 0; }
 @media (max-width: 900px) {
   .pb-wins-elevated__layout { grid-template-columns: 1fr; gap: 48px; }
   .pb-wins-item { grid-template-columns: 48px 1fr; gap: 16px; }
