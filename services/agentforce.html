@@ -1978,9 +1978,38 @@ html { scroll-behavior: smooth; }
     </nav>
     <div class="site-header__cta">
       <a href="../contact.html" class="btn btn-primary">Talk to an architect</a>
+      <button class="site-mob-btn" data-nav-toggle aria-label="Open menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/>
+        </svg>
+      </button>
     </div>
   </div>
 </header>
+<div class="site-mob-nav" data-mobile-nav>
+  <a href="../products.html">Products</a>
+  <span class="site-mob-nav__label">Services</span>
+  <div class="site-mob-nav__sub">
+    <a href="../services/integration.html">Integration</a>
+    <a href="../services/data.html">Data</a>
+    <a href="../services/ai-agents.html">AI &amp; Agents</a>
+    <a href="../services/managed-services.html">Managed Services</a>
+    <a href="../services/migration.html">Migration &amp; Modernization</a>
+  </div>
+  <span class="site-mob-nav__label">Industries</span>
+  <div class="site-mob-nav__sub">
+    <a href="../industries/manufacturing.html">Manufacturing</a>
+    <a href="../industries/logistics.html">Logistics</a>
+    <a href="../industries/healthcare.html">Healthcare</a>
+    <a href="../industries/retail.html">Retail</a>
+    <a href="../industries/financial-services.html">Financial Services</a>
+    <a href="../industries/energy.html">Energy &amp; Utilities</a>
+  </div>
+  <a href="../customers.html">Customers</a>
+  <a href="../newsletter.html">Insights</a>
+  <a href="../about.html">About</a>
+  <a href="../contact.html" class="site-mob-nav__cta">Talk to an architect →</a>
+</div>
 
 <!-- ====== HERO — Agentforce problem-led ====== -->
 <section class="h-hero">
@@ -2491,6 +2520,23 @@ html { scroll-behavior: smooth; }
     }, { threshold: 0.4 });
     document.querySelectorAll('.h-stat__num[data-count]').forEach(el => { el.textContent = '0' + (el.dataset.suffix || ''); cObs.observe(el); });
   }
+})();
+</script>
+<script>
+(function(){
+  var btn=document.querySelector('[data-nav-toggle]');
+  var nav=document.querySelector('[data-mobile-nav]');
+  if(!btn||!nav)return;
+  btn.addEventListener('click',function(){
+    var o=nav.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded',o?'true':'false');
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      nav.classList.remove('is-open');
+      btn.setAttribute('aria-expanded','false');
+    });
+  });
 })();
 </script>
 </body>
