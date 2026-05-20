@@ -349,33 +349,53 @@
 .pb-wins-elevated__inner { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; }
 .pb-wins-elevated__layout { display: grid; grid-template-columns: 320px 1fr; gap: 80px; align-items: start; }
 
-/* Sticky left intro */
-.pb-wins-elevated__intro { position: sticky; top: 100px; }
+/* Sticky left intro with giant "4" watermark */
+.pb-wins-elevated__intro {
+  position: sticky; top: 100px;
+}
+.pb-wins-elevated__intro::before {
+  content: "4";
+  position: absolute; top: -20px; left: -28px;
+  font-size: 260px; font-weight: 900; line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255,180,84,0.18);
+  letter-spacing: -0.06em;
+  pointer-events: none; user-select: none; z-index: 0;
+}
 .pb-wins-elevated__eyebrow {
+  position: relative; z-index: 1;
   font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700;
   color: #2E5C8A; margin-bottom: 20px;
   display: inline-flex; align-items: center; gap: 8px;
 }
 .pb-wins-elevated__eyebrow::before { content: ""; width: 20px; height: 2px; background: currentColor; }
 .pb-wins-elevated__h2 {
-  font-size: clamp(26px, 2.8vw, 40px); line-height: 1.08; letter-spacing: -0.025em;
-  font-weight: 600; color: #0A1828; margin: 0 0 20px;
+  position: relative; z-index: 1;
+  font-size: clamp(22px, 2.4vw, 34px); line-height: 1.1; letter-spacing: -0.025em;
+  font-weight: 600; color: #0A1828; margin: 0 0 16px;
 }
-.pb-wins-elevated__sub { font-size: 15px; line-height: 1.7; color: #64748B; margin: 0; }
+.pb-wins-elevated__sub {
+  position: relative; z-index: 1;
+  font-size: 14px; line-height: 1.7; color: #64748B; margin: 0 0 32px;
+}
+
+/* Animated node diagram */
+.pb-wins-deco { position: relative; z-index: 1; margin-top: 8px; }
+.pb-wins-deco__svg { width: 160px; height: 160px; display: block; }
 
 /* 2×2 card grid */
-.pb-wins-elevated__items { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.pb-wins-elevated__items { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 
 .pb-wins-item {
   position: relative; overflow: hidden;
   background: #fff;
-  border-radius: 18px;
-  border-top: 4px solid transparent;
-  box-shadow: 0 2px 12px rgba(10,24,40,0.06), 0 1px 3px rgba(10,24,40,0.04);
-  padding: 32px 28px 28px 32px;
+  border-radius: 16px;
+  border: 1px solid rgba(10,24,40,0.07);
+  border-top: 3px solid transparent;
+  box-shadow: 0 2px 8px rgba(10,24,40,0.05);
+  padding: 0;
   transition: transform 260ms ease, box-shadow 260ms ease, border-top-color 260ms ease;
-  /* scroll-reveal */
-  opacity: 0; transform: translateY(18px);
+  opacity: 0; transform: translateY(20px);
 }
 .pb-wins-item.is-visible {
   opacity: 1; transform: translateY(0);
@@ -387,34 +407,50 @@
 .pb-wins-item:nth-child(3) { transition-delay: 200ms; }
 .pb-wins-item:nth-child(4) { transition-delay: 300ms; }
 .pb-wins-item:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
   border-top-color: #FFB454;
-  box-shadow: 0 20px 50px rgba(10,24,40,0.12), 0 4px 12px rgba(10,24,40,0.06);
+  box-shadow: 0 16px 44px rgba(10,24,40,0.11), 0 2px 8px rgba(10,24,40,0.05);
 }
 
-/* Giant structural number — top-right corner */
+/* Large amber number — purely decorative, bottom-right */
 .pb-wins-item__num {
-  position: absolute; top: -16px; right: 16px;
-  font-size: 120px; font-weight: 800; line-height: 1;
-  color: rgba(255,180,84,0.10); letter-spacing: -0.06em;
+  position: absolute; bottom: -12px; right: 14px;
+  font-size: 96px; font-weight: 900; line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255,180,84,0.14);
+  letter-spacing: -0.06em;
   pointer-events: none; user-select: none;
-  transition: color 260ms ease;
+  transition: -webkit-text-stroke-color 260ms ease;
 }
-.pb-wins-item:hover .pb-wins-item__num { color: rgba(255,180,84,0.20); }
+.pb-wins-item:hover .pb-wins-item__num {
+  -webkit-text-stroke-color: rgba(255,180,84,0.30);
+}
 
-/* Body content above the number */
-.pb-wins-item__body { position: relative; z-index: 2; padding: 48px 0 0; }
+/* Card body */
+.pb-wins-item__body {
+  position: relative; z-index: 2;
+  padding: 28px 28px 26px 28px;
+  display: flex; flex-direction: column; height: 100%;
+}
+/* Small amber index chip before the title */
+.pb-wins-item__body::before {
+  content: "";
+  display: block; width: 32px; height: 3px;
+  background: linear-gradient(90deg, #FFB454, rgba(255,180,84,0.3));
+  border-radius: 2px; margin-bottom: 18px;
+}
 .pb-wins-item__title {
-  font-size: 17px; font-weight: 640; line-height: 1.25;
+  font-size: 16px; font-weight: 640; line-height: 1.3;
   color: #0A1828; margin: 0 0 10px; letter-spacing: -0.01em;
 }
-.pb-wins-item__text { font-size: 14px; line-height: 1.7; color: #475569; margin: 0; }
+.pb-wins-item__text { font-size: 13.5px; line-height: 1.68; color: #475569; margin: 0; }
 
 @media (max-width: 1024px) { .pb-wins-elevated__intro { position: static; } }
 @media (max-width: 900px) {
   .pb-wins-elevated__layout { grid-template-columns: 1fr; gap: 48px; }
+  .pb-wins-elevated__intro::before { font-size: 160px; }
   .pb-wins-elevated__items { grid-template-columns: 1fr; }
-  .pb-wins-item__num { font-size: 80px; }
+  .pb-wins-deco { display: none; }
 }
 
 
