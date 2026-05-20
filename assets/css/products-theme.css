@@ -466,17 +466,6 @@
 }
 
 
-/* ===== v3 — How-step: hide front face entirely, clean photo at rest, dot hint ===== */
-.po-how-step__front { opacity: 0 !important; pointer-events: none; }
-.po-how-step::after {
-  content: ""; position: absolute; z-index: 2;
-  bottom: 20px; left: 50%; transform: translateX(-50%);
-  width: 8px; height: 8px; border-radius: 50%;
-  background: rgba(255,180,84,0.65);
-  box-shadow: 0 0 0 4px rgba(255,180,84,0.12), 0 0 0 8px rgba(255,180,84,0.05);
-  transition: opacity 160ms ease; pointer-events: none;
-}
-.po-how-step:hover::after { opacity: 0; }
 
 
 /* ===== v4 — Hero polygon: remove white background around clip-path ===== */

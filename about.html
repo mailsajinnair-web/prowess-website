@@ -205,19 +205,72 @@
 <body>
 
 <header class="site-header">
-  <div class="container site-header__inner">
-    <a href="index.html" class="brand"><span class="brand__mark">P</span><span>Prowess</span></a>
-    <nav class="primary-nav" aria-label="Primary">
-      <a href="products.html">Products</a><a href="services.html">Services</a><a href="industries.html">Industries</a><a href="customers.html">Customers</a><a href="about.html">About</a><a href="trust.html">Trust</a>
+  <div class="site-header__inner">
+    <a href="index.html" class="brand">
+      <span class="brand__mark">P</span>
+      <span>Prowess</span>
+    </a>
+    <nav class="site-nav">
+      <a href="products.html">Products</a>
+      <div class="nav-dd">
+        <a href="services.html">Services</a>
+        <div class="nav-dd__menu">
+          <a href="services/integration.html">Integration</a>
+          <a href="services/data.html">Data</a>
+          <a href="services/ai-agents.html">AI &amp; Agents</a>
+          <a href="services/managed-services.html">Managed Services</a>
+          <a href="services/migration.html">Migration &amp; Modernization</a>
+        </div>
+      </div>
+      <div class="nav-dd">
+        <a href="industries.html">Industries</a>
+        <div class="nav-dd__menu">
+          <a href="industries/manufacturing.html">Manufacturing</a>
+          <a href="industries/logistics.html">Logistics</a>
+          <a href="industries/healthcare.html">Healthcare</a>
+          <a href="industries/retail.html">Retail</a>
+          <a href="industries/financial-services.html">Financial Services</a>
+          <a href="industries/energy.html">Energy &amp; Utilities</a>
+        </div>
+      </div>
+      <a href="customers.html">Customers</a>
+      <a href="newsletter.html">Insights</a>
+      <a href="about.html">About</a>
     </nav>
-    <div class="header-cta"><a href="contact.html?cal=bookings" class="btn btn--primary btn--sm" data-cta-id="header_book_call" data-page="about" data-stage="awareness">Book a scoping call <span class="arrow">→</span></a></div>
-    <button class="nav-toggle" data-nav-toggle aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
-  </div>
-  <div class="mobile-nav" id="mobile-nav" data-mobile-nav>
-    <a href="products.html">Products</a><a href="services.html">Services</a><a href="industries.html">Industries</a><a href="customers.html">Customers</a><a href="about.html">About</a><a href="trust.html">Trust</a>
-    <a href="contact.html?cal=bookings" class="btn btn--primary">Book a scoping call</a>
+    <div class="site-header__cta">
+      <a href="contact.html" class="btn btn-primary">Talk to an architect</a>
+      <button class="site-mob-btn" data-nav-toggle aria-label="Open menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/>
+        </svg>
+      </button>
+    </div>
   </div>
 </header>
+<div class="site-mob-nav" data-mobile-nav>
+  <a href="products.html">Products</a>
+  <span class="site-mob-nav__label">Services</span>
+  <div class="site-mob-nav__sub">
+    <a href="services/integration.html">Integration</a>
+    <a href="services/data.html">Data</a>
+    <a href="services/ai-agents.html">AI &amp; Agents</a>
+    <a href="services/managed-services.html">Managed Services</a>
+    <a href="services/migration.html">Migration &amp; Modernization</a>
+  </div>
+  <span class="site-mob-nav__label">Industries</span>
+  <div class="site-mob-nav__sub">
+    <a href="industries/manufacturing.html">Manufacturing</a>
+    <a href="industries/logistics.html">Logistics</a>
+    <a href="industries/healthcare.html">Healthcare</a>
+    <a href="industries/retail.html">Retail</a>
+    <a href="industries/financial-services.html">Financial Services</a>
+    <a href="industries/energy.html">Energy &amp; Utilities</a>
+  </div>
+  <a href="customers.html">Customers</a>
+  <a href="newsletter.html">Insights</a>
+  <a href="about.html">About</a>
+  <a href="contact.html" class="site-mob-nav__cta">Talk to an architect →</a>
+</div>
 
 <nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><a href="index.html">Home</a><span class="sep">/</span>About</div></nav>
 
