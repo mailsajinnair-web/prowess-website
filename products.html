@@ -272,26 +272,7 @@
 .po-how__title { font-size: clamp(40px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 560; color: #0A1828; margin: 0 0 24px; max-width: 18ch; }
 .po-how__intro { font-size: 19px; line-height: 1.65; color: #475569; max-width: 56ch; }
 .po-how__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.po-how-step {
-  background: transparent !important; border: none !important;
-  border-radius: 16px; padding: 0 !important;
-  position: relative; min-height: 320px;
-  display: flex; flex-direction: column; overflow: hidden;
-}
-.po-how-step__desc { display: none; }
-/* Photo fills card */
-.po-how-step__photo { position: absolute; inset: 0; background-size: cover; background-position: center; filter: brightness(0.60) saturate(0.65); z-index: 0; border-radius: 16px; transition: filter 320ms ease; }
-.po-how-step__photo::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 60%; background: linear-gradient(0deg, rgba(10,24,40,0.92) 0%, transparent 100%); }
-/* Front face: hook text anchored to bottom of image */
-.po-how-step__front { position: absolute; bottom: 0; left: 0; right: 0; z-index: 3; padding: 20px 24px 26px; opacity: 1; pointer-events: none; transition: opacity 240ms ease; }
-.po-how-step__num { display: block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #FFB454; margin: 0 0 6px; }
-.po-how-step__title { display: block; font-size: 19px; font-weight: 600; color: #fff; letter-spacing: -0.015em; line-height: 1.25; margin: 0; }
-/* Fade front out when reveal comes in */
-.po-how-step:hover .po-how-step__front { opacity: 0; }
-/* Reveal on hover */
-.po-how-step__reveal { position: absolute; inset: 0; border-radius: 16px; z-index: 4; background: linear-gradient(135deg, rgba(10,24,40,0.96) 0%, rgba(26,41,66,0.92) 100%); padding: 32px; display: flex; flex-direction: column; justify-content: center; opacity: 0; transform: translateY(8px); transition: opacity 320ms ease, transform 320ms ease; }
-.po-how-step:hover .po-how-step__reveal { opacity: 1; transform: translateY(0); }
-.po-how-step:hover .po-how-step__photo { filter: brightness(0.30) saturate(0.4); }
+/* po-how-step styles live in assets/css/products-theme.css */
 @media (max-width: 900px) { .po-how__grid { grid-template-columns: 1fr; } }
 
 /* ===== Comparison table — EnterpriseFLOW vs T&M ===== */

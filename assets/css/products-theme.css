@@ -187,16 +187,44 @@
 .po-pillar-card__overlay-link:hover { color: #FFC273; }
 
 /* ===== products.html — Why this practice (photo cards) ===== */
-.po-how-step { position: relative; overflow: hidden; }
-.po-how-step__photo { position: absolute; inset: 0; background-size: cover; background-position: center; filter: brightness(0.55) saturate(0.65); z-index: 0; transition: filter 400ms ease; border-radius: 16px; }
-.po-how-step:hover .po-how-step__photo { filter: brightness(0.35) saturate(0.5); }
-.po-how-step__front { position: relative; z-index: 2; }
-.po-how-step__num { color: rgba(255,255,255,0.55); }
-.po-how-step__title { color: #fff; }
-.po-how-step__desc { color: rgba(255,255,255,0.7); }
+.po-how-step {
+  position: relative; overflow: hidden; border-radius: 16px;
+  background: transparent !important; border: none !important;
+  min-height: 320px; display: flex; flex-direction: column;
+}
+/* Image fills card */
+.po-how-step__photo {
+  position: absolute; inset: 0; background-size: cover; background-position: center;
+  filter: brightness(0.58) saturate(0.65); z-index: 0;
+  transition: filter 320ms ease; border-radius: 16px;
+}
+/* Dark gradient at bottom so white text is always legible */
+.po-how-step__photo::after {
+  content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 60%;
+  background: linear-gradient(0deg, rgba(10,24,40,0.92) 0%, transparent 100%);
+}
+.po-how-step:hover .po-how-step__photo { filter: brightness(0.30) saturate(0.4); }
+/* Hook text — always visible, anchored to bottom of image */
+.po-how-step__front {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  z-index: 3; padding: 20px 24px 26px;
+  opacity: 1; transition: opacity 220ms ease;
+}
+.po-how-step__num {
+  display: block; font-size: 11px; letter-spacing: 0.14em;
+  text-transform: uppercase; font-weight: 700; color: #FFB454; margin: 0 0 6px;
+}
+.po-how-step__title {
+  display: block; font-size: 19px; font-weight: 600;
+  color: #fff; letter-spacing: -0.015em; line-height: 1.25; margin: 0;
+}
+.po-how-step__desc { display: none !important; }
+/* Fade hook text out as reveal comes in */
+.po-how-step:hover .po-how-step__front { opacity: 0; }
+/* Reveal on hover */
 .po-how-step__reveal {
-  position: absolute; inset: 0; border-radius: 16px; z-index: 3;
-  background: linear-gradient(135deg, rgba(10,24,40,0.94) 0%, rgba(26,41,66,0.9) 100%);
+  position: absolute; inset: 0; border-radius: 16px; z-index: 4;
+  background: linear-gradient(135deg, rgba(10,24,40,0.96) 0%, rgba(26,41,66,0.92) 100%);
   padding: 36px; display: flex; flex-direction: column; justify-content: center;
   opacity: 0; transform: translateY(8px);
   transition: opacity 320ms ease, transform 320ms ease;
@@ -224,24 +252,6 @@
 /* Ensure icon + num stay at top, CTA at bottom */
 .po-pillar-card__front { flex: 1; display: flex; flex-direction: column; }
 .po-pillar-card__cta { margin-top: auto; }
-
-/* 4. How-step cards — transparent bg, desc hidden, content pushed to bottom */
-.po-how-step {
-  background: transparent !important;
-  border: none !important;
-  min-height: 320px;
-  display: flex;
-  flex-direction: column;
-}
-.po-how-step__desc { display: none !important; }
-.po-how-step__photo::after {
-  content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 55%;
-  background: linear-gradient(0deg, rgba(10,24,40,0.92) 0%, transparent 100%);
-}
-.po-how-step__front {
-  flex: 1; display: flex; flex-direction: column; justify-content: flex-end;
-  position: relative; z-index: 2;
-}
 
 
 /* ===== v2 — Sub-page dark hero ===== */
