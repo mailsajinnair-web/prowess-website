@@ -379,6 +379,15 @@
   position: relative; z-index: 1;
   font-size: 14px; line-height: 1.7; color: #64748B; margin: 0 0 32px;
 }
+.pb-wins-elevated__persona {
+  position: relative; z-index: 1;
+  font-size: 13px; line-height: 1.68; color: #475569;
+  margin: 0 0 32px; padding: 10px 14px;
+  border-left: 3px solid #FFB454;
+  font-style: italic;
+  background: rgba(255,180,84,0.05);
+  border-radius: 0 6px 6px 0;
+}
 
 /* Animated node diagram */
 .pb-wins-deco { position: relative; z-index: 1; margin-top: 8px; }
