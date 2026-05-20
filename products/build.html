@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build — Net-new integration and Agent Fabric | EnterpriseFLOW</title>
+<meta name="description" content="Net-new integration and agent fabric on the post-acquisition Salesforce + MuleSoft + Informatica stack. Two productized sprints. Working pilot in 4–6 weeks.">
+<link rel="canonical" href="https://www.prowesssoft.com/products/build/">
+<link rel="icon" type="image/png" href="../assets/brand/favicon.png">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../assets/css/products-theme.css?v=20260520g">
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Build — EnterpriseFLOW | Prowess">
+<meta property="og:description" content="Net-new integration and Agent Fabric on the post-acquisition stack.">
+<meta property="og:url" content="https://www.prowesssoft.com/products/build/">
+<meta property="og:image" content="https://www.prowesssoft.com/assets/brand/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+.p-nav { position: sticky; top: 0; z-index: 100; background: rgba(10, 24, 40, 0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); }
+.p-nav__inner { max-width: 1320px; margin: 0 auto; padding: 0 32px; height: 64px; display: flex; align-items: center; gap: 40px; }
+.p-nav__brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
+.p-nav__brand-mark { width: 32px; height: 32px; background: linear-gradient(135deg, #FFB454, #FF8A4C); border-radius: 8px; display: grid; place-items: center; font-weight: 700; font-size: 14px; color: #0A1828; }
+.p-nav__brand-text { font-size: 16px; font-weight: 560; letter-spacing: -0.01em; }
+.p-nav__brand-text sup { font-size: 0.55em; font-weight: 400; opacity: 0.7; }
+.p-nav__brand-sub { font-size: 12px; color: rgba(255,255,255,0.5); padding-left: 12px; margin-left: 2px; border-left: 1px solid rgba(255,255,255,0.15); }
+.p-nav__links { display: flex; align-items: center; gap: 28px; flex: 1; }
+.p-nav__links a { font-size: 14px; color: rgba(255,255,255,0.7); text-decoration: none; padding: 8px 0; transition: color 160ms ease; }
+.p-nav__links a:hover { color: #fff; }
+.p-nav__links a.active { color: #fff; border-bottom: 2px solid #FFB454; margin-bottom: -2px; }
+.p-nav__cta { display: flex; align-items: center; gap: 12px; }
+.p-nav__cta-back { font-size: 13px; color: rgba(255,255,255,0.55); text-decoration: none; padding: 8px 12px; }
+.p-nav__cta-back:hover { color: rgba(255,255,255,0.85); }
+.p-nav__cta-primary { font-size: 14px; font-weight: 540; background: #FFB454; color: #0A1828; text-decoration: none; padding: 10px 18px; border-radius: 8px; transition: background 160ms ease; }
+.p-nav__cta-primary:hover { background: #FFC273; }
+@media (max-width: 1100px) { .p-nav__brand-sub { display: none; } .p-nav__links { display: none; } }
+</style>
+</head>
+<body>
+
+<nav class="p-nav">
+  <div class="p-nav__inner">
+    <a href="../products.html" class="p-nav__brand">
+      <span class="p-nav__brand-mark">E</span>
+      <span class="p-nav__brand-text">EnterpriseFLOW<sup>™</sup></span>
+      <span class="p-nav__brand-sub">by Prowess</span>
+    </a>
+    <div class="p-nav__links">
+      <a href="../products.html">Overview</a>
+      <a href="migrate.html">Migrate</a>
+      <a href="build.html" class="active">Build</a>
+      <a href="manage.html">Manage</a>
+      <a href="industry-agents.html">Industry Agents</a>
+      <a href="../customers.html">Customers</a>
+      <a href="../contact.html?type=demo">Schedule demo</a>
+    </div>
+    <div class="p-nav__cta">
+      <a href="../index.html" class="p-nav__cta-back">prowesssoft.com ↗</a>
+      <a href="../contact.html" class="p-nav__cta-primary">Talk to product</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <section class="hero pb-hero-dark">
+  <div class="pb-hero-orb pb-hero-orb--1"></div>
+  <div class="pb-hero-orb pb-hero-orb--2"></div>
+  <div class="pb-hero-orb pb-hero-orb--3"></div>
+    <div class="container">
+      <div class="hero__layout">
+        <div class="hero__copy">
+          <span class="eyebrow">Build · Pillar two of four</span>
+          <h1 class="display">Net-new integration and Agent Fabric, on the post-acquisition stack.</h1>
+          <p class="hero__subhead">Two sprints. Two CDO-level questions answered. Implementation Accelerator stands up an API-led MuleSoft foundation and ships a working pilot in four to six weeks. Agent Fabric Builder deploys Agent Registry, Broker, Visualizer, and Flex Gateway across Agentforce, Bedrock, Vertex AI, and Copilot Studio — the only governance plane that survives a CISO review.</p>
+          <div class="hero__ctas">
+            <a href="../contact.html?type=build" class="btn btn--primary btn--lg" data-cta-id="build_hero_talk" data-page="build" data-stage="decision">Schedule a build assessment <span class="arrow">→</span></a>
+            <a href="#accelerators" class="btn btn--ghost btn--lg">See the two sprints <span class="arrow">→</span></a>
+          </div>
+        </div>
+        <div class="hero__visual" style="position:relative; overflow:visible; aspect-ratio: 4/5; background: transparent; border: none; border-radius: 0;">
+          <div style="position:absolute; inset:-5%; background: radial-gradient(ellipse 65% 65% at 50% 55%, rgba(124,210,255,0.22) 0%, rgba(124,210,255,0.06) 45%, transparent 100%); z-index:0; pointer-events:none;"></div>
+          <div style="position:absolute; inset:0; clip-path: polygon(22.5% 4%, 80% 6%, 97.5% 38%, 87.5% 76%, 47.5% 96%, 5% 60%); -webkit-clip-path: polygon(22.5% 4%, 80% 6%, 97.5% 38%, 87.5% 76%, 47.5% 96%, 5% 60%); z-index:1; filter: drop-shadow(0 10px 18px rgba(0,0,0,0.55));">
+            <img src="../assets/case-studies/mfg-digital-modernization.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter: brightness(0.82) saturate(0.88) contrast(1.05);">
+            <div style="position:absolute; inset:0; background: linear-gradient(180deg, transparent 0%, rgba(10,24,40,0.18) 55%, rgba(0,0,0,0.65) 100%); pointer-events:none;"></div>
+            <div style="position:absolute; inset:0; background: radial-gradient(ellipse 62% 62% at 55% 42%, transparent 38%, rgba(5,11,20,0.55) 80%, rgba(5,11,20,1) 100%); pointer-events:none;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Buyer + Operating principle -->
+  <!-- Buyer + Operating principle -->
+  <!-- Buyer + Operating principle -->
+  <!-- Buyer + Operating principle -->
+  <section class="pb-buyer">
+    <div class="pb-buyer__inner">
+      <div class="pb-buyer__section-head">
+        <span class="pb-buyer__section-eyebrow">— Build · The buyer</span>
+        <h2 class="pb-buyer__section-h2">Who the Build pillar is built for.</h2>
+        <p class="pb-buyer__section-sub">The buyer profile and the operating principle behind every implementation and Agent Fabric engagement.</p>
+      </div>
+      <div class="pb-buyer__grid">
+        <div>
+          <span class="pb-buyer__eyebrow">The buyer</span>
+          <h2 class="pb-buyer__h2">The Chief Digital Officer is one quarter from a board check-in.</h2>
+          <div class="pb-buyer__body">
+            <p>The MuleSoft licenses have been on the books for six months. The Agentforce contract is signed. Internally, the team still cannot agree on the operating model — API-led versus event-driven versus flow-by-flow. The first pilot has to be in production before next budget cycle, or the platform commitment looks indefensible at the year-end board check-in.</p>
+            <p>Build is the answer. The Implementation Accelerator stands up the API-led foundation and ships a working pilot in four to six weeks. The Agent Fabric Builder makes the agent rollout CISO-defensible from day one — Registry, Broker, Visualizer, Flex Gateway with MCP and A2A policy live before the first production agent. The CFO sees an outcome. The CISO signs off. The CDO keeps the budget.</p>
+          </div>
+        </div>
+        <div class="pb-buyer-canvas" data-buyer-canvas>
+          <svg class="pb-buyer-canvas__lines" data-buyer-lines xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="pb-bc-photo pb-bc-photo--a" data-anchor="bc-photo-a" style="background-image:url('../assets/case-studies/mfg-digital-modernization.jpg');"></div>
+          <div class="pb-bc-photo pb-bc-photo--b" data-anchor="bc-photo-b" style="background-image:url('../assets/case-studies/digital-security-jira-sfdc.jpg');"></div>
+          <div class="pb-bc-card pb-bc-card--op" data-anchor="bc-card-op">
+            <span class="pb-bc-card__eyebrow">Operating principle</span>
+            <p class="pb-bc-card__title">Pilot first. Operating model second. Multi-year program third.</p>
+            <p class="pb-bc-card__sub">Pilot ships before the operating model is locked — architecture made real before review.</p>
+          </div>
+          <div class="pb-bc-card pb-bc-card--stat" data-anchor="bc-card-stat">
+            <span class="pb-bc-card__eyebrow">The stakes</span>
+            <p class="pb-bc-card__title">Platform budget at stake</p>
+            <p class="pb-bc-card__sub">First production pilot needed before year-end board review</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script>
+  (function(){
+    var c=document.querySelector('[data-buyer-canvas]');
+    if(!c)return;
+    var svg=c.querySelector('[data-buyer-lines]');
+    var order=['bc-photo-a','bc-card-op','bc-photo-b','bc-card-stat'];
+    function ctr(el){var cr=c.getBoundingClientRect(),er=el.getBoundingClientRect();return{x:er.left+er.width/2-cr.left,y:er.top+er.height/2-cr.top};}
+    function draw(){
+      var els=order.map(function(a){return c.querySelector('[data-anchor="'+a+'"]');});
+      if(els.some(function(e){return !e;}))return;
+      var pts=els.map(ctr);
+      svg.setAttribute('width',c.offsetWidth);svg.setAttribute('height',c.offsetHeight);
+      svg.innerHTML='';
+      var defs=document.createElementNS('http://www.w3.org/2000/svg','defs');
+      defs.innerHTML='<filter id="bcglow"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>';
+      svg.appendChild(defs);
+      var n=pts.length;
+      for(var i=0;i<n;i++){
+        var a=pts[i],b=pts[(i+1)%n];
+        var mx=(a.x+b.x)/2,my=(a.y+b.y)/2,dx=b.x-a.x,dy=b.y-a.y,len=Math.max(1,Math.hypot(dx,dy)),bow=48;
+        var cpx=mx-dy*bow/len,cpy=my+dx*bow/len;
+        var d='M '+a.x.toFixed(1)+' '+a.y.toFixed(1)+' Q '+cpx.toFixed(1)+' '+cpy.toFixed(1)+' '+b.x.toFixed(1)+' '+b.y.toFixed(1);
+        var pid='bcp'+i;
+        var p=document.createElementNS('http://www.w3.org/2000/svg','path');
+        p.setAttribute('id',pid);p.setAttribute('d',d);p.setAttribute('fill','none');
+        p.setAttribute('stroke','rgba(46,92,138,0.25)');p.setAttribute('stroke-width','1.5');p.setAttribute('stroke-dasharray','5 7');
+        var pl=200;try{pl=p.getTotalLength();}catch(e){}
+        p.innerHTML='<animate attributeName="stroke-dashoffset" from="'+pl+'" to="0" dur="4s" begin="'+(i*1)+'s" repeatCount="indefinite"/>';
+        svg.appendChild(p);
+        var dot=document.createElementNS('http://www.w3.org/2000/svg','circle');
+        dot.setAttribute('r','4.5');dot.setAttribute('fill','#FFB454');dot.setAttribute('filter','url(#bcglow)');
+        dot.innerHTML='<animateMotion dur="4s" begin="'+(i*1)+'s" repeatCount="indefinite" rotate="auto"><mpath href="#'+pid+'"/></animateMotion>';
+        svg.appendChild(dot);
+      }
+    }
+    if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',draw);}else{draw();}
+    window.addEventListener('resize',draw);
+  })();
+  </script>
+  </section>
+
+  <!-- Why now -->
+  <!-- Why now -->
+  <!-- Why now -->
+  <!-- Why now -->
+  <section class="pb-signal">
+    <div class="pb-signal__inner">
+      <div class="pb-signal__head">
+        <span class="pb-signal__eyebrow">Why now</span>
+        <h2 class="pb-signal__h2">The build window opened in January 2026.</h2>
+        
+      </div>
+      <div class="pb-signal__grid">
+      <div class="pb-signal-card">
+        <div class="pb-signal-card__photo" style="background-image:url('../assets/case-studies/mfg-digital-modernization.jpg');">
+          <span class="pb-signal-card__date-chip">January 2026</span>
+        </div>
+        <div class="pb-signal-card__body">
+          <h3 class="pb-signal-card__title">Agent Fabric expanded GA.</h3>
+          <p class="pb-signal-card__text">Agent Registry, Agent Broker, Agent Visualizer, and Flex Gateway hit expanded GA. Agent Scanners GA for Agentforce, Bedrock, Vertex AI, and Copilot Studio. Full GA lands June 2026.</p>
+          <span class="pb-signal-card__hint">Details →</span>
+        </div>
+      </div>
+      <div class="pb-signal-card">
+        <div class="pb-signal-card__photo" style="background-image:url('../assets/case-studies/digital-security-jira-sfdc.jpg');">
+          <span class="pb-signal-card__date-chip">February 2026</span>
+        </div>
+        <div class="pb-signal-card__body">
+          <h3 class="pb-signal-card__title">Anypoint Code Builder + Vibes.</h3>
+          <p class="pb-signal-card__text">AI-assisted MuleSoft development reached production parity. Pilot velocity is materially higher than 2024 baselines. Workspace import for existing Anypoint Studio assets — no duplicate management.</p>
+          <span class="pb-signal-card__hint">Details →</span>
+        </div>
+      </div>
+      <div class="pb-signal-card">
+        <div class="pb-signal-card__photo" style="background-image:url('../assets/case-studies/platform-support-impl.jpg');">
+          <span class="pb-signal-card__date-chip">2025–2026</span>
+        </div>
+        <div class="pb-signal-card__body">
+          <h3 class="pb-signal-card__title">Agentforce 3 + FDE network.</h3>
+          <p class="pb-signal-card__text">Salesforce Agentforce 3 plus the Forward Deployed Engineer Partner Network shift enterprises from proof-of-concept to scaled rollouts. Buyers expect productized agent SKUs, not consulting decks.</p>
+          <span class="pb-signal-card__hint">Details →</span>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Two accelerators — the spine -->
+  <!-- Two accelerators — the spine -->
+  <!-- Two accelerators — the spine -->
+  <!-- Two accelerators — the spine -->
+  <section class="pb-acc" id="accelerators">
+    <div class="pb-acc__inner">
+      <div class="pb-acc__head">
+        <span class="pb-acc__eyebrow">Two accelerators</span>
+        <h2 class="pb-acc__h2">What ships inside the Build pillar.</h2>
+        
+      </div>
+      <div class="pb-acc__grid">
+    <div class="pb-acc-card">
+      <div class="pb-acc-card__photo" style="background-image:url('../assets/case-studies/mfg-digital-modernization.jpg');">
+        <span class="pb-acc-card__badge">Accelerator 01</span>
+        <div class="pb-acc-card__photo-title">Implementation Accelerator</div>
+      </div>
+      <div class="pb-acc-card__body">
+        <p class="pb-acc-card__intro">A four-to-six-week MuleSoft Anypoint pilot. API-led foundation stood up, operating model documented, first production integration shipped — before any multi-year program commitment.</p>
+        <ul class="pb-acc-card__specs">
+          <li><strong>Working pilot in production</strong> by Week 6</li>
+          <li><strong>8-phase methodology</strong> — discovery, strategy, architecture, pilot, rollout, training, optimization, innovation</li>
+          <li><strong>Logging Framework + Project Templates</strong> seeded — flows start at 30–40% complete</li>
+          <li><strong>Architect-to-architect handover</strong> — design review by Prowess founding architects on the engagement</li>
+        </ul>
+        <a href="implementation-accelerator.html" class="pb-acc-card__cta">Read the pilot accelerator</a>
+      </div>
+    </div>
+    <div class="pb-acc-card">
+      <div class="pb-acc-card__photo" style="background-image:url('../assets/case-studies/digital-security-jira-sfdc.jpg');">
+        <span class="pb-acc-card__badge">Accelerator 02</span>
+        <div class="pb-acc-card__photo-title">Agent Fabric Builder</div>
+      </div>
+      <div class="pb-acc-card__body">
+        <p class="pb-acc-card__intro">A scoped build to deploy MuleSoft Agent Fabric for an enterprise running Agentforce alongside non-Salesforce agents — CISO-defensible governance from day one.</p>
+        <ul class="pb-acc-card__specs">
+          <li><strong>Agent Registry</strong> — catalog every agent across Agentforce, Bedrock, Vertex AI, Copilot Studio</li>
+          <li><strong>Agent Broker</strong> — context-aware routing, failover, load balancing</li>
+          <li><strong>Flex Gateway</strong> — MCP + A2A policy, auth, rate limit, audit trail</li>
+          <li><strong>Agent Visualizer</strong> — real-time data-exposure monitoring</li>
+        </ul>
+        <a href="agent-fabric-builder.html" class="pb-acc-card__cta">Read the Agent Fabric build</a>
+      </div>
+    </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Where Prowess wins -->
+  <!-- Where Prowess wins — elevated dark numbered list -->
+  <!-- Where Prowess wins — elevated dark numbered list -->
+  <!-- Where Prowess wins — elevated dark numbered list -->
+  <section class="pb-wins-elevated">
+    <div class="pb-wins-elevated__inner">
+      <div class="pb-wins-elevated__layout">
+        <div class="pb-wins-elevated__intro">
+          <span class="pb-wins-elevated__eyebrow">Where Prowess wins</span>
+          <h2 class="pb-wins-elevated__h2">Four capabilities the market cannot easily replicate.</h2>
+          <p class="pb-wins-elevated__sub">Four capabilities — not four talking points. Each one is anchored in a real Prowess delivery pattern.</p>
+        </div>
+        <div class="pb-wins-elevated__items">
+      <div class="pb-wins-item">
+        <div class="pb-wins-item__num">01</div>
+        <div class="pb-wins-item__body">
+          <h3 class="pb-wins-item__title">The only Above &amp; Beyond partner with a published Agent Fabric build page.</h3>
+          <p class="pb-wins-item__text">Agent Registry, Broker, Visualizer, and Flex Gateway are named by component with an 8-phase methodology and a 4–6 week pilot timeline — publicly documented, not described in a deck.</p>
+        </div>
+      </div>
+      <div class="pb-wins-item">
+        <div class="pb-wins-item__num">02</div>
+        <div class="pb-wins-item__body">
+          <h3 class="pb-wins-item__title">Integration, data, and agent in one delivery org.</h3>
+          <p class="pb-wins-item__text">Prowess ships all three from one architecture team — the only structure that makes grounded agents possible. Running them from separate practices shifts the integration risk onto the customer.</p>
+        </div>
+      </div>
+      <div class="pb-wins-item">
+        <div class="pb-wins-item__num">03</div>
+        <div class="pb-wins-item__body">
+          <h3 class="pb-wins-item__title">MCP and A2A in production, not slideware.</h3>
+          <p class="pb-wins-item__text">Flex Gateway supports Model Context Protocol and Agent-to-Agent. Prowess has hands-on implementation muscle on both — the de-facto governance plane CISOs accept.</p>
+        </div>
+      </div>
+      <div class="pb-wins-item">
+        <div class="pb-wins-item__num">04</div>
+        <div class="pb-wins-item__body">
+          <h3 class="pb-wins-item__title">Architect-founded. Technology DNA built into every build.</h3>
+          <p class="pb-wins-item__text">Every Implementation Accelerator and Agent Fabric Builder engagement is reviewed at the architecture level by Prowess founding architects. The decision structure that shapes a pilot is architecture-first, not process-first.</p>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div style="margin-bottom: var(--s-7);"><span class="eyebrow">Reference</span><h2>Syncron — first production API live in Week 6.</h2></div>
+      <div class="grid grid--2" style="align-items:center; gap:var(--s-7);">
+        <div style="position:relative; overflow:visible; aspect-ratio: 5/4;">
+          <div style="position:absolute; inset:-5%; background: radial-gradient(ellipse 65% 65% at 50% 55%, rgba(124,210,255,0.18) 0%, rgba(124,210,255,0.04) 45%, transparent 100%); z-index:0; pointer-events:none;"></div>
+          <div style="position:absolute; inset:0; clip-path: polygon(5% 8%, 95% 4%, 87.5% 70%, 70% 96%, 17.5% 92%); -webkit-clip-path: polygon(5% 8%, 95% 4%, 87.5% 70%, 70% 96%, 17.5% 92%); z-index:1; filter: drop-shadow(0 10px 18px rgba(0,0,0,0.45));">
+            <img src="../assets/case-studies/digital-security-jira-sfdc.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter: brightness(0.85) saturate(0.88) contrast(1.05);">
+            <div style="position:absolute; inset:0; background: linear-gradient(180deg, transparent 0%, rgba(10,24,40,0.15) 60%, rgba(0,0,0,0.55) 100%); pointer-events:none;"></div>
+          </div>
+        </div>
+        <div>
+          <blockquote style="font-size: 22px; line-height: 1.55; font-style: italic; border-left: 3px solid #FFB454; padding-left: 20px; margin: 0 0 var(--s-4);">Diligent. The team understood our architecture before they touched a line of code, and the first pilot integration shipped exactly when they said it would.</blockquote>
+          <p class="muted" style="margin-bottom: var(--s-5);"><strong>Sandeep Patil</strong>, Syncron</p>
+          <a href="../customers/syncron.html" class="btn btn--ghost">Read the Syncron story <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band__layout">
+        <div><span class="eyebrow on-dark">Build · scoping open</span><h2>Bring us your 2026 pilot — Agentforce, MuleSoft, or both.</h2><p>Discovery and architecture runs in two to four weeks. Output is a sized pilot scope, an operating-model recommendation, and a named architect committed to delivery.</p></div>
+        <div class="cta-band__actions">
+          <a href="../contact.html?type=build" class="btn btn--on-dark btn--lg" data-cta-id="build_cta_talk" data-page="build" data-stage="decision">Schedule a scoping call <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col"><h4>Prowess</h4><ul><li><a href="../about.html">About</a></li><li><a href="../about/founders.html">Founders</a></li><li><a href="../why-prowess.html">Why Prowess</a></li><li><a href="../trust.html">Trust &amp; awards</a></li></ul></div>
+      <div class="footer__col"><h4>EnterpriseFLOW</h4><ul><li><a href="migrate.html">Migrate</a></li><li><a href="build.html">Build</a></li><li><a href="manage.html">Manage</a></li><li><a href="industry-agents.html">Industry Agents</a></li></ul></div>
+      <div class="footer__col"><h4>Industries</h4><ul><li><a href="../industries/manufacturing.html">Manufacturing</a></li><li><a href="../industries/logistics.html">Logistics</a></li><li><a href="../industries/healthcare.html">Healthcare</a></li><li><a href="../industries/retail.html">Retail</a></li><li><a href="../industries/financial-services.html">Financial Services</a></li><li><a href="../industries/energy.html">Energy</a></li></ul></div>
+      <div class="footer__col"><h4>Customers</h4><ul><li><a href="../customers/novelis.html">Novelis</a></li><li><a href="../customers/ceva-logistics.html">CEVA Logistics</a></li><li><a href="../customers/syncron.html">Syncron</a></li><li><a href="../customers/keystone-logistics.html">Keystone Logistics</a></li><li><a href="../customers.html">All customers</a></li></ul></div>
+      <div class="footer__col"><h4>Connect</h4><ul><li><a href="../contact.html">Contact</a></li><li><a href="../newsletter.html">Newsletter</a></li><li><a href="../services.html">Services</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><span>&copy; <span data-year>2026</span> Prowess Software Services.</span><span class="footer__legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Security</a></span></div>
+  </div>
+</footer>
+
+<script src="../script.js" defer></script>
+
+</body>
+</html>

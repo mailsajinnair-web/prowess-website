@@ -1,0 +1,48 @@
+# Prowess Software Services
+
+> Integration and data architects for the AI-native enterprise. Two-time MuleSoft Above & Beyond Partner of the Year — Americas (2024 and 2025). 350 certified architects across four offices: Atlanta, Hyderabad, Bengaluru, Singapore.
+
+Founded 2016 by Aravind Konda (CEO) and Ajay Konda (CGO). 175+ customers across 25+ industries. Named customer references include Novelis, CEVA Logistics, Syncron, Keystone Logistics, Pacific International Lines, Rich Products, and ADT.
+
+## Core pages
+
+- [Home](https://www.prowesssoft.com/): integration and data architects for the AI-native enterprise
+- [About](https://www.prowesssoft.com/about/): 12 named leaders, 4 offices, 175+ customers, 350+ architects
+- [Founders](https://www.prowesssoft.com/about/founders/): Aravind Konda and Ajay Konda, both ex-TIBCO and webMethods
+- [Why Prowess](https://www.prowesssoft.com/why-prowess/): architect-led delivery, ten years independent
+
+## EnterpriseFLOW products (fixed-fee)
+
+- [EnterpriseFLOW overview](https://www.prowesssoft.com/products/): four accelerators, $150K–$500K
+- [Migration Sprint MuleSoft](https://www.prowesssoft.com/products/migration-sprint-mulesoft/): TIBCO, Boomi, IIB, webMethods, BizTalk → MuleSoft. $200K–$350K, 12–24 weeks. X2M + CurieTech AI Migration Agent.
+- [Migration Sprint Informatica](https://www.prowesssoft.com/products/migration-sprint-informatica/): PowerCenter, DataStage, SSIS, Talend → IDMC + MDM. $200K–$350K, 12–20 weeks.
+- [Agent Fabric Builder](https://www.prowesssoft.com/products/agent-fabric-builder/): MuleSoft Agent Fabric in 6 weeks. $150K–$300K. Two pilot agents, governance, observability.
+- [Implementation Accelerator](https://www.prowesssoft.com/products/implementation-accelerator/): Anypoint Platform standup + operating C4E by day 90. $300K–$500K, 16–28 weeks.
+
+## Services (T&M with cap)
+
+- [Services overview](https://www.prowesssoft.com/services/): 5 service lines beyond the productized accelerators
+- MuleSoft Services · Informatica Services · Salesforce Agentforce · Managed Integration · Centre of Excellence
+
+## Industries
+
+- [Manufacturing](https://www.prowesssoft.com/industries/manufacturing/): 50+ implementations. Novelis (85% faster processing), Charlotte Pipe, Ecolab.
+- [Logistics & Supply Chain](https://www.prowesssoft.com/industries/logistics/): CEVA, Keystone, PIL. API platforms, B2B, omnichannel, maritime EDI.
+
+## Customers
+
+- [Customer stories](https://www.prowesssoft.com/customers/): 10 named, 29 total
+- [Novelis](https://www.prowesssoft.com/customers/novelis/): 85% faster processing, TIBCO → MuleSoft
+- [CEVA Logistics](https://www.prowesssoft.com/customers/ceva-logistics/): Pratap Pillai, multi-region API platform
+- [Syncron](https://www.prowesssoft.com/customers/syncron/): Sandeep Patil, 4-year partnership since 2021
+- [Keystone Logistics](https://www.prowesssoft.com/customers/keystone-logistics/): Ravi Joshi, omnichannel fulfillment
+- [Rich Products](https://www.prowesssoft.com/customers/rich-products/): $600K AI agent via Parabola9
+
+## Trust
+
+- [Trust & awards](https://www.prowesssoft.com/trust/): MuleSoft 2024 + 2025 Above & Beyond Americas, Salesforce Summit Partner, ISO 27001, ISO 9001, SOC 2 Type II, GDPR + HIPAA readiness, WCAG 2.2 AA
+
+## Connect
+
+- [Contact](https://www.prowesssoft.com/contact/): Schedule a 30-minute scoping call (Microsoft Bookings)
+- [Newsletter](https://www.prowesssoft.com/newsletter/): One email a month, architects writing for architects

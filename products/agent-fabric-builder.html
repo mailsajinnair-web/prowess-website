@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Fabric Builder — EnterpriseFLOW™ · Prowess Software Services</title>
+<meta name="description" content="MuleSoft Agent Fabric implementation in 6 to 12 weeks. Governance, observability, and pre-built use-case agents. Fixed-fee, milestone-billed. By a two-time MuleSoft Above &amp; Beyond Partner of the Year.">
+<link rel="canonical" href="https://www.prowesssoft.com/products/agent-fabric-builder/">
+<link rel="icon" type="image/png" href="../assets/brand/favicon.png">
+<link rel="stylesheet" href="../styles.css">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Agent Fabric Builder — EnterpriseFLOW™">
+<meta property="og:description" content="Production-grade MuleSoft Agent Fabric in 6 to 12 weeks. Governance, observability, two pilot agents. Fixed-fee.">
+<meta property="og:url" content="https://www.prowesssoft.com/products/agent-fabric-builder/">
+
+<style>
+/* ===== Product-page chrome (SaaS-style, distinct from main site) ===== */
+.p-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10, 24, 40, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.p-nav__inner {
+  max-width: 1280px; margin: 0 auto; padding: 0 32px;
+  height: 64px;
+  display: flex; align-items: center; gap: 40px;
+}
+.p-nav__brand {
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none; color: #fff;
+}
+.p-nav__brand-mark {
+  width: 32px; height: 32px;
+  background: linear-gradient(135deg, #FFB454, #FF8A4C);
+  border-radius: 8px;
+  display: grid; place-items: center;
+  font-weight: 700; font-size: 14px; color: #0A1828;
+}
+.p-nav__brand-text { font-size: 16px; font-weight: 560; letter-spacing: -0.01em; }
+.p-nav__brand-text sup { font-size: 0.55em; font-weight: 400; opacity: 0.7; }
+.p-nav__brand-sub {
+  font-size: 12px; color: rgba(255,255,255,0.5);
+  padding-left: 12px; margin-left: 2px;
+  border-left: 1px solid rgba(255,255,255,0.15);
+}
+.p-nav__links {
+  display: flex; align-items: center; gap: 28px;
+  flex: 1;
+}
+.p-nav__links a {
+  font-size: 14px; color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  padding: 8px 0;
+  transition: color 160ms ease;
+}
+.p-nav__links a:hover { color: #fff; }
+.p-nav__links a.active {
+  color: #fff;
+  border-bottom: 2px solid #FFB454;
+  margin-bottom: -2px;
+}
+.p-nav__cta {
+  display: flex; align-items: center; gap: 12px;
+}
+.p-nav__cta-back {
+  font-size: 13px; color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  padding: 8px 12px;
+}
+.p-nav__cta-back:hover { color: rgba(255,255,255,0.85); }
+.p-nav__cta-primary {
+  font-size: 14px; font-weight: 540;
+  background: #FFB454; color: #0A1828;
+  text-decoration: none;
+  padding: 10px 18px; border-radius: 8px;
+  transition: background 160ms ease;
+}
+.p-nav__cta-primary:hover { background: #FFC273; }
+
+@media (max-width: 1100px) {
+  .p-nav__brand-sub { display: none; }
+  .p-nav__links { display: none; }
+}
+
+/* ===== Product hero ===== */
+.p-hero {
+  background: #0A1828; color: #fff;
+  padding: 120px 32px 80px;
+  position: relative; overflow: hidden;
+}
+.p-hero::before {
+  content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 90% 10%, rgba(255,180,84,0.12), transparent 60%),
+    radial-gradient(ellipse 50% 60% at 10% 90%, rgba(46,92,138,0.25), transparent 60%);
+  pointer-events: none;
+}
+.p-hero::after {
+  content: ""; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black, transparent 90%);
+}
+.p-hero__inner {
+  position: relative; z-index: 2;
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.3fr 1fr; gap: 80px; align-items: center;
+}
+.p-hero__breadcrumb { font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 24px; }
+.p-hero__breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+.p-hero__breadcrumb a:hover { color: rgba(255,255,255,0.9); }
+.p-hero__eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 700; color: #FFB454;
+  margin-bottom: 24px;
+}
+.p-hero__eyebrow::before { content: ""; width: 6px; height: 6px; background: #FFB454; border-radius: 50%; }
+.p-hero__title {
+  font-size: clamp(40px, 5.5vw, 80px);
+  line-height: 1.02; letter-spacing: -0.03em;
+  font-weight: 560; margin: 0 0 28px; max-width: 16ch;
+}
+.p-hero__lede {
+  font-size: 20px; line-height: 1.6; color: rgba(255,255,255,0.78);
+  margin: 0 0 40px; max-width: 56ch;
+}
+.p-hero__cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+.p-hero__btn-primary {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: #FFB454; color: #0A1828;
+  padding: 16px 28px; border-radius: 100px;
+  font-weight: 580; font-size: 16px; text-decoration: none;
+  transition: background 200ms ease;
+}
+.p-hero__btn-primary:hover { background: #FFC273; }
+.p-hero__btn-ghost {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: #fff; border: 1px solid rgba(255,255,255,0.25);
+  padding: 16px 28px; border-radius: 100px;
+  font-weight: 500; font-size: 16px; text-decoration: none;
+}
+.p-hero__btn-ghost:hover { border-color: rgba(255,255,255,0.5); }
+
+.p-hero__card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px; padding: 32px;
+  backdrop-filter: blur(12px);
+}
+.p-hero__card-eyebrow {
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 700; color: rgba(255,255,255,0.6); margin-bottom: 24px;
+}
+.p-hero__card-row {
+  display: flex; justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 14px;
+}
+.p-hero__card-row:last-child { border-bottom: none; }
+.p-hero__card-key { color: rgba(255,255,255,0.6); }
+.p-hero__card-val { color: #fff; font-weight: 540; }
+.p-hero__card-val.highlight { color: #FFB454; font-weight: 600; }
+
+@media (max-width: 1024px) {
+  .p-hero__inner { grid-template-columns: 1fr; gap: 48px; }
+  .p-hero__card { max-width: 480px; }
+}
+
+.p-awards { background: #0E1F33; color: #fff; border-top: 1px solid rgba(255,255,255,0.06); padding: 24px 32px; }
+.p-awards__inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+.p-awards__label { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: rgba(255,255,255,0.55); }
+.p-awards__chips { display: flex; gap: 24px; flex-wrap: wrap; align-items: center; flex: 1; }
+.p-awards__chip { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; color: rgba(255,255,255,0.85); }
+.p-awards__chip img { height: 24px; width: 24px; object-fit: contain; }
+
+.p-logos { background: #0A1828; padding: 32px; border-top: 1px solid rgba(255,255,255,0.06); }
+.p-logos__inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+.p-logos__label { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: rgba(255,255,255,0.5); }
+.p-logos__list { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; flex: 1; }
+.p-logos__list img { height: 26px; width: auto; filter: brightness(0) invert(1) opacity(0.65); }
+
+.p-problem { background: #fff; padding: 120px 32px; }
+.p-problem__inner { max-width: 1280px; margin: 0 auto; }
+.p-problem__head { max-width: 720px; margin: 0 0 64px; }
+.p-problem__eyebrow { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #2E5C8A; margin-bottom: 16px; display: inline-block; }
+.p-problem__title { font-size: clamp(32px, 4vw, 52px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 560; color: #0A1828; margin: 0 0 24px; max-width: 22ch; }
+.p-problem__intro { font-size: 18px; line-height: 1.6; color: #475569; }
+.p-problem__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.p-trap { background: #F8FAFC; border-radius: 16px; padding: 32px; border-left: 3px solid #FFB454; display: flex; flex-direction: column; min-height: 240px; }
+.p-trap__num { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #94734A; margin-bottom: 16px; }
+.p-trap__title { font-size: 22px; line-height: 1.2; letter-spacing: -0.01em; font-weight: 560; color: #0A1828; margin: 0 0 16px; }
+.p-trap__desc { font-size: 15px; line-height: 1.55; color: #475569; }
+@media (max-width: 900px) { .p-problem__grid { grid-template-columns: 1fr; } }
+
+.p-features { background: #FBF9F2; padding: 120px 32px; }
+.p-features__inner { max-width: 1280px; margin: 0 auto; }
+.p-features__head { text-align: center; max-width: 720px; margin: 0 auto 80px; }
+.p-features__title { font-size: clamp(32px, 4vw, 52px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 560; color: #0A1828; margin: 0 0 24px; }
+.p-features__intro { font-size: 18px; line-height: 1.6; color: #475569; }
+.p-features__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.p-feature { background: #fff; border: 1px solid #E2E8F0; border-radius: 16px; padding: 36px; }
+.p-feature__icon { width: 44px; height: 44px; background: #0A1828; color: #fff; border-radius: 10px; display: grid; place-items: center; margin-bottom: 24px; }
+.p-feature__title { font-size: 20px; line-height: 1.25; letter-spacing: -0.01em; font-weight: 560; color: #0A1828; margin: 0 0 12px; }
+.p-feature__desc { font-size: 15px; line-height: 1.6; color: #475569; margin: 0; }
+@media (max-width: 900px) { .p-features__grid { grid-template-columns: 1fr; } }
+
+.p-method { background: #fff; padding: 120px 32px; }
+.p-method__inner { max-width: 1280px; margin: 0 auto; }
+.p-method__head { max-width: 720px; margin: 0 0 80px; }
+.p-method__title { font-size: clamp(32px, 4vw, 52px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 560; color: #0A1828; margin: 0 0 24px; max-width: 18ch; }
+.p-method__intro { font-size: 18px; line-height: 1.6; color: #475569; }
+.p-method__steps { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.p-method__steps::before { content: ""; position: absolute; left: 8%; right: 8%; top: 28px; height: 1px; background: linear-gradient(90deg, transparent, #E2E8F0 12%, #E2E8F0 88%, transparent); z-index: 0; }
+.p-step { position: relative; z-index: 2; }
+.p-step__num-wrap { background: #fff; display: inline-flex; align-items: center; gap: 12px; padding: 0 12px 0 0; }
+.p-step__num { width: 56px; height: 56px; background: #0A1828; color: #FFB454; border-radius: 50%; display: grid; place-items: center; font-size: 18px; font-weight: 600; }
+.p-step__week { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #6B7280; }
+.p-step__title { font-size: 19px; line-height: 1.3; letter-spacing: -0.01em; font-weight: 560; color: #0A1828; margin: 24px 0 12px; }
+.p-step__desc { font-size: 14px; line-height: 1.6; color: #475569; }
+@media (max-width: 900px) { .p-method__steps { grid-template-columns: 1fr; gap: 24px; } .p-method__steps::before { display: none; } }
+
+.p-pricing { background: #0A1828; color: #fff; padding: 120px 32px; position: relative; overflow: hidden; }
+.p-pricing::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(ellipse 80% 80% at 50% 30%, black, transparent 80%); }
+.p-pricing__inner { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; }
+.p-pricing__head { text-align: center; max-width: 720px; margin: 0 auto 64px; }
+.p-pricing__eyebrow { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #FFB454; margin-bottom: 16px; display: inline-block; }
+.p-pricing__title { font-size: clamp(32px, 4vw, 52px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 560; margin: 0 0 24px; }
+.p-pricing__intro { font-size: 18px; color: rgba(255,255,255,0.7); line-height: 1.6; }
+.p-pricing__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.p-tier { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 40px; display: flex; flex-direction: column; }
+.p-tier.featured { background: linear-gradient(180deg, rgba(255,180,84,0.08), rgba(255,180,84,0.02)); border-color: rgba(255,180,84,0.35); position: relative; }
+.p-tier.featured::before { content: "Most popular"; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; background: #FFB454; color: #0A1828; padding: 6px 14px; border-radius: 100px; }
+.p-tier__name { font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+.p-tier__price { font-size: 44px; font-weight: 580; letter-spacing: -0.025em; line-height: 1; margin: 0 0 8px; color: #fff; }
+.p-tier__period { font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 24px; }
+.p-tier__includes { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.8); margin: 0 0 32px; list-style: none; padding: 0; flex: 1; }
+.p-tier__includes li { padding-left: 22px; position: relative; margin-bottom: 10px; }
+.p-tier__includes li::before { content: "✓"; position: absolute; left: 0; color: #FFB454; font-weight: 700; }
+.p-tier__cta { display: inline-flex; justify-content: center; padding: 12px 20px; border-radius: 100px; font-size: 14px; font-weight: 540; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); color: #fff; }
+.p-tier__cta:hover { border-color: rgba(255,255,255,0.5); }
+.p-tier.featured .p-tier__cta { background: #FFB454; color: #0A1828; border-color: transparent; font-weight: 580; }
+.p-tier.featured .p-tier__cta:hover { background: #FFC273; }
+@media (max-width: 900px) { .p-pricing__grid { grid-template-columns: 1fr; } }
+
+.p-proof { background: #FBF9F2; padding: 120px 32px; }
+.p-proof__inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr; gap: 80px; align-items: center; }
+.p-proof__quote { font-size: clamp(28px, 3vw, 40px); line-height: 1.25; letter-spacing: -0.015em; font-weight: 480; color: #0A1828; margin: 0 0 32px; }
+.p-proof__quote::before { content: "\201C"; display: block; font-family: Georgia, serif; font-size: 80px; line-height: 0.8; color: #FFB454; margin-bottom: 16px; }
+.p-proof__attribution { display: flex; align-items: center; gap: 14px; font-size: 15px; }
+.p-proof__attribution-name { color: #0A1828; font-weight: 560; }
+.p-proof__attribution-role { color: #6B7280; }
+.p-proof__metrics { background: #fff; padding: 40px; border-radius: 16px; border: 1px solid #E2E8F0; }
+.p-proof__metric { padding: 14px 0; border-bottom: 1px solid #E2E8F0; }
+.p-proof__metric:last-child { border-bottom: none; }
+.p-proof__metric-num { font-size: 40px; font-weight: 580; line-height: 1; letter-spacing: -0.02em; color: #0A1828; margin-bottom: 6px; }
+.p-proof__metric-label { font-size: 13px; color: #475569; }
+@media (max-width: 900px) { .p-proof__inner { grid-template-columns: 1fr; gap: 40px; } }
+
+.p-faq { background: #fff; padding: 120px 32px; }
+.p-faq__inner { max-width: 880px; margin: 0 auto; }
+.p-faq__head { text-align: center; margin-bottom: 56px; }
+.p-faq__title { font-size: clamp(32px, 4vw, 52px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 560; color: #0A1828; margin: 0; }
+.p-faq__item { border-top: 1px solid #E2E8F0; }
+.p-faq__item:last-child { border-bottom: 1px solid #E2E8F0; }
+.p-faq__item summary { cursor: pointer; list-style: none; padding: 24px 32px 24px 0; display: flex; align-items: center; justify-content: space-between; font-size: 18px; font-weight: 540; color: #0A1828; line-height: 1.4; }
+.p-faq__item summary::-webkit-details-marker { display: none; }
+.p-faq__item summary::after { content: "+"; font-size: 24px; font-weight: 300; color: #6B7280; transition: transform 200ms ease; }
+.p-faq__item[open] summary::after { transform: rotate(45deg); }
+.p-faq__answer { padding: 0 32px 24px 0; font-size: 16px; line-height: 1.65; color: #475569; }
+
+.p-final { background: #0A1828; color: #fff; padding: 120px 32px; position: relative; overflow: hidden; }
+.p-final::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 20% 50%, rgba(255,180,84,0.15), transparent 50%), radial-gradient(circle at 80% 50%, rgba(46,92,138,0.25), transparent 50%); }
+.p-final__inner { position: relative; z-index: 2; max-width: 880px; margin: 0 auto; text-align: center; }
+.p-final__title { font-size: clamp(40px, 5vw, 64px); line-height: 1.05; letter-spacing: -0.025em; font-weight: 560; margin: 0 0 24px; }
+.p-final__lede { font-size: 19px; line-height: 1.6; color: rgba(255,255,255,0.78); margin: 0 auto 40px; max-width: 56ch; }
+
+.p-sticky { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(10,24,40,0.95); backdrop-filter: blur(12px); border-top: 1px solid rgba(255,255,255,0.1); padding: 12px 16px; z-index: 90; display: none; }
+.p-sticky__inner { display: flex; align-items: center; gap: 12px; max-width: 600px; margin: 0 auto; }
+.p-sticky__price { font-size: 13px; color: rgba(255,255,255,0.7); flex: 1; }
+.p-sticky__cta { background: #FFB454; color: #0A1828; padding: 12px 20px; border-radius: 100px; font-size: 14px; font-weight: 580; text-decoration: none; }
+@media (max-width: 720px) { .p-sticky { display: block; } body { padding-bottom: 72px; } }
+</style>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"EnterpriseFLOW Agent Fabric Builder","description":"Production-grade MuleSoft Agent Fabric implementation in 6 to 12 weeks. Governance, observability, two pilot agents.","provider":{"@type":"Organization","name":"Prowess Software Services"},"serviceType":"AI Agent Implementation","areaServed":["United States","India","Singapore"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is MuleSoft Agent Fabric?","acceptedAnswer":{"@type":"Answer","text":"MuleSoft Agent Fabric is the governance and orchestration layer for production AI agents including Agent Registry, Agent Broker, Flex Gateway, and Agent Visualizer."}},{"@type":"Question","name":"How long does an Agent Fabric Builder engagement take?","acceptedAnswer":{"@type":"Answer","text":"Foundation engagements run 6 weeks. Production runs 8 weeks. Multi-platform runs 12 weeks."}},{"@type":"Question","name":"Do we need to be on MuleSoft already?","acceptedAnswer":{"@type":"Answer","text":"Yes. Agent Fabric runs on MuleSoft Anypoint. If you are not on MuleSoft yet, Migration Sprint MuleSoft is typically engaged first."}},{"@type":"Question","name":"Is the engagement fixed-fee?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every engagement is fixed-fee with milestone billing."}}]}
+</script>
+</head>
+<body class="is-product">
+
+<nav class="p-nav">
+  <div class="p-nav__inner">
+    <a href="../products.html" class="p-nav__brand">
+      <span class="p-nav__brand-mark">E</span>
+      <span class="p-nav__brand-text">EnterpriseFLOW<sup>™</sup></span>
+      <span class="p-nav__brand-sub">by Prowess</span>
+    </a>
+    <div class="p-nav__links">
+      <a href="../products.html">Overview</a>
+      <a href="agent-fabric-builder.html" class="active">Features</a>
+      <a href="#use-cases">Use cases</a>
+      <a href="#pricing">Pricing</a>
+      <a href="../customers.html">Customers</a>
+      <a href="#faq">Docs &amp; FAQ</a>
+    </div>
+    <div class="p-nav__cta">
+      <a href="../index.html" class="p-nav__cta-back">prowesssoft.com ↗</a>
+      <a href="../contact.html?type=agent-fabric" class="p-nav__cta-primary">Talk to product</a>
+    </div>
+  </div>
+</nav>
+
+<section class="p-hero">
+  <div class="p-hero__inner">
+    <div>
+      <div class="p-hero__breadcrumb"><a href="../index.html">Prowess</a> · <a href="../products.html">EnterpriseFLOW</a> · Agent Fabric Builder</div>
+      <span class="p-hero__eyebrow">Pillar 03 · Build</span>
+      <h1 class="p-hero__title">Production-grade AI agents in six weeks.</h1>
+      <p class="p-hero__lede">Stand up MuleSoft Agent Fabric with governance, observability, and two pilot agents integrated to your enterprise systems. Fixed-fee. Architect-led. Built on the same platform two-time MuleSoft Partner of the Year teams ship to production every quarter.</p>
+      <div class="p-hero__cta-row">
+        <a href="../contact.html?type=agent-fabric" class="p-hero__btn-primary" data-cta-id="prod-hero-primary" data-page="agent-fabric-builder" data-stage="consideration">
+          Talk to a Build architect
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#pricing" class="p-hero__btn-ghost">See pricing</a>
+      </div>
+    </div>
+
+    <div class="p-hero__card">
+      <div class="p-hero__card-eyebrow">At a glance</div>
+      <div class="p-hero__card-row"><span class="p-hero__card-key">Duration</span><span class="p-hero__card-val">6 to 12 weeks</span></div>
+      <div class="p-hero__card-row"><span class="p-hero__card-key">Model</span><span class="p-hero__card-val highlight">Fixed-fee, milestone-billed</span></div>
+      <div class="p-hero__card-row"><span class="p-hero__card-key">Model</span><span class="p-hero__card-val">Fixed-fee, milestone-billed</span></div>
+      <div class="p-hero__card-row"><span class="p-hero__card-key">Delivered by</span><span class="p-hero__card-val">Certified Prowess architects</span></div>
+      <div class="p-hero__card-row"><span class="p-hero__card-key">Built on</span><span class="p-hero__card-val">MuleSoft Anypoint + Agent Fabric</span></div>
+      <div class="p-hero__card-row"><span class="p-hero__card-key">Pilot agents</span><span class="p-hero__card-val">2 included</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="p-awards">
+  <div class="p-awards__inner">
+    <span class="p-awards__label">Built by</span>
+    <div class="p-awards__chips">
+      <span class="p-awards__chip"><img src="../assets/certifications/mulesoft-poty-2024.webp" alt=""><strong style="font-weight:580;">MuleSoft Above &amp; Beyond — Americas, 2024 + 2025</strong></span>
+      <span class="p-awards__chip"><img src="../assets/certifications/salesforce-summit-partner.webp" alt="">Salesforce Summit Consulting Partner</span>
+      <span class="p-awards__chip"><img src="../assets/certifications/iso-27001.webp" alt="">ISO/IEC 27001</span>
+    </div>
+  </div>
+</section>
+
+<section class="p-logos">
+  <div class="p-logos__inner">
+    <span class="p-logos__label">Built for enterprises like</span>
+    <div class="p-logos__list">
+      <img src="../assets/customers/novelis.webp" alt="Novelis">
+      <img src="../assets/customers/charlotte-pipe.webp" alt="Charlotte Pipe">
+      <img src="../assets/customers/ecolab.webp" alt="Ecolab">
+      <img src="../assets/customers/syncron.webp" alt="Syncron">
+      <img src="../assets/customers/adt.webp" alt="ADT">
+    </div>
+  </div>
+</section>
+
+<section class="p-problem">
+  <div class="p-problem__inner">
+    <div class="p-problem__head">
+      <span class="p-problem__eyebrow">The problem</span>
+      <h2 class="p-problem__title">Most AI agents never reach production. The ones that do, sit on a governed fabric.</h2>
+      <p class="p-problem__intro">Agent pilots stall at three predictable failure modes. Each one is an integration-and-governance problem, not an AI problem.</p>
+    </div>
+    <div class="p-problem__grid">
+      <div class="p-trap"><div class="p-trap__num">Failure 01</div><h3 class="p-trap__title">No registry of agents in the enterprise.</h3><p class="p-trap__desc">Teams build pilots in isolation. Six months later, no one knows which agents are running, what data they access, or who owns them.</p></div>
+      <div class="p-trap"><div class="p-trap__num">Failure 02</div><h3 class="p-trap__title">No broker between agents and enterprise systems.</h3><p class="p-trap__desc">Each agent ships its own integrations. Authentication, rate limiting, and observability are inconsistent. Production load exposes every gap.</p></div>
+      <div class="p-trap"><div class="p-trap__num">Failure 03</div><h3 class="p-trap__title">No governance signed off by the board.</h3><p class="p-trap__desc">Risk and compliance teams refuse to release agents into production without a policy framework. The pilot becomes a sandbox forever.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="p-features" id="features">
+  <div class="p-features__inner">
+    <div class="p-features__head">
+      <span class="p-problem__eyebrow">What you get</span>
+      <h2 class="p-features__title">Six production-grade components, configured to your estate.</h2>
+      <p class="p-features__intro">Every Agent Fabric Builder engagement delivers a working, governed agent platform on your MuleSoft Anypoint runtime. Six components, fixed scope.</p>
+    </div>
+    <div class="p-features__grid">
+      <div class="p-feature"><div class="p-feature__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 10h8M8 14h5"/></svg></div><div class="p-feature__title">Agent Registry</div><p class="p-feature__desc">Catalog every AI agent in the enterprise — what it does, what data it touches, who owns it. The single inventory for AI governance reviews.</p></div>
+      <div class="p-feature"><div class="p-feature__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M3 12h6M15 12h6M12 3v6M12 15v6"/></svg></div><div class="p-feature__title">Agent Broker</div><p class="p-feature__desc">The mediation layer between agents and enterprise systems. Authentication, rate limiting, retry logic, observability, handled once for every agent on the fabric.</p></div>
+      <div class="p-feature"><div class="p-feature__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4-9 4-9-4 9-4z"/><path d="M3 10l9 4 9-4M3 14l9 4 9-4"/></svg></div><div class="p-feature__title">Flex Gateway with MCP and A2A</div><p class="p-feature__desc">Model Context Protocol and Agent-to-Agent communication wired into the gateway. Agents from different vendors talk to your enterprise systems through one governed channel.</p></div>
+      <div class="p-feature"><div class="p-feature__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></div><div class="p-feature__title">Agent Visualizer</div><p class="p-feature__desc">Visual topology of every agent, its connections, and live traffic. Used by architects on the call and by risk officers in the audit.</p></div>
+      <div class="p-feature"><div class="p-feature__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div><div class="p-feature__title">Two pilot agents in production</div><p class="p-feature__desc">Choose from a pre-built use-case library — customer triage, order status, document processing, knowledge retrieval — or scope custom agents in the Enterprise tier.</p></div>
+      <div class="p-feature"><div class="p-feature__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div><div class="p-feature__title">Governance framework signed off</div><p class="p-feature__desc">Policy, data classification, identity binding, audit trail, designed with your risk and compliance teams in week one, in production by week six.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="p-method" id="use-cases">
+  <div class="p-method__inner">
+    <div class="p-method__head">
+      <span class="p-problem__eyebrow">How it works</span>
+      <h2 class="p-method__title">Four phases, six weeks, one production agent platform.</h2>
+      <p class="p-method__intro">Architect-led from week one. Decisions are made in the design review, not after the fact.</p>
+    </div>
+    <div class="p-method__steps">
+      <div class="p-step"><div class="p-step__num-wrap"><div class="p-step__num">01</div><span class="p-step__week">Week 1</span></div><h3 class="p-step__title">Discover</h3><p class="p-step__desc">Architecture assessment of your MuleSoft Anypoint estate. Identification of two pilot agents and target systems. Risk and compliance kick-off.</p></div>
+      <div class="p-step"><div class="p-step__num-wrap"><div class="p-step__num">02</div><span class="p-step__week">Weeks 2 — 3</span></div><h3 class="p-step__title">Stand up</h3><p class="p-step__desc">Agent Fabric provisioned on CloudHub 2.0 or Runtime Fabric. Identity provider, gateway policies, and Agent Registry configured to your enterprise standards.</p></div>
+      <div class="p-step"><div class="p-step__num-wrap"><div class="p-step__num">03</div><span class="p-step__week">Weeks 4 — 5</span></div><h3 class="p-step__title">Build</h3><p class="p-step__desc">Two pilot agents built, integrated, and tested with enterprise systems. Governance framework wired in. Observability dashboards configured.</p></div>
+      <div class="p-step"><div class="p-step__num-wrap"><div class="p-step__num">04</div><span class="p-step__week">Week 6</span></div><h3 class="p-step__title">Operate</h3><p class="p-step__desc">Production cutover. Alert thresholds and SLA defined. Architecture handover. Optional Centre of Excellence kick-off for sustained capability.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="p-pricing" id="engagement">
+  <div class="p-pricing__inner">
+    <div class="p-pricing__head">
+      <span class="p-pricing__eyebrow">Engagement format</span>
+      <h2 class="p-pricing__title">Fixed-fee. Milestone-billed. Scope on paper before any code moves.</h2>
+      <p class="p-pricing__intro">Every Agent Fabric Builder engagement is sized to the number of pilot agents, system integrations, and governance depth required. Three engagement envelopes — sized to the scope, not to a tier — with milestone billing against a defined deliverable list. Time and materials applies only to scope changes signed in writing.</p>
+    </div>
+    <div class="p-pricing__grid">
+      <div class="p-tier">
+        <div class="p-tier__name">Foundation</div>
+        <div class="p-tier__period">6 weeks · fixed-fee</div>
+        <ul class="p-tier__includes"><li>Agent Fabric standup on Anypoint</li><li>1 pilot agent</li><li>2 system integrations</li><li>Governance framework v1</li><li>Observability dashboard</li><li>Architecture handover</li></ul>
+        <a href="../contact.html?type=agent-fabric" class="p-tier__cta">Schedule scoping call</a>
+      </div>
+      <div class="p-tier featured">
+        <div class="p-tier__name">Production</div>
+        <div class="p-tier__period">8 weeks · fixed-fee</div>
+        <ul class="p-tier__includes"><li>Everything in Foundation</li><li>2 pilot agents</li><li>4 system integrations</li><li>Governance hardening</li><li>Custom alert thresholds</li><li>Risk &amp; compliance review session</li></ul>
+        <a href="../contact.html?type=agent-fabric" class="p-tier__cta">Schedule scoping call</a>
+      </div>
+      <div class="p-tier">
+        <div class="p-tier__name">Multi-platform</div>
+        <div class="p-tier__period">12 weeks · fixed-fee</div>
+        <ul class="p-tier__includes"><li>Everything in Production</li><li>1 custom use-case agent</li><li>Advanced observability</li><li>MCP + A2A integration</li><li>Centre of Excellence kick-off</li><li>90-day post-go-live support</li></ul>
+        <a href="../contact.html?type=agent-fabric" class="p-tier__cta">Schedule scoping call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-proof">
+  <div class="p-proof__inner">
+    <div>
+      <blockquote class="p-proof__quote">The Prowess team demonstrates remarkable commitment, diligence, and efficiency.</blockquote>
+      <div class="p-proof__attribution">
+        <div>
+          <div class="p-proof__attribution-name">Sandeep Patil</div>
+          <div class="p-proof__attribution-role">VP Expert Services, Syncron</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-proof__metrics">
+      <div class="p-proof__metric"><div class="p-proof__metric-num">6 weeks</div><div class="p-proof__metric-label">Standard engagement to production cutover</div></div>
+      <div class="p-proof__metric"><div class="p-proof__metric-num">2 agents</div><div class="p-proof__metric-label">Pilot agents shipped in the Standard tier</div></div>
+      <div class="p-proof__metric"><div class="p-proof__metric-num">100%</div><div class="p-proof__metric-label">Fixed-fee, milestone-billed</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="p-faq" id="faq">
+  <div class="p-faq__inner">
+    <div class="p-faq__head"><h2 class="p-faq__title">Frequently asked</h2></div>
+    <details class="p-faq__item"><summary>What is MuleSoft Agent Fabric?</summary><div class="p-faq__answer">MuleSoft Agent Fabric is the governance and orchestration layer for production AI agents. It includes Agent Registry, Agent Broker, Flex Gateway, and Agent Visualizer, and enables enterprises to deploy, monitor, and govern AI agents at scale on the MuleSoft Anypoint platform.</div></details>
+    <details class="p-faq__item"><summary>How long does an Agent Fabric Builder engagement take?</summary><div class="p-faq__answer">Foundation engagements run 6 weeks. Production and Multi-platform engagements run 8 and 12 weeks respectively, scoped to the number of pilot agents and the integration depth.</div></details>
+    <details class="p-faq__item"><summary>Do we need to be on MuleSoft already?</summary><div class="p-faq__answer">Yes. Agent Fabric runs on MuleSoft Anypoint. If you are not on MuleSoft yet, Migration Sprint MuleSoft is typically engaged first, and Agent Fabric Builder follows in the next quarter.</div></details>
+    <details class="p-faq__item"><summary>What kind of agents can be built in the pilot?</summary><div class="p-faq__answer">Customer service triage, order management, document processing, knowledge retrieval, and pre-built industry agents for manufacturing and retail. Custom agents are available in the Enterprise tier.</div></details>
+    <details class="p-faq__item"><summary>How is governance handled?</summary><div class="p-faq__answer">Policy framework, data classification, identity binding, and audit trail are designed in week one with your risk and compliance teams. The framework is in production by week six.</div></details>
+    <details class="p-faq__item"><summary>Is the engagement truly fixed-fee?</summary><div class="p-faq__answer">Yes. Every engagement is fixed-fee with defined scope and milestone billing. Time and materials applies only to scope changes signed in writing.</div></details>
+  </div>
+</section>
+
+<section class="p-final">
+  <div class="p-final__inner">
+    <h2 class="p-final__title">Talk to a Prowess Build architect.</h2>
+    <p class="p-final__lede">A 30-minute working session with the architect who would scope and deliver your Agent Fabric Builder engagement.</p>
+    <a href="../contact.html?type=agent-fabric" class="p-hero__btn-primary" data-cta-id="prod-final-cta" data-page="agent-fabric-builder" data-stage="decision">
+      Schedule a scoping call
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<div class="p-sticky">
+  <div class="p-sticky__inner">
+    <div class="p-sticky__price">Fixed-fee, milestone-billed</div>
+    <a href="../contact.html?type=agent-fabric" class="p-sticky__cta">Talk to product</a>
+  </div>
+</div>
+
+</body>
+</html>

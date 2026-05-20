@@ -1,0 +1,125 @@
+# Prowess Software Services — full content index
+
+> The integration and data architecture firm AI-native enterprises rely on. Two-time MuleSoft Above & Beyond Partner of the Year — Americas (2024 and 2025). Founded 2016 by Aravind Konda and Ajay Konda. 350 certified architects across Atlanta, Hyderabad, Bengaluru, and Singapore. 175+ customers across 25+ industries.
+
+## Positioning
+
+Prowess engineers the integration, data, and governance foundations that allow enterprise AI to move from pilot to production. The practice grew up through TIBCO and webMethods, scaled through MuleSoft, expanded into Informatica as master-data foundations became central, and added Salesforce Agentforce and MuleSoft Agent Fabric as production AI matured.
+
+The senior architects who scope an engagement remain on it through delivery. A bench of 350 certified architects supports the model.
+
+## Awards and recognition
+
+- MuleSoft Above & Beyond Partner of the Year — Americas, 2024 (first award)
+- MuleSoft Above & Beyond Partner of the Year — Americas, 2025 (back-to-back, announced July 8 2025)
+- MuleSoft Partner Excellence Award, 2025
+- MuleSoft Connect AI Partner of the Year, 2025
+- Salesforce Summit Consulting Partner
+- Salesforce AppExchange: 13 reviews · 129 certified experts · 45 projects
+- Great Place to Work Certified
+- AICPA SOC 2 Type II
+- ISO/IEC 27001 (TÜV SÜD)
+- ISO 9001 (TÜV SÜD)
+- Pledge 1% Member
+
+## Leadership (12)
+
+- Aravind Konda — Chief Executive Officer
+- Ajay Konda — Chief Growth Officer
+- Maruthi Pendem — Chief Operating Officer
+- Kiran Nittala — Chief Technology Officer
+- Derek Morris — Vice President, Sales
+- Vijay Chakka — VP Integration Practices and Delivery
+- Anand Surana — VP Business Operations and Delivery
+- Pradeep Tallogu — Head, Integration Centre of Excellence
+- Kishore Yasarapu — Head, Corporate Strategy
+- Baba Kishore Mutta — Chief Financial Officer
+- Akbar Hirani — Delivery Head, Americas
+- Joseph Blackburn — Strategic Board Advisor
+
+## Offices
+
+- Atlanta, US: 5955 Pkwy N Blvd, Suite C, Cumming, GA 30040 · +1-678-386-7472
+- Hyderabad, IN: Manjeera Trinity Corporate, Kukatpally · +91 40 6909 1100
+- Bengaluru, IN: Gopalan Signature Mall, Old Madras Road · +91 40 6909 1100
+- Singapore: 10 Anson Road, #29-03a, International Plaza · +1-678-386-7472
+
+## EnterpriseFLOW — four fixed-fee accelerators
+
+### Migration Sprint MuleSoft — $200K–$350K, 12–24 weeks
+Migrate legacy iPaaS (TIBCO BW6, Boomi, IBM Integration Bus, webMethods, BizTalk, Jitterbit, Enosix) to MuleSoft. Includes X2M Accelerator + CurieTech AI Migration Agent (80%+ first-pass accuracy, 10× acceleration).
+- Sprint A: $200K · up to 25 integrations · 12 weeks
+- Sprint B: $275K · 25–75 integrations · 16 weeks
+- Sprint C: $350K · 75–150 integrations · 24 weeks
+- Migration Assessment: $75K–$95K, credits against Sprint
+- Reference: Novelis reduced processing time by 85% on the new MuleSoft stack.
+
+### Migration Sprint Informatica — $200K–$350K, 12–20 weeks
+Modernize ETL from PowerCenter, DataStage, SSIS, or Talend onto Informatica IDMC and MDM.
+- Sprint A: $200K · up to 50 pipelines, single MDM domain · 12 weeks
+- Sprint B: $275K · 50–150 pipelines, 2 MDM domains · 16 weeks
+- Sprint C: $350K · 150+ pipelines, 3+ MDM domains · 20 weeks
+- Reference: Pacific International Lines red-to-green in 2.5 months.
+
+### Agent Fabric Builder — $150K–$300K, 6–12 weeks
+MuleSoft Agent Fabric implementation. Governance, observability, two pilot agents wired to existing systems.
+- Builder A: $150K · 1 pilot agent · 6 weeks
+- Builder B: $225K · 2 pilot agents + governance hardening · 8 weeks
+- Builder C: $300K · + 1 custom agent + C4E kick-off · 12 weeks
+- Reference: TE Connectivity 6-week pilot in Singapore.
+
+### Implementation Accelerator — $300K–$500K, 16–28 weeks
+Anypoint Platform standup, three-tier API architecture, operating C4E by day 90.
+- Accelerator A: $300K · 3 System APIs + 1 Process API · 16 weeks
+- Accelerator B: $400K · 5 System APIs + 2 Process APIs + 1 Experience API · 22 weeks
+- Accelerator C: $500K · + 2 additional integrations + Mule 3 to Mule 4 · 28 weeks
+- Reference: 120+ new MuleSoft customers onboarded in 2024.
+
+## Pre-built agents (Agent Fabric library)
+
+Manufacturing (5): Order Hold Triage · Invoice Mismatch · Quality Exception · Maintenance Trigger · Claims Triage
+Retail (4): launching Q3 2026
+
+## Services (T&M with cap)
+
+- MuleSoft Services — Anypoint, Agent Fabric, Composer, RPA, MQ, Connectors. 300+ certified consultants.
+- Informatica Services — IDMC, MDM, Data Quality, Data Governance & Catalog.
+- Salesforce Agentforce — implementation + MuleSoft integration + Salesforce-native flows.
+- Managed Integration — 24/7 platform operations, three tiers, $15K–$60K/mo.
+- Centre of Excellence — led by Pradeep Tallogu, accelerator IP + architectural patterns.
+
+## Named customer outcomes
+
+- Novelis: 85% faster processing on the new MuleSoft platform (TIBCO → MuleSoft, X2M Accelerator, API-led composable). Twinkle Khanna Rajendran, Senior Manager: "Significantly shorter development timelines and a solid architectural foundation for the Novelis data integration layer."
+- CEVA Logistics: multi-year integration partnership delivering API platform across multiple regions inside CEVA's Integration COE. Pratap Pillai, Integration COE Delivery Manager: "The partnership with Prowess Software Services has matured in many ways and is making waves in delivering customer implementations with diligence and high quality."
+- Syncron: four years of integration delivery since 2021. Sandeep Patil, VP Expert Services: "The Prowess team demonstrates remarkable commitment, diligence, and efficiency."
+- Keystone Logistics: three years of omnichannel fulfillment for North American retailers. Ravi Joshi, Managing Partner: "Over the past three years, Prowess team has partnered with Keystone to deliver some of the most notable successes in Omnichannel fulfillment for leading retailers in North America."
+- Pacific International Lines: red-to-green Informatica recovery in 2.5 months [CONFIRM consent].
+- Rich Products: $600K AI agent engagement via Parabola9.
+- TE Connectivity: 6-week Agent Fabric pilot in Singapore [CONFIRM consent].
+- ADT: 1,300 legacy interfaces and 160+ services migrated to MuleSoft [CONFIRM consent].
+
+## Strategic partnerships
+
+- MuleSoft (Salesforce)
+- Informatica
+- Salesforce Agentforce
+- CurieTech AI — One-Click AI Migration Agent (June 24, 2025 partnership)
+- Parabola9 — AI agent delivery
+- Anthropic Claude — model layer [CONFIRM tier]
+
+## Industries served
+
+Live practices: Manufacturing, Logistics & Supply Chain
+In development (2026): Healthcare, Retail, Financial Services
+
+## Contact
+
+- Sales: sales@prowesssoft.com
+- Executive: executive@prowesssoft.com
+- Solutions: solutions@prowesssoft.com
+- Partners: partners@prowesssoft.com
+- Press: media@prowesssoft.com
+- Procurement / Trust: trust@prowesssoft.com
+- General: connect@prowesssoft.com
+- Microsoft Bookings calendar: https://www.prowesssoft.com/contact/?cal=bookings

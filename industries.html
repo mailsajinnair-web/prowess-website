@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Industries | Prowess Software Services</title>
+<meta name="description" content="Integration, data, and AI engineering for Manufacturing, Logistics, Healthcare, Retail, Financial Services, and Energy. Production-proven across 100+ enterprises.">
+<link rel="canonical" href="https://www.prowesssoft.com/industries/">
+<link rel="icon" type="image/png" href="assets/brand/favicon.png">
+<link rel="stylesheet" href="styles.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Industries — Prowess">
+<meta property="og:description" content="Manufacturing and Logistics live. Healthcare, Retail, Financial Services in development.">
+<meta property="og:url" content="https://www.prowesssoft.com/industries/">
+<meta property="og:image" content="https://www.prowesssoft.com/assets/brand/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "url": "https://www.prowesssoft.com/industries/",
+  "name": "Industries we serve"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.prowesssoft.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://www.prowesssoft.com/industries/" }
+  ]
+}
+</script>
+
+<style>
+/* ============================================================
+   Dark hero + Industries flip-tile grid — reused from services
+   subpages and home page for consistent visual language.
+   ============================================================ */
+
+/* ========== H-HERO (dark) ========== */
+.h-hero {
+  position: relative;
+  background: #050B14;
+  color: #fff;
+  overflow: hidden;
+}
+.h-hero__bg {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse 60% 70% at 80% 20%, rgba(46, 92, 138, 0.25), transparent 60%),
+    radial-gradient(ellipse 50% 50% at 10% 90%, rgba(255, 180, 84, 0.08), transparent 60%);
+}
+.h-hero__bg::after {
+  content: ""; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 90%);
+}
+.h-hero__inner {
+  position: relative; z-index: 2;
+  max-width: 1440px; margin: 0 auto;
+  padding: 96px 32px 96px;
+  display: grid; grid-template-columns: 0.9fr 1.1fr;
+  gap: 64px;
+  align-items: center;
+}
+.h-hero__content {
+  animation: heroFade 1000ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@keyframes heroFade { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+.h-hero__eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 7px 14px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 100px;
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  font-weight: 700; color: rgba(255,255,255,0.85);
+  margin-bottom: 28px;
+}
+.h-hero__eyebrow::before {
+  content: ""; width: 6px; height: 6px; border-radius: 50%; background: #FFB454;
+}
+.h-hero__display {
+  font-size: clamp(48px, 6vw, 84px);
+  line-height: 1.02; letter-spacing: -0.03em;
+  font-weight: 580; margin: 0 0 24px;
+  color: #fff;
+}
+.h-hero__display em {
+  font-style: normal;
+  background: linear-gradient(90deg, #B8D4FF 0%, #FFB454 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.h-hero__lede {
+  font-size: 18px; line-height: 1.55;
+  color: rgba(255,255,255,0.78);
+  max-width: 56ch;
+  margin: 0 0 36px;
+}
+.h-hero__cta-row {
+  display: flex; gap: 14px; flex-wrap: wrap;
+}
+.h-hero__btn-primary {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 24px;
+  background: #fff; color: #0A1828;
+  border-radius: 100px;
+  font-size: 15px; font-weight: 580; text-decoration: none;
+  transition: transform 240ms ease, box-shadow 240ms ease;
+  box-shadow: 0 8px 24px rgba(255,255,255,0.12);
+}
+.h-hero__btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(255,255,255,0.18); }
+.h-hero__btn-ghost {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 24px;
+  background: transparent; color: #fff;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 100px;
+  font-size: 15px; font-weight: 540; text-decoration: none;
+  transition: background 240ms ease, border-color 240ms ease;
+}
+.h-hero__btn-ghost:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.4); }
+
+@media (max-width: 1024px) {
+  .h-hero__inner { grid-template-columns: 1fr; gap: 48px; padding-top: 48px; }
+  .h-hero__media { aspect-ratio: 16/10 !important; max-width: 100% !important; margin: 0 !important; }
+}
+
+/* ========== H-INDUSTRIES (flip-tile grid — from home page) ========== */
+.h-industries { background: #fff; padding: 140px 32px; }
+.h-industries__inner { max-width: 1280px; margin: 0 auto; }
+.h-industries__head { display: flex; justify-content: space-between; align-items: end; gap: 40px; flex-wrap: wrap; margin-bottom: 56px; }
+.h-industries__title {
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.02; letter-spacing: -0.03em;
+  font-weight: 560; margin: 0; color: #0A1828; max-width: 18ch;
+}
+.h-industries__subtitle { font-size: 17px; line-height: 1.55; color: #475569; max-width: 48ch; margin: 0; }
+.h-industries__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 1024px) { .h-industries__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 900px) { .h-industries__grid { grid-template-columns: 1fr; } }
+
+.h-industry-tile {
+  background: none; padding: 0;
+  overflow: hidden;
+  border-radius: 24px;
+  position: relative; aspect-ratio: 4 / 3;
+  text-decoration: none; color: #fff;
+}
+.h-industry-tile__inner { position: relative; width: 100%; height: 100%; }
+.h-industry-tile__face { position: absolute; inset: 0; overflow: hidden; }
+.h-industry-tile__face--front { z-index: 1; transition: opacity 360ms ease, transform 360ms ease; }
+.h-industry-tile__face--back {
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(10,24,40,0.94) 0%, rgba(10,24,40,0.985) 60%);
+  padding: 26px 28px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  gap: 14px; color: #fff;
+  opacity: 0; transform: translateY(8%);
+  transition: opacity 360ms ease, transform 360ms ease;
+  pointer-events: none; overflow: hidden;
+}
+.h-industry-tile:hover .h-industry-tile__face--front { opacity: 0; transform: translateY(-6%); }
+.h-industry-tile:hover .h-industry-tile__face--back { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.h-industry-tile__face--back::before {
+  content: ""; position: absolute; top: -80px; right: -80px;
+  width: 320px; height: 320px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,180,84,0.22), transparent 70%);
+  filter: blur(50px);
+}
+.h-industry-tile__bg {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  filter: brightness(0.95) saturate(1.1);
+  transition: transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.h-industry-tile:hover .h-industry-tile__bg { transform: scale(1.06); }
+.h-industry-tile.mfg .h-industry-tile__bg { background-image: url('https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=1200&q=80'); background-color: #1E3A5F; }
+.h-industry-tile.log .h-industry-tile__bg { background-image: url('https://images.unsplash.com/photo-1605745341112-85968b19335b?w=1200&q=80'); background-color: #2E5C8A; }
+.h-industry-tile.healthcare .h-industry-tile__bg { background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80'); background-color: #0E4F4F; }
+.h-industry-tile.retail .h-industry-tile__bg { background-image: url('https://images.unsplash.com/photo-1481437156560-3205f6a55735?w=1200&q=80'); background-color: #6B3F2F; }
+.h-industry-tile.financial .h-industry-tile__bg { background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80'); background-color: #1A2F4F; }
+.h-industry-tile.energy .h-industry-tile__bg { background-image: url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=1200&q=80'); background-color: #3A5F1E; }
+.h-industry-tile__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(10,24,40,0.4) 0%, rgba(10,24,40,0.55) 35%, rgba(10,24,40,0.82) 75%, rgba(10,24,40,0.94) 100%);
+}
+.h-industry-tile__content-front {
+  position: relative; z-index: 2;
+  padding: 32px; height: 100%;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.h-industry-tile__content-front-top { display: flex; justify-content: space-between; align-items: start; }
+.h-industry-tile__eyebrow-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 14px;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  border-radius: 100px;
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 700; color: #0A1828;
+  width: fit-content;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+.h-industry-tile__eyebrow-pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #FFB454; }
+.h-industry-tile__open {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.3);
+  display: grid; place-items: center;
+  color: #fff;
+  transition: transform 240ms ease, background 240ms ease;
+}
+.h-industry-tile:hover .h-industry-tile__open { background: #FFB454; color: #0A1828; transform: rotate(45deg); }
+.h-industry-tile__title {
+  font-size: clamp(22px, 2.2vw, 28px);
+  line-height: 1.18; letter-spacing: -0.018em;
+  font-weight: 580; margin: 0 0 18px; max-width: 18ch;
+  color: #fff;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.5);
+}
+.h-industry-tile__teaser-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.h-industry-tile__teaser-chip {
+  display: inline-flex; align-items: baseline; gap: 6px;
+  padding: 6px 12px;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 100px;
+  font-size: 12px; color: rgba(255,255,255,0.92);
+  font-weight: 540;
+}
+.h-industry-tile__teaser-chip strong { color: #FFB454; font-weight: 700; font-size: 13px; }
+.h-industry-tile__customers-hint { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: rgba(255,255,255,0.6); }
+.h-industry-tile__back-eyebrow {
+  font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 700; color: #FFB454; margin-bottom: 10px;
+  display: inline-flex; align-items: center; gap: 10px;
+  position: relative; z-index: 2;
+}
+.h-industry-tile__back-eyebrow::before { content: ""; width: 22px; height: 2px; background: #FFB454; }
+.h-industry-tile__back-title {
+  font-size: clamp(16px, 1.5vw, 19px);
+  line-height: 1.25; letter-spacing: -0.01em;
+  font-weight: 580; margin: 0 0 10px; max-width: 26ch;
+  color: #fff;
+  position: relative; z-index: 2;
+}
+.h-industry-tile__back-customers { font-size: 12.5px; line-height: 1.5; color: rgba(255,255,255,0.75); margin: 0 0 12px; position: relative; z-index: 2; }
+.h-industry-tile__back-customers strong { color: #fff; font-weight: 580; }
+.h-industry-tile__back-metrics {
+  display: flex; gap: 18px; padding: 10px 0;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  margin-bottom: 12px;
+  position: relative; z-index: 2;
+}
+.h-industry-tile__back-metric-num { font-size: 17px; font-weight: 600; color: #FFB454; letter-spacing: -0.01em; line-height: 1; }
+.h-industry-tile__back-metric-label { font-size: 10px; color: rgba(255,255,255,0.6); margin-top: 4px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; }
+.h-industry-tile__back-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #FFB454; color: #0A1828;
+  padding: 8px 16px; border-radius: 100px;
+  font-size: 12px; font-weight: 580;
+  width: fit-content;
+  position: relative; z-index: 2;
+}
+.h-industry-tile__back-cta::after { content: "→"; }
+
+@media (max-width: 768px) {
+  .h-industry-tile__face--back { display: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="brand"><span class="brand__mark">P</span><span>Prowess</span></a>
+    <nav class="primary-nav"><a href="products.html">Products</a><a href="services.html">Services</a><a href="industries.html">Industries</a><a href="customers.html">Customers</a><a href="about.html">About</a><a href="trust.html">Trust</a></nav>
+    <div class="header-cta"><a href="contact.html?cal=bookings" class="btn btn--primary btn--sm">Book a scoping call <span class="arrow">→</span></a></div>
+    <button class="nav-toggle" data-nav-toggle aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav" data-mobile-nav><a href="products.html">Products</a><a href="services.html">Services</a><a href="industries.html">Industries</a><a href="customers.html">Customers</a><a href="about.html">About</a><a href="trust.html">Trust</a><a href="contact.html?cal=bookings" class="btn btn--primary">Book a scoping call</a></div>
+</header>
+
+<nav class="breadcrumbs"><div class="container"><a href="index.html">Home</a><span class="sep">/</span>Industries</div></nav>
+
+<main>
+
+<!-- ====== Dark hero with polygon image ====== -->
+<section class="h-hero">
+  <div class="h-hero__bg" aria-hidden="true"></div>
+  <div class="h-hero__inner">
+    <div class="h-hero__content">
+      <span class="h-hero__eyebrow">Industries</span>
+      <h1 class="h-hero__display">
+        Engineering integration backbones <em>for every industry.</em>
+      </h1>
+      <p class="h-hero__lede">
+        Manufacturing, Logistics &amp; Supply Chain, Healthcare, Retail, Financial Services, and Energy. The integration, data, and agent architecture that runs across every vertical Prowess serves — delivered by the same architects who founded the firm.
+      </p>
+      <div class="h-hero__cta-row">
+        <a href="contact.html?cal=bookings" class="h-hero__btn-primary">Talk to an industry specialist
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="customers.html" class="h-hero__btn-ghost">See customer stories</a>
+      </div>
+    </div>
+
+    <div class="h-hero__media hv-industries" aria-hidden="true" style="position:relative; background:transparent; border:none; border-radius:0; box-shadow:none; overflow:visible; width:100%; max-width:760px; aspect-ratio:3/2; margin-left:auto;">
+      <div style="position:absolute; inset:-8%; background: radial-gradient(ellipse 70% 70% at 50% 55%, rgba(46,92,138,0.38) 0%, rgba(255,180,84,0.10) 50%, transparent 100%); z-index:0; pointer-events:none;"></div>
+      <div style="position:absolute; inset:0; clip-path: polygon(15% 4%, 85% 2%, 99% 32%, 96% 72%, 80% 99%, 20% 98%, 3% 70%, 1% 34%); -webkit-clip-path: polygon(15% 4%, 85% 2%, 99% 32%, 96% 72%, 80% 99%, 20% 98%, 3% 70%, 1% 34%); z-index:1; filter: drop-shadow(0 14px 26px rgba(0,0,0,0.7));">
+        <img src="assets/heroes/prowess-team-conference.jpg" alt="Prowess team across industries" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; filter: brightness(0.95) saturate(0.95) contrast(1.08);">
+        <div style="position:absolute; inset:0; background: linear-gradient(180deg, rgba(15,30,55,0.08) 0%, transparent 45%, rgba(8,15,28,0.20) 85%, rgba(5,11,20,0.45) 100%); pointer-events:none;"></div>
+        <div style="position:absolute; inset:0; background: radial-gradient(ellipse 75% 75% at 50% 45%, transparent 55%, rgba(8,15,28,0.18) 88%, rgba(5,11,20,0.45) 100%); pointer-events:none;"></div>
+        <div style="position:absolute; inset:0; background: linear-gradient(135deg, rgba(46,92,138,0.08) 0%, transparent 50%, rgba(255,180,84,0.06) 100%); mix-blend-mode:overlay; pointer-events:none;"></div>
+      </div>
+      <div style="position:absolute; top:3%; left:4%; width:32px; height:32px; background:linear-gradient(135deg, #FFB454, #C46F25); clip-path:polygon(0 0, 100% 0, 100% 65%, 65% 100%, 0 100%); z-index:3; box-shadow:0 8px 18px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.3);"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Six-industry flip-tile grid (reused from home) ====== -->
+<section class="h-industries">
+  <div class="h-industries__inner">
+    <div class="h-industries__head">
+      <h2 class="h-industries__title">Six industry practices. One delivery org.</h2>
+      <p class="h-industries__subtitle">Same architecture toolkit across every vertical — MuleSoft Anypoint, Informatica IDMC, Agentforce, MuleSoft Agent Fabric. Vertical depth in the data models and agent libraries.</p>
+    </div>
+    <div class="h-industries__grid">
+
+      <a href="industries/manufacturing.html" class="h-industry-tile mfg">
+        <div class="h-industry-tile__face h-industry-tile__face--front">
+          <div class="h-industry-tile__bg"></div>
+          <div class="h-industry-tile__overlay"></div>
+          <div class="h-industry-tile__content-front">
+            <div class="h-industry-tile__content-front-top">
+              <span class="h-industry-tile__eyebrow-pill">Manufacturing</span>
+              <span class="h-industry-tile__open" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+              </span>
+            </div>
+            <h3 class="h-industry-tile__title">Connect plant-floor systems to the enterprise — production AI that respects the OT layer.</h3>
+            <div class="h-industry-tile__teaser-row">
+              <span class="h-industry-tile__teaser-chip"><strong>$2.2M</strong> saved · <strong>50+</strong> programs</span>
+              <span class="h-industry-tile__customers-hint">Novelis · Ecolab</span>
+            </div>
+          </div>
+        </div>
+        <div class="h-industry-tile__face h-industry-tile__face--back">
+          <div>
+            <span class="h-industry-tile__back-eyebrow">Manufacturing</span>
+            <h3 class="h-industry-tile__back-title">Plant-to-enterprise integration on a unified data foundation.</h3>
+            <p class="h-industry-tile__back-customers"><strong>Novelis · Charlotte Pipe · Ecolab · Armstrong</strong></p>
+            <div class="h-industry-tile__back-metrics">
+              <div><div class="h-industry-tile__back-metric-num">50+</div><div class="h-industry-tile__back-metric-label">Programs</div></div>
+              <div><div class="h-industry-tile__back-metric-num">$2.2M</div><div class="h-industry-tile__back-metric-label">Saved</div></div>
+              <div><div class="h-industry-tile__back-metric-num">3×</div><div class="h-industry-tile__back-metric-label">Faster TTM</div></div>
+            </div>
+          </div>
+          <span class="h-industry-tile__back-cta">Explore Manufacturing</span>
+        </div>
+      </a>
+
+      <a href="industries/logistics.html" class="h-industry-tile log">
+        <div class="h-industry-tile__face h-industry-tile__face--front">
+          <div class="h-industry-tile__bg"></div>
+          <div class="h-industry-tile__overlay"></div>
+          <div class="h-industry-tile__content-front">
+            <div class="h-industry-tile__content-front-top">
+              <span class="h-industry-tile__eyebrow-pill">Logistics</span>
+              <span class="h-industry-tile__open" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+              </span>
+            </div>
+            <h3 class="h-industry-tile__title">Multi-region API platforms behind real global logistics operations.</h3>
+            <div class="h-industry-tile__teaser-row">
+              <span class="h-industry-tile__teaser-chip"><strong>3</strong> regions · <strong>24×7</strong> ops</span>
+              <span class="h-industry-tile__customers-hint">CEVA · Keystone</span>
+            </div>
+          </div>
+        </div>
+        <div class="h-industry-tile__face h-industry-tile__face--back">
+          <div>
+            <span class="h-industry-tile__back-eyebrow">Logistics &amp; Supply Chain</span>
+            <h3 class="h-industry-tile__back-title">API platforms, B2B modernization, maritime EDI across regions.</h3>
+            <p class="h-industry-tile__back-customers"><strong>CEVA Logistics · Keystone Logic · Pacific International Lines</strong></p>
+            <div class="h-industry-tile__back-metrics">
+              <div><div class="h-industry-tile__back-metric-num">3</div><div class="h-industry-tile__back-metric-label">Regions</div></div>
+              <div><div class="h-industry-tile__back-metric-num">24×7</div><div class="h-industry-tile__back-metric-label">Operations</div></div>
+              <div><div class="h-industry-tile__back-metric-num">COE</div><div class="h-industry-tile__back-metric-label">Integration</div></div>
+            </div>
+          </div>
+          <span class="h-industry-tile__back-cta">Explore Logistics</span>
+        </div>
+      </a>
+
+      <a href="industries/healthcare.html" class="h-industry-tile healthcare">
+        <div class="h-industry-tile__face h-industry-tile__face--front">
+          <div class="h-industry-tile__bg"></div>
+          <div class="h-industry-tile__overlay"></div>
+          <div class="h-industry-tile__content-front">
+            <div class="h-industry-tile__content-front-top">
+              <span class="h-industry-tile__eyebrow-pill">Healthcare</span>
+              <span class="h-industry-tile__open" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+              </span>
+            </div>
+            <h3 class="h-industry-tile__title">Patient data and clinical workflows connected for AI-assisted care.</h3>
+            <div class="h-industry-tile__teaser-row">
+              <span class="h-industry-tile__teaser-chip"><strong>FHIR</strong> + <strong>EHR</strong> connected</span>
+              <span class="h-industry-tile__customers-hint">HIPAA-ready</span>
+            </div>
+          </div>
+        </div>
+        <div class="h-industry-tile__face h-industry-tile__face--back">
+          <div>
+            <span class="h-industry-tile__back-eyebrow">Healthcare &amp; Life Sciences</span>
+            <h3 class="h-industry-tile__back-title">HL7 / FHIR, EHR connectivity, AI-assisted care workflows.</h3>
+            <p class="h-industry-tile__back-customers"><strong>Provider networks · Payors · Life sciences</strong></p>
+            <div class="h-industry-tile__back-metrics">
+              <div><div class="h-industry-tile__back-metric-num">FHIR</div><div class="h-industry-tile__back-metric-label">Native</div></div>
+              <div><div class="h-industry-tile__back-metric-num">HIPAA</div><div class="h-industry-tile__back-metric-label">Compliant</div></div>
+              <div><div class="h-industry-tile__back-metric-num">EHR</div><div class="h-industry-tile__back-metric-label">Connected</div></div>
+            </div>
+          </div>
+          <span class="h-industry-tile__back-cta">Explore Healthcare</span>
+        </div>
+      </a>
+
+      <a href="industries/retail.html" class="h-industry-tile retail">
+        <div class="h-industry-tile__face h-industry-tile__face--front">
+          <div class="h-industry-tile__bg"></div>
+          <div class="h-industry-tile__overlay"></div>
+          <div class="h-industry-tile__content-front">
+            <div class="h-industry-tile__content-front-top">
+              <span class="h-industry-tile__eyebrow-pill">Retail</span>
+              <span class="h-industry-tile__open" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+              </span>
+            </div>
+            <h3 class="h-industry-tile__title">Omnichannel commerce on a unified customer data foundation.</h3>
+          </div>
+        </div>
+        <div class="h-industry-tile__face h-industry-tile__face--back">
+          <div>
+            <span class="h-industry-tile__back-eyebrow">Retail &amp; Consumer</span>
+            <h3 class="h-industry-tile__back-title">POS, e-commerce, OMS, WMS, customer-360 on one API platform.</h3>
+            <p class="h-industry-tile__back-customers"><strong>Macy's · Ritz-Carlton Yacht · ADT</strong></p>
+            <div class="h-industry-tile__back-metrics">
+              <div><div class="h-industry-tile__back-metric-num">Omni</div><div class="h-industry-tile__back-metric-label">Channel</div></div>
+              <div><div class="h-industry-tile__back-metric-num">C360</div><div class="h-industry-tile__back-metric-label">Customer</div></div>
+              <div><div class="h-industry-tile__back-metric-num">Real-time</div><div class="h-industry-tile__back-metric-label">Inventory</div></div>
+            </div>
+          </div>
+          <span class="h-industry-tile__back-cta">Explore Retail</span>
+        </div>
+      </a>
+
+      <a href="industries/financial-services.html" class="h-industry-tile financial">
+        <div class="h-industry-tile__face h-industry-tile__face--front">
+          <div class="h-industry-tile__bg"></div>
+          <div class="h-industry-tile__overlay"></div>
+          <div class="h-industry-tile__content-front">
+            <div class="h-industry-tile__content-front-top">
+              <span class="h-industry-tile__eyebrow-pill">Financial Services</span>
+              <span class="h-industry-tile__open" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+              </span>
+            </div>
+            <h3 class="h-industry-tile__title">Core banking, payments, and risk on regulated integration.</h3>
+          </div>
+        </div>
+        <div class="h-industry-tile__face h-industry-tile__face--back">
+          <div>
+            <span class="h-industry-tile__back-eyebrow">Financial Services</span>
+            <h3 class="h-industry-tile__back-title">Core banking modernization, payments orchestration, risk-data integration.</h3>
+            <p class="h-industry-tile__back-customers"><strong>Banking · Insurance · Asset management</strong></p>
+            <div class="h-industry-tile__back-metrics">
+              <div><div class="h-industry-tile__back-metric-num">SOC2</div><div class="h-industry-tile__back-metric-label">Audit-ready</div></div>
+              <div><div class="h-industry-tile__back-metric-num">SWIFT</div><div class="h-industry-tile__back-metric-label">Native</div></div>
+              <div><div class="h-industry-tile__back-metric-num">PCI</div><div class="h-industry-tile__back-metric-label">Compliant</div></div>
+            </div>
+          </div>
+          <span class="h-industry-tile__back-cta">Explore Financial</span>
+        </div>
+      </a>
+
+      <a href="industries/energy.html" class="h-industry-tile energy">
+        <div class="h-industry-tile__face h-industry-tile__face--front">
+          <div class="h-industry-tile__bg"></div>
+          <div class="h-industry-tile__overlay"></div>
+          <div class="h-industry-tile__content-front">
+            <div class="h-industry-tile__content-front-top">
+              <span class="h-industry-tile__eyebrow-pill">Energy &amp; Utilities</span>
+              <span class="h-industry-tile__open" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+              </span>
+            </div>
+            <h3 class="h-industry-tile__title">Grid, asset, and field operations connected end-to-end.</h3>
+          </div>
+        </div>
+        <div class="h-industry-tile__face h-industry-tile__face--back">
+          <div>
+            <span class="h-industry-tile__back-eyebrow">Energy &amp; Utilities</span>
+            <h3 class="h-industry-tile__back-title">SCADA, GIS, asset, and field-service systems integrated for grid-scale operations.</h3>
+            <p class="h-industry-tile__back-customers"><strong>Utility companies · Energy producers · Renewables</strong></p>
+            <div class="h-industry-tile__back-metrics">
+              <div><div class="h-industry-tile__back-metric-num">SCADA</div><div class="h-industry-tile__back-metric-label">Connected</div></div>
+              <div><div class="h-industry-tile__back-metric-num">Asset</div><div class="h-industry-tile__back-metric-label">360</div></div>
+              <div><div class="h-industry-tile__back-metric-num">Field</div><div class="h-industry-tile__back-metric-label">Operations</div></div>
+            </div>
+          </div>
+          <span class="h-industry-tile__back-cta">Explore Energy</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-band__layout">
+      <div><span class="eyebrow on-dark">Scope</span><h2>Talk to a specialist for your industry.</h2><p>If your industry is not listed above, we likely still have integration patterns that apply.</p></div>
+      <div class="cta-band__actions">
+        <a href="contact.html?cal=bookings" class="btn btn--on-dark btn--lg" data-cta-id="industries_cta_book" data-page="industries" data-stage="decision">Schedule a call <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col"><h4>Prowess</h4><ul><li><a href="about.html">About</a></li><li><a href="about/founders.html">Founders</a></li><li><a href="why-prowess.html">Why Prowess</a></li><li><a href="trust.html">Trust &amp; awards</a></li></ul></div>
+      <div class="footer__col"><h4>EnterpriseFLOW</h4><ul><li><a href="products/migration-sprint-mulesoft.html">Migration Sprint · MuleSoft</a></li><li><a href="products/migration-sprint-informatica.html">Migration Sprint · Informatica</a></li><li><a href="products/agent-fabric-builder.html">Agent Fabric Builder</a></li><li><a href="products/implementation-accelerator.html">Implementation Accelerator</a></li></ul></div>
+      <div class="footer__col"><h4>Industries</h4><ul><li><a href="industries/manufacturing.html">Manufacturing</a></li><li><a href="industries/logistics.html">Logistics</a></li><li><a href="industries.html">All industries</a></li></ul></div>
+      <div class="footer__col"><h4>Customers</h4><ul><li><a href="customers/novelis.html">Novelis</a></li><li><a href="customers/ceva-logistics.html">CEVA Logistics</a></li><li><a href="customers/syncron.html">Syncron</a></li><li><a href="customers/keystone-logistics.html">Keystone Logistics</a></li><li><a href="customers/rich-products.html">Rich Products</a></li><li><a href="customers.html">All customers</a></li></ul></div>
+      <div class="footer__col"><h4>Connect</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="newsletter.html">Newsletter</a></li><li><a href="services.html">Services</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><span>&copy; <span data-year>2026</span> Prowess Software Services.</span><span class="footer__legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Security</a></span></div>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energy Integration | Prowess Software Services</title>
+<meta name="description" content="Grid telemetry, distribution operations, regulatory reporting, ESG data. Energy integration practice in development for 2026.">
+<link rel="canonical" href="https://www.prowesssoft.com/industries/energy/">
+<link rel="icon" type="image/png" href="../assets/brand/favicon.png">
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Energy Integration | Prowess">
+<meta property="og:description" content="Grid telemetry, distribution operations, regulatory reporting, ESG data.">
+<meta property="og:url" content="https://www.prowesssoft.com/industries/energy/">
+<meta property="og:image" content="https://www.prowesssoft.com/assets/brand/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Energy Integration",
+  "audience": { "@type": "BusinessAudience", "audienceType": "Energy and Utilities" },
+  "provider": { "@type": "Organization", "name": "Prowess Software Services" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.prowesssoft.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://www.prowesssoft.com/industries/" },
+    { "@type": "ListItem", "position": 3, "name": "Energy", "item": "https://www.prowesssoft.com/industries/energy/" }
+  ]
+}
+</script>
+<style>
+/* ========== Dark h-hero with polygon image ========== */
+.h-hero { position: relative; background: #050B14; color: #fff; overflow: hidden; }
+.h-hero__bg { position: absolute; inset: 0; z-index: 0;
+  background: radial-gradient(ellipse 60% 70% at 80% 20%, rgba(46, 92, 138, 0.25), transparent 60%),
+    radial-gradient(ellipse 50% 50% at 10% 90%, rgba(255, 180, 84, 0.08), transparent 60%);
+}
+.h-hero__bg::after { content: ""; position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 90%);
+}
+.h-hero__inner { position: relative; z-index: 2; max-width: 1440px; margin: 0 auto; padding: 96px 32px 96px;
+  display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: center;
+}
+.h-hero__content { animation: heroFade 1000ms cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+@keyframes heroFade { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.h-hero__eyebrow { display: inline-flex; align-items: center; gap: 10px; padding: 7px 14px;
+  background: rgba(255,255,255,0.08); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.16); border-radius: 100px;
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.85); margin-bottom: 28px;
+}
+.h-hero__eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #7ED957; }
+.h-hero__display { font-size: clamp(48px, 6vw, 84px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 580; margin: 0 0 24px; color: #fff; }
+.h-hero__display em { font-style: normal;
+  background: linear-gradient(90deg, #B8D4FF 0%, #7ED957 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.h-hero__lede { font-size: 18px; line-height: 1.55; color: rgba(255,255,255,0.78); max-width: 56ch; margin: 0 0 36px; }
+.h-hero__cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+.h-hero__btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; background: #fff; color: #0A1828;
+  border-radius: 100px; font-size: 15px; font-weight: 580; text-decoration: none;
+  transition: transform 240ms ease, box-shadow 240ms ease; box-shadow: 0 8px 24px rgba(255,255,255,0.12);
+}
+.h-hero__btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(255,255,255,0.18); }
+.h-hero__btn-ghost { display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px;
+  background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.22); border-radius: 100px;
+  font-size: 15px; font-weight: 540; text-decoration: none;
+  transition: background 240ms ease, border-color 240ms ease;
+}
+.h-hero__btn-ghost:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.4); }
+@media (max-width: 1024px) {
+  .h-hero__inner { grid-template-columns: 1fr; gap: 48px; padding-top: 48px; }
+  .h-hero__media { aspect-ratio: 16/10 !important; max-width: 100% !important; margin: 0 !important; }
+}
+</style>
+<link rel="stylesheet" href="../assets/css/services-theme.css?v=20260520c">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="../index.html" class="brand"><span class="brand__mark">P</span><span>Prowess</span></a>
+    <nav class="primary-nav"><a href="../products.html">Products</a><a href="../services.html">Services</a><a href="../industries.html">Industries</a><a href="../customers.html">Customers</a><a href="../about.html">About</a><a href="../trust.html">Trust</a></nav>
+    <div class="header-cta"><a href="../contact.html?cal=bookings" class="btn btn--primary btn--sm">Book a scoping call <span class="arrow">→</span></a></div>
+    <button class="nav-toggle" data-nav-toggle aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav" data-mobile-nav><a href="../products.html">Products</a><a href="../services.html">Services</a><a href="../industries.html">Industries</a><a href="../customers.html">Customers</a><a href="../about.html">About</a><a href="../trust.html">Trust</a><a href="../contact.html?cal=bookings" class="btn btn--primary">Book a scoping call</a></div>
+</header>
+
+<nav class="breadcrumbs"><div class="container"><a href="../index.html">Home</a><span class="sep">/</span><a href="../industries.html">Industries</a><span class="sep">/</span>Energy</div></nav>
+
+<main>
+
+  <section class="h-hero">
+  <div class="h-hero__bg" aria-hidden="true"></div>
+  <div class="h-hero__inner">
+    <div class="h-hero__content">
+      <span class="h-hero__eyebrow">Energy — in development</span>
+      <h1 class="h-hero__display">
+        Engineering integration for <em>the energy transition.</em>
+      </h1>
+      <p class="h-hero__lede">
+        Energy integration practice in development for 2026. Grid telemetry, distribution operations, regulatory reporting, ESG data pipelines, and customer-experience modernization — engineered for utilities, generators, and renewables operators navigating the transition to distributed, regulated, real-time energy.
+      </p>
+      <div class="h-hero__cta-row">
+        <a href="../contact.html?type=energy" class="h-hero__btn-primary">Talk to an energy specialist
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="../services.html" class="h-hero__btn-ghost">See what we deliver</a>
+      </div>
+    </div>
+
+    <div class="h-hero__media" aria-hidden="true" style="position:relative; background:transparent; border:none; border-radius:0; box-shadow:none; overflow:visible; width:100%; max-width:760px; aspect-ratio:3/2; margin-left:auto;">
+      <div style="position:absolute; inset:-8%; background: radial-gradient(ellipse 70% 70% at 50% 55%, rgba(58,95,30,0.36) 0%, rgba(126,217,87,0.14) 50%, transparent 100%); z-index:0; pointer-events:none;"></div>
+      <div style="position:absolute; inset:0; clip-path: polygon(8% 3%, 92% 6%, 99% 35%, 95% 98%, 5% 92%, 1% 30%); -webkit-clip-path: polygon(8% 3%, 92% 6%, 99% 35%, 95% 98%, 5% 92%, 1% 30%); z-index:1; filter: drop-shadow(0 14px 26px rgba(0,0,0,0.7));">
+        <img src="../assets/heroes/prowess-team-engineering.jpg" alt="Prowess energy team" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; filter: brightness(0.92) saturate(0.92) contrast(1.10) hue-rotate(20deg);">
+        <div style="position:absolute; inset:0; background: linear-gradient(180deg, rgba(15,30,55,0.08) 0%, transparent 45%, rgba(8,15,28,0.20) 85%, rgba(5,11,20,0.45) 100%); pointer-events:none;"></div>
+        <div style="position:absolute; inset:0; background: radial-gradient(ellipse 75% 75% at 50% 45%, transparent 55%, rgba(8,15,28,0.18) 88%, rgba(5,11,20,0.45) 100%); pointer-events:none;"></div>
+        <div style="position:absolute; inset:0; background: linear-gradient(135deg, rgba(46,92,138,0.08) 0%, transparent 50%, rgba(255,180,84,0.06) 100%); mix-blend-mode:overlay; pointer-events:none;"></div>
+      </div>
+      <div style="position:absolute; top:3%; left:4%; width:32px; height:32px; background:linear-gradient(135deg, #7ED957, #3A5F1E); clip-path:polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); z-index:3; box-shadow:0 8px 18px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.3);"></div>
+    </div>
+  </div>
+</section>
+
+  <!-- ====== POY-style proof band ====== -->
+  <section class="svc-poy">
+    <div class="svc-poy__inner">
+      <div class="svc-poy__big">SCADA</div>
+      <div class="svc-poy__text">
+        <h2 class="svc-poy__title">Grid, asset, and field operations connected end-to-end.</h2>
+        <p class="svc-poy__sub">Real-time grid telemetry, AMI / IoT meter integration, CIS modernization, outage orchestration. <strong>Energy distributor data sync delivered</strong>.</p>
+      </div>
+      <div class="svc-poy__chips"><span class="svc-poy__chip">SCADA · AMI · OPC UA</span><span class="svc-poy__chip">GIS + EAM</span><span class="svc-poy__chip">Field-service agents</span></div>
+    </div>
+  </section>
+
+  <!-- ====== USE CASES — cap-card flip ====== -->
+  <section class="svc-section svc-section--cream-white">
+    <div class="svc-inner">
+      <div class="svc-head">
+        <span class="svc-eyebrow">— Where Prowess plugs in</span>
+        <h2 class="svc-h2">Use cases we have built — or are building — in energy.</h2>
+        <p class="svc-intro">Each use case is anchored in a real Prowess delivery, partner motion, or referenceable pattern. Hover for what we deliver.</p>
+      </div>
+      <div class="svc-grid">
+      <article class="svc-card svc-card--amber">
+        <div class="svc-card__face svc-card__face--front">
+          <div class="svc-card__photo" style="background-image:url('../assets/case-studies/energy-distributor.png');">
+            <span class="svc-card__shape svc-card__shape--ring"></span>
+          </div>
+          <div class="svc-card__content">
+            <div class="svc-card__icon">01</div>
+            <h3 class="svc-card__title">Energy distributor data sync</h3>
+            <p class="svc-card__brief">Customer, asset, and field — all in sync.</p>
+            <span class="svc-card__hint">What we deliver →</span>
+          </div>
+        </div>
+        <div class="svc-card__face svc-card__face--back">
+          <span class="svc-card__back-eyebrow">Use case · 01</span>
+          <h3 class="svc-card__back-title">Energy distributor data synchronization</h3>
+          <ul class="svc-card__back-list"><li>Advancing Data Synchronization for a Leading Energy Distributor — cross-system data sync across customer, asset, and field-service systems.</li><li>Operations teams get a single, consistent view.</li></ul>
+          <span class="svc-card__back-stat">Delivered · energy distributor</span>
+        </div>
+      </article>
+      <article class="svc-card svc-card--blue">
+        <div class="svc-card__face svc-card__face--front">
+          <div class="svc-card__photo" style="background-image:url('../assets/case-studies/servicenow-composite-api.jpg');">
+            <span class="svc-card__shape svc-card__shape--dots"></span>
+          </div>
+          <div class="svc-card__content">
+            <div class="svc-card__icon">02</div>
+            <h3 class="svc-card__title">SCADA + AMI integration</h3>
+            <p class="svc-card__brief">Real-time grid telemetry.</p>
+            <span class="svc-card__hint">What we deliver →</span>
+          </div>
+        </div>
+        <div class="svc-card__face svc-card__face--back">
+          <span class="svc-card__back-eyebrow">Use case · 02</span>
+          <h3 class="svc-card__back-title">SCADA / AMI / IoT meter integration</h3>
+          <ul class="svc-card__back-list"><li>OPC UA + Kafka + Anypoint streaming for SCADA and AMI smart meter data.</li><li>Real-time grid telemetry into analytics and control rooms.</li></ul>
+          <span class="svc-card__back-stat">OPC UA · Kafka · Anypoint</span>
+        </div>
+      </article>
+      <article class="svc-card svc-card--violet">
+        <div class="svc-card__face svc-card__face--front">
+          <div class="svc-card__photo" style="background-image:url('../assets/case-studies/sustainability-legacy-migration.png');">
+            <span class="svc-card__shape svc-card__shape--hex"></span>
+          </div>
+          <div class="svc-card__content">
+            <div class="svc-card__icon">03</div>
+            <h3 class="svc-card__title">Asset 360 modernization</h3>
+            <p class="svc-card__brief">SCADA / GIS / EAM unified.</p>
+            <span class="svc-card__hint">What we deliver →</span>
+          </div>
+        </div>
+        <div class="svc-card__face svc-card__face--back">
+          <span class="svc-card__back-eyebrow">Use case · 03</span>
+          <h3 class="svc-card__back-title">Asset 360 across SCADA, GIS, EAM</h3>
+          <ul class="svc-card__back-list"><li>Field asset 360 view by unifying SCADA telemetry, GIS spatial data, and EAM work orders.</li><li>Predictive maintenance and outage prevention.</li></ul>
+          <span class="svc-card__back-stat">SCADA · GIS · EAM</span>
+        </div>
+      </article>
+      <article class="svc-card svc-card--green">
+        <div class="svc-card__face svc-card__face--front">
+          <div class="svc-card__photo" style="background-image:url('../assets/case-studies/capital-wealth.png');">
+            <span class="svc-card__shape svc-card__shape--tri"></span>
+          </div>
+          <div class="svc-card__content">
+            <div class="svc-card__icon">04</div>
+            <h3 class="svc-card__title">CIS modernization</h3>
+            <p class="svc-card__brief">Customer information system replatformed.</p>
+            <span class="svc-card__hint">What we deliver →</span>
+          </div>
+        </div>
+        <div class="svc-card__face svc-card__face--back">
+          <span class="svc-card__back-eyebrow">Use case · 04</span>
+          <h3 class="svc-card__back-title">CIS modernization on API-led</h3>
+          <ul class="svc-card__back-list"><li>Customer Information System modernized via API-led architecture.</li><li>Billing, service requests, outage notifications across channels.</li></ul>
+          <span class="svc-card__back-stat">API-led CIS</span>
+        </div>
+      </article>
+      <article class="svc-card svc-card--coral">
+        <div class="svc-card__face svc-card__face--front">
+          <div class="svc-card__photo" style="background-image:url('../assets/case-studies/auto-marketplace-support.jpg');">
+            <span class="svc-card__shape svc-card__shape--square"></span>
+          </div>
+          <div class="svc-card__content">
+            <div class="svc-card__icon">05</div>
+            <h3 class="svc-card__title">Outage management</h3>
+            <p class="svc-card__brief">Real-time alerting + crew dispatch.</p>
+            <span class="svc-card__hint">What we deliver →</span>
+          </div>
+        </div>
+        <div class="svc-card__face svc-card__face--back">
+          <span class="svc-card__back-eyebrow">Use case · 05</span>
+          <h3 class="svc-card__back-title">Outage management orchestration</h3>
+          <ul class="svc-card__back-list"><li>Real-time alerting, automated crew dispatch, ETA communication.</li><li>Agent Fabric for dispatcher decision support during major events.</li></ul>
+          <span class="svc-card__back-stat">Agent Fabric assist</span>
+        </div>
+      </article>
+      <article class="svc-card svc-card--ink">
+        <div class="svc-card__face svc-card__face--front">
+          <div class="svc-card__photo" style="background-image:url('../assets/case-studies/sustainability-legacy-migration.png');">
+            <span class="svc-card__shape svc-card__shape--bar"></span>
+          </div>
+          <div class="svc-card__content">
+            <div class="svc-card__icon">06</div>
+            <h3 class="svc-card__title">ESG data pipelines</h3>
+            <p class="svc-card__brief">Sustainability reporting.</p>
+            <span class="svc-card__hint">What we deliver →</span>
+          </div>
+        </div>
+        <div class="svc-card__face svc-card__face--back">
+          <span class="svc-card__back-eyebrow">Use case · 06</span>
+          <h3 class="svc-card__back-title">ESG data pipelines</h3>
+          <ul class="svc-card__back-list"><li>Emissions, sustainability, and ESG data pipelines for regulatory reporting and stakeholder disclosure.</li><li>Aligned to Prowess sustainability themes.</li></ul>
+          <span class="svc-card__back-stat">Sustainability-aligned</span>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CAPABILITY MAP — methodology tiles ====== -->
+  <section class="svc-section svc-section--mist">
+    <div class="svc-inner">
+      <div class="svc-head">
+        <span class="svc-eyebrow svc-eyebrow--steel">— How we engineer</span>
+        <h2 class="svc-h2">The capabilities behind every program.</h2>
+        <p class="svc-intro">Methodology and tooling we deploy across each use case — the engine room.</p>
+      </div>
+      <div class="svc-meth-grid">
+      <div class="svc-meth svc-meth--amber">
+        <div class="svc-meth__photo" style="background-image:url('../assets/case-studies/energy-distributor.png');"></div>
+        <div class="svc-meth__front">
+          <span class="svc-meth__icon">SCADA</span>
+          <h3 class="svc-meth__title">SCADA / IoT integration</h3>
+        </div>
+        <div class="svc-meth__overlay">
+          <span class="svc-meth__overlay-icon">SCADA</span>
+          <h3 class="svc-meth__overlay-title">SCADA / IoT integration</h3>
+          <p class="svc-meth__overlay-desc">Real-time grid telemetry on Anypoint.</p>
+        </div>
+      </div>
+      <div class="svc-meth svc-meth--blue">
+        <div class="svc-meth__photo" style="background-image:url('../assets/case-studies/servicenow-composite-api.jpg');"></div>
+        <div class="svc-meth__front">
+          <span class="svc-meth__icon">AMI</span>
+          <h3 class="svc-meth__title">AMI smart meter integration</h3>
+        </div>
+        <div class="svc-meth__overlay">
+          <span class="svc-meth__overlay-icon">AMI</span>
+          <h3 class="svc-meth__overlay-title">AMI smart meter integration</h3>
+          <p class="svc-meth__overlay-desc">Smart meter data flows + analytics.</p>
+        </div>
+      </div>
+      <div class="svc-meth svc-meth--violet">
+        <div class="svc-meth__photo" style="background-image:url('../assets/case-studies/sustainability-legacy-migration.png');"></div>
+        <div class="svc-meth__front">
+          <span class="svc-meth__icon">GIS</span>
+          <h3 class="svc-meth__title">GIS + EAM integration</h3>
+        </div>
+        <div class="svc-meth__overlay">
+          <span class="svc-meth__overlay-icon">GIS</span>
+          <h3 class="svc-meth__overlay-title">GIS + EAM integration</h3>
+          <p class="svc-meth__overlay-desc">Spatial asset and work-order unification.</p>
+        </div>
+      </div>
+      <div class="svc-meth svc-meth--green">
+        <div class="svc-meth__photo" style="background-image:url('../assets/case-studies/capital-wealth.png');"></div>
+        <div class="svc-meth__front">
+          <span class="svc-meth__icon">CIS</span>
+          <h3 class="svc-meth__title">CIS modernization</h3>
+        </div>
+        <div class="svc-meth__overlay">
+          <span class="svc-meth__overlay-icon">CIS</span>
+          <h3 class="svc-meth__overlay-title">CIS modernization</h3>
+          <p class="svc-meth__overlay-desc">API-led customer information system.</p>
+        </div>
+      </div>
+      <div class="svc-meth svc-meth--coral">
+        <div class="svc-meth__photo" style="background-image:url('../assets/case-studies/auto-marketplace-support.jpg');"></div>
+        <div class="svc-meth__front">
+          <span class="svc-meth__icon">OMS</span>
+          <h3 class="svc-meth__title">Outage management workflows</h3>
+        </div>
+        <div class="svc-meth__overlay">
+          <span class="svc-meth__overlay-icon">OMS</span>
+          <h3 class="svc-meth__overlay-title">Outage management workflows</h3>
+          <p class="svc-meth__overlay-desc">Crew dispatch, ETA, customer notifications.</p>
+        </div>
+      </div>
+      <div class="svc-meth svc-meth--ink">
+        <div class="svc-meth__photo" style="background-image:url('../assets/case-studies/sustainability-legacy-migration.png');"></div>
+        <div class="svc-meth__front">
+          <span class="svc-meth__icon">ESG</span>
+          <h3 class="svc-meth__title">ESG data pipelines</h3>
+        </div>
+        <div class="svc-meth__overlay">
+          <span class="svc-meth__overlay-icon">ESG</span>
+          <h3 class="svc-meth__overlay-title">ESG data pipelines</h3>
+          <p class="svc-meth__overlay-desc">Emissions and sustainability reporting.</p>
+        </div>
+      </div>
+      <div class="svc-meth svc-meth--amber">
+        <div class="svc-meth__photo" style="background-image:url('../assets/case-studies/energy-distributor.png');"></div>
+        <div class="svc-meth__front">
+          <span class="svc-meth__icon">AF</span>
+          <h3 class="svc-meth__title">Field-service Agent Fabric</h3>
+        </div>
+        <div class="svc-meth__overlay">
+          <span class="svc-meth__overlay-icon">AF</span>
+          <h3 class="svc-meth__overlay-title">Field-service Agent Fabric</h3>
+          <p class="svc-meth__overlay-desc">Dispatcher support, work-order intelligence.</p>
+        </div>
+      </div>
+      <div class="svc-meth svc-meth--blue">
+        <div class="svc-meth__photo" style="background-image:url('../assets/case-studies/servicenow-composite-api.jpg');"></div>
+        <div class="svc-meth__front">
+          <span class="svc-meth__icon">HA</span>
+          <h3 class="svc-meth__title">Energy-grade reliability</h3>
+        </div>
+        <div class="svc-meth__overlay">
+          <span class="svc-meth__overlay-icon">HA</span>
+          <h3 class="svc-meth__overlay-title">Energy-grade reliability</h3>
+          <p class="svc-meth__overlay-desc">High availability, multi-region failover.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CUSTOMER SUCCESS STORY ====== -->
+  <section class="svc-story svc-story--cream">
+    <div class="svc-story__inner">
+      <div class="svc-story__text">
+        <span class="svc-story__tag">Customer success · Leading Energy Distributor</span>
+        <h2 class="svc-story__headline">Distribution · Asset & customer data</h2>
+        <div class="svc-story__metrics"><div><div class="svc-story__metric-num">SCADA</div><div class="svc-story__metric-label">Connected</div></div><div><div class="svc-story__metric-num">Asset</div><div class="svc-story__metric-label">360</div></div><div><div class="svc-story__metric-num">Field</div><div class="svc-story__metric-label">Operations</div></div></div>
+        <blockquote class="svc-story__quote">Cross-system data synchronization delivered across customer, asset, and field-service platforms — giving operations teams a consistent, reliable view of grid and field data.</blockquote>
+        <p class="svc-story__attrib"><strong>Prowess Energy practice</strong> · Leading Energy Distributor · Data synchronization</p>
+        <a href="https://www.prowesssoft.com/case-studies/" class="svc-story__cta">See the energy case →</a>
+      </div>
+      <div class="svc-story__visual">
+        <img src="../assets/case-studies/energy-distributor.png" alt="Leading Energy Distributor">
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TECH STACK ====== -->
+  <section class="svc-section svc-section--white svc-section--dashed">
+    <div class="svc-deco-dash svc-deco-dash--1"></div>
+    <div class="svc-deco-dash svc-deco-dash--2"></div>
+    <div class="svc-inner">
+      <div class="svc-head">
+        <span class="svc-eyebrow">— The stack</span>
+        <h2 class="svc-h2">Does this fit your existing tech?</h2>
+        <p class="svc-intro">The platforms, standards, and tooling we ship on for this practice.</p>
+      </div>
+      <div class="svc-stack-grid">
+      <div class="svc-stack-card">
+        <div class="svc-stack-card__photo" style="background-image:url('../assets/case-studies/energy-distributor.png');"></div>
+        <div class="svc-stack-card__body">
+          <h3 class="svc-stack-card__title">Integration</h3>
+          <div class="svc-stack-card__chips"><span class="svc-stack-chip">MuleSoft Anypoint</span><span class="svc-stack-chip">Agent Fabric</span><span class="svc-stack-chip">Kafka</span><span class="svc-stack-chip">OPC UA</span></div>
+        </div>
+      </div>
+      <div class="svc-stack-card">
+        <div class="svc-stack-card__photo" style="background-image:url('../assets/case-studies/servicenow-composite-api.jpg');"></div>
+        <div class="svc-stack-card__body">
+          <h3 class="svc-stack-card__title">Energy systems</h3>
+          <div class="svc-stack-card__chips"><span class="svc-stack-chip">SCADA</span><span class="svc-stack-chip">OSIsoft PI</span><span class="svc-stack-chip">AVEVA</span><span class="svc-stack-chip">Schneider EcoStruxure</span></div>
+        </div>
+      </div>
+      <div class="svc-stack-card">
+        <div class="svc-stack-card__photo" style="background-image:url('../assets/case-studies/sustainability-legacy-migration.png');"></div>
+        <div class="svc-stack-card__body">
+          <h3 class="svc-stack-card__title">GIS</h3>
+          <div class="svc-stack-card__chips"><span class="svc-stack-chip">Esri ArcGIS</span></div>
+        </div>
+      </div>
+      <div class="svc-stack-card">
+        <div class="svc-stack-card__photo" style="background-image:url('../assets/case-studies/capital-wealth.png');"></div>
+        <div class="svc-stack-card__body">
+          <h3 class="svc-stack-card__title">ERP / EAM</h3>
+          <div class="svc-stack-card__chips"><span class="svc-stack-chip">SAP IS-U</span><span class="svc-stack-chip">Oracle Utilities</span><span class="svc-stack-chip">IBM Maximo</span></div>
+        </div>
+      </div>
+      <div class="svc-stack-card">
+        <div class="svc-stack-card__photo" style="background-image:url('../assets/case-studies/auto-marketplace-support.jpg');"></div>
+        <div class="svc-stack-card__body">
+          <h3 class="svc-stack-card__title">Cloud</h3>
+          <div class="svc-stack-card__chips"><span class="svc-stack-chip">AWS / Azure with energy-grade reliability</span></div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== LATEST INSIGHTS ====== -->
+  <section class="svc-section svc-section--cream">
+    <div class="svc-inner">
+      <div class="svc-head">
+        <span class="svc-eyebrow">— Latest from the practice</span>
+        <h2 class="svc-h2">Insights, cases, and patterns.</h2>
+        <p class="svc-intro">Recent thinking from the team that delivers this practice. Every link goes to a real Prowess case or article.</p>
+      </div>
+      <div class="svc-insights-grid">
+      <a href="https://www.prowesssoft.com/case-studies/" class="svc-insight" target="_blank" rel="noopener">
+        <div class="svc-insight__photo" style="background-image:url('../assets/case-studies/energy-distributor.png');"></div>
+        <div class="svc-insight__body">
+          <span class="svc-insight__type">Case study</span>
+          <h3 class="svc-insight__title">Advancing Data Synchronization for an Energy Distributor</h3>
+          <p class="svc-insight__desc">Cross-system data sync on MuleSoft for an energy distributor.</p>
+          <span class="svc-insight__cta">Read</span>
+        </div>
+      </a>
+      <a href="https://www.prowesssoft.com/mulesoft-on-kubernetes-scaling-api-led-integration-for-cloud-native-enterprises/" class="svc-insight" target="_blank" rel="noopener">
+        <div class="svc-insight__photo" style="background-image:url('../assets/case-studies/sustainability-legacy-migration.png');"></div>
+        <div class="svc-insight__body">
+          <span class="svc-insight__type">Blog</span>
+          <h3 class="svc-insight__title">MuleSoft on Kubernetes — Scaling API-led integration</h3>
+          <p class="svc-insight__desc">Cloud-native deployment patterns relevant to grid-scale reliability.</p>
+          <span class="svc-insight__cta">Read</span>
+        </div>
+      </a>
+      <a href="https://www.prowesssoft.com/ultimate-guide-create-an-api-strategy-for-ai-success/" class="svc-insight" target="_blank" rel="noopener">
+        <div class="svc-insight__photo" style="background-image:url('../assets/case-studies/capital-wealth.png');"></div>
+        <div class="svc-insight__body">
+          <span class="svc-insight__type">Blog</span>
+          <h3 class="svc-insight__title">Ultimate Guide: API Strategy for AI Success</h3>
+          <p class="svc-insight__desc">Layered architecture, Domain-driven design, AI agents — applied to utilities.</p>
+          <span class="svc-insight__cta">Read</span>
+        </div>
+      </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SPECIALIST CTA ====== -->
+  <section class="svc-cta">
+    <div class="svc-cta__inner">
+      <div>
+        <span class="svc-cta__eyebrow">Scope</span>
+        <h2 class="svc-cta__h2">Talk to an energy specialist.</h2>
+        <p class="svc-cta__lede">Grid data, SCADA / AMI integration, CIS modernization, and outage management — designed for the reliability that utility operations demand.</p>
+        <div class="svc-cta__row">
+          <a href="../contact.html?type=energy" class="svc-cta__btn-pri">Schedule a scoping call
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="../customers.html" class="svc-cta__btn-ghost">See more customers</a>
+        </div>
+      </div>
+      <div class="svc-cta__stats"><div class="svc-cta__stat"><div class="svc-cta__stat-num">Real</div><div class="svc-cta__stat-label">Energy case delivered</div></div><div class="svc-cta__stat"><div class="svc-cta__stat-num">Grid-scale</div><div class="svc-cta__stat-label">Reliability</div></div></div>
+    </div>
+  </section>
+
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col"><h4>Prowess</h4><ul><li><a href="../about.html">About</a></li><li><a href="../about/founders.html">Founders</a></li><li><a href="../why-prowess.html">Why Prowess</a></li><li><a href="../trust.html">Trust &amp; awards</a></li></ul></div>
+      <div class="footer__col"><h4>EnterpriseFLOW</h4><ul><li><a href="../products/migration-sprint-mulesoft.html">Migration Sprint · MuleSoft</a></li><li><a href="../products/migration-sprint-informatica.html">Migration Sprint · Informatica</a></li><li><a href="../products/agent-fabric-builder.html">Agent Fabric Builder</a></li><li><a href="../products/implementation-accelerator.html">Implementation Accelerator</a></li></ul></div>
+      <div class="footer__col"><h4>Industries</h4><ul><li><a href="../industries/manufacturing.html">Manufacturing</a></li><li><a href="../industries/logistics.html">Logistics</a></li><li><a href="../industries/healthcare.html">Healthcare</a></li><li><a href="../industries/retail.html">Retail</a></li><li><a href="../industries/financial-services.html">Financial Services</a></li><li><a href="../industries/energy.html">Energy</a></li></ul></div>
+      <div class="footer__col"><h4>Customers</h4><ul><li><a href="../customers/novelis.html">Novelis</a></li><li><a href="../customers/ceva-logistics.html">CEVA Logistics</a></li><li><a href="../customers/syncron.html">Syncron</a></li><li><a href="../customers/keystone-logistics.html">Keystone Logistics</a></li><li><a href="../customers.html">All customers</a></li></ul></div>
+      <div class="footer__col"><h4>Connect</h4><ul><li><a href="../contact.html">Contact</a></li><li><a href="../newsletter.html">Newsletter</a></li><li><a href="../services.html">Services</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><span>&copy; <span data-year>2026</span> Prowess Software Services.</span><span class="footer__legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Security</a></span></div>
+  </div>
+</footer>
+
+<script src="../script.js" defer></script>
+
+</body>
+</html>

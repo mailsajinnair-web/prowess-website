@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EnterpriseFLOW™ — Productized Accelerators · Prowess Software Services</title>
+<meta name="description" content="EnterpriseFLOW™ is the productized accelerator practice from Prowess. Four fixed-fee SKUs for migration, build, agent fabric, and implementation. By a two-time MuleSoft Partner of the Year.">
+<link rel="canonical" href="https://www.prowesssoft.com/products/">
+<link rel="icon" type="image/png" href="assets/brand/favicon.png">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="assets/css/products-theme.css?v=20260520f">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="EnterpriseFLOW™ — Productized Accelerators">
+<meta property="og:description" content="Four fixed-fee productized accelerators for MuleSoft migration, integration build, Agent Fabric, and implementation. By a two-time MuleSoft Partner of the Year.">
+
+<style>
+/* ===== Product chrome — dark SaaS-style nav ===== */
+.p-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10, 24, 40, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.p-nav__inner { max-width: 1320px; margin: 0 auto; padding: 0 32px; height: 64px; display: flex; align-items: center; gap: 40px; }
+.p-nav__brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
+.p-nav__brand-mark { width: 32px; height: 32px; background: linear-gradient(135deg, #FFB454, #FF8A4C); border-radius: 8px; display: grid; place-items: center; font-weight: 700; font-size: 14px; color: #0A1828; }
+.p-nav__brand-text { font-size: 16px; font-weight: 560; letter-spacing: -0.01em; }
+.p-nav__brand-text sup { font-size: 0.55em; font-weight: 400; opacity: 0.7; }
+.p-nav__brand-sub { font-size: 12px; color: rgba(255,255,255,0.5); padding-left: 12px; margin-left: 2px; border-left: 1px solid rgba(255,255,255,0.15); }
+.p-nav__links { display: flex; align-items: center; gap: 28px; flex: 1; }
+.p-nav__links a { font-size: 14px; color: rgba(255,255,255,0.7); text-decoration: none; padding: 8px 0; transition: color 160ms ease; }
+.p-nav__links a:hover { color: #fff; }
+.p-nav__links a.active { color: #fff; border-bottom: 2px solid #FFB454; margin-bottom: -2px; }
+.p-nav__cta { display: flex; align-items: center; gap: 12px; }
+.p-nav__cta-back { font-size: 13px; color: rgba(255,255,255,0.55); text-decoration: none; padding: 8px 12px; }
+.p-nav__cta-back:hover { color: rgba(255,255,255,0.85); }
+.p-nav__cta-primary { font-size: 14px; font-weight: 540; background: #FFB454; color: #0A1828; text-decoration: none; padding: 10px 18px; border-radius: 8px; transition: background 160ms ease; }
+.p-nav__cta-primary:hover { background: #FFC273; }
+@media (max-width: 1100px) { .p-nav__brand-sub { display: none; } .p-nav__links { display: none; } }
+
+/* ===== Hero ===== */
+.po-hero {
+  background: #0A1828; color: #fff;
+  padding: 120px 32px 100px;
+  position: relative; overflow: hidden;
+}
+.po-hero::before {
+  content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 90% 10%, rgba(255,180,84,0.12), transparent 60%),
+    radial-gradient(ellipse 50% 60% at 10% 90%, rgba(46,92,138,0.25), transparent 60%);
+}
+.po-hero::after {
+  content: ""; position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black, transparent 90%);
+}
+.po-hero__inner { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; }
+.po-hero__eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #FFB454; margin-bottom: 24px; }
+.po-hero__eyebrow::before { content: ""; width: 6px; height: 6px; background: #FFB454; border-radius: 50%; }
+.po-hero__title { font-size: clamp(48px, 6.5vw, 96px); line-height: 1.0; letter-spacing: -0.035em; font-weight: 560; margin: 0 0 28px; max-width: 18ch; }
+.po-hero__title em { font-style: normal; background: linear-gradient(120deg, #B8D4FF 0%, #FFE3B0 60%, #FFB454 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.po-hero__lede { font-size: 22px; line-height: 1.55; color: rgba(255,255,255,0.82); max-width: 64ch; margin: 0 0 48px; }
+
+/* Stats inside hero */
+.po-hero__stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 64px;
+  padding-top: 48px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.po-stat { padding-right: 32px; border-right: 1px solid rgba(255,255,255,0.06); }
+.po-stat:last-child { border-right: none; }
+.po-stat__num { font-size: clamp(32px, 4vw, 48px); line-height: 1; letter-spacing: -0.03em; font-weight: 600; color: #fff; margin: 0 0 10px; }
+.po-stat__label { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+@media (max-width: 900px) { .po-hero__stats { grid-template-columns: repeat(2, 1fr); } }
+
+/* ===== Market signal section (why this matters NOW) ===== */
+.po-signal { background: #fff; padding: 120px 48px; }
+.po-signal__inner { max-width: 1360px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.35fr; gap: 72px; align-items: center; }
+.po-signal__text { max-width: 480px; }
+.po-eyebrow { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #2E5C8A; margin-bottom: 20px; display: inline-flex; align-items: center; gap: 12px; }
+.po-eyebrow::before { content: ""; width: 28px; height: 2px; background: #2E5C8A; }
+.po-signal__title { font-size: clamp(40px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 560; color: #0A1828; margin: 0 0 28px; max-width: 16ch; }
+.po-signal__body p { font-size: 18px; line-height: 1.65; color: #475569; margin: 0 0 20px; }
+.po-signal__visual {
+  position: relative; aspect-ratio: 1/1.1; max-width: 540px; margin-left: auto;
+  border-radius: 24px; overflow: hidden;
+  background: linear-gradient(135deg, #FBF9F2 0%, #fff 100%);
+  border: 1px solid #E2E8F0;
+}
+.po-signal__visual::before { content: ""; position: absolute; top: -100px; right: -100px; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, rgba(255,180,84,0.5), transparent 70%); filter: blur(40px); }
+.po-signal__signals { position: relative; z-index: 2; padding: 40px; display: flex; flex-direction: column; gap: 14px; height: 100%; justify-content: center; }
+.po-signal-item {
+  background: rgba(255,255,255,0.85); backdrop-filter: blur(8px);
+  border: 1px solid #E2E8F0; border-radius: 12px;
+  padding: 18px 22px;
+  display: flex; align-items: center; gap: 16px;
+}
+.po-signal-item__year { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #FFB454; min-width: 64px; }
+.po-signal-item__text { font-size: 14px; line-height: 1.45; color: #0A1828; font-weight: 500; }
+@media (max-width: 1024px) { .po-signal__inner { grid-template-columns: 1fr; gap: 48px; } .po-signal__visual { margin: 0 auto; } }
+
+/* ===== Signal canvas — thesis-style (inline to guarantee render) ===== */
+.po-sig-canvas {
+  position: relative; aspect-ratio: 1/1; width: 100%;
+  background: linear-gradient(160deg, #F8FAFC 0%, #FBF9F2 100%);
+  border-radius: 28px; border: 1px solid #E2E8F0; overflow: hidden;
+  min-height: 480px;
+}
+.po-sig-canvas::before {
+  content: ""; position: absolute; top: -50px; right: -50px; z-index: 0;
+  width: 240px; height: 240px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,180,84,0.35), transparent 70%);
+  filter: blur(50px); pointer-events: none;
+}
+.po-sig-canvas::after {
+  content: ""; position: absolute; bottom: -50px; left: -50px; z-index: 0;
+  width: 220px; height: 220px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(46,92,138,0.28), transparent 70%);
+  filter: blur(50px); pointer-events: none;
+}
+.po-sig-lines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+.po-sig-photo {
+  position: absolute; z-index: 2; border-radius: 14px; overflow: hidden;
+  background-size: cover; background-position: center;
+  box-shadow: 0 12px 30px rgba(10,24,40,0.18); border: 3px solid #fff;
+}
+.po-sig-photo--tl { top: 6%; left: 6%; width: 32%; aspect-ratio: 1/1; filter: brightness(0.88) saturate(0.85); }
+.po-sig-photo--ml { top: 42%; left: 5%; width: 14%; aspect-ratio: 1/1; border-radius: 50%; filter: brightness(0.85) saturate(0.8); }
+.po-sig-photo--br { bottom: 6%; right: 6%; width: 32%; aspect-ratio: 1/1; border-radius: 16px; filter: brightness(0.88) saturate(0.85); }
+.po-sig-card {
+  position: absolute; z-index: 3;
+  display: grid; grid-template-columns: 38px 1fr; gap: 12px; align-items: center;
+  padding: 14px 16px; border-radius: 12px; backdrop-filter: blur(12px);
+}
+.po-sig-card__icon { width: 38px; height: 38px; border-radius: 9px; display: grid; place-items: center; }
+.po-sig-card__tier { font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; }
+.po-sig-card__name { font-size: 13.5px; font-weight: 580; margin-top: 3px; letter-spacing: -0.005em; line-height: 1.3; }
+.po-sig-card--dark {
+  top: 10%; right: 6%; width: 48%;
+  background: linear-gradient(135deg, #0A1828 0%, #1A2942 100%);
+  color: #fff; border: 1px solid rgba(255,180,84,0.3);
+  box-shadow: 0 16px 38px rgba(10,24,40,0.22);
+}
+.po-sig-card--dark .po-sig-card__tier { color: #FFB454; }
+.po-sig-card--dark .po-sig-card__icon { background: rgba(255,180,84,0.18); color: #FFB454; }
+.po-sig-card--mid {
+  top: 44%; right: 5%; width: 52%;
+  background: linear-gradient(135deg, #1E3A5F 0%, #0E1F33 100%);
+  color: #fff; box-shadow: 0 14px 34px rgba(10,24,40,0.24);
+}
+.po-sig-card--mid .po-sig-card__tier { color: rgba(184,212,255,0.95); }
+.po-sig-card--mid .po-sig-card__icon { background: rgba(255,255,255,0.12); color: #fff; }
+.po-sig-card--light {
+  bottom: 10%; left: 6%; width: 48%;
+  background: rgba(255,255,255,0.96); color: #1A1F2A;
+  border: 1px solid #E2E8F0; box-shadow: 0 12px 30px rgba(10,24,40,0.14);
+}
+.po-sig-card--light .po-sig-card__tier { color: #6B7280; }
+.po-sig-card--light .po-sig-card__icon { background: rgba(14,31,51,0.08); color: #0A1828; }
+.po-sig-card--dark .po-sig-card__name, .po-sig-card--mid .po-sig-card__name { color: rgba(255,255,255,0.92); }
+.po-sig-card--light .po-sig-card__name { color: #0A1828; }
+
+/* ===== The 4 pillars grid ===== */
+.po-pillars { background: #F8FAFC; padding: 140px 32px; }
+.po-pillars__inner { max-width: 1320px; margin: 0 auto; }
+.po-pillars__head { text-align: center; max-width: 720px; margin: 0 auto 80px; }
+.po-pillars__eyebrow { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #2E5C8A; margin-bottom: 20px; display: inline-block; }
+.po-pillars__title { font-size: clamp(40px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 560; color: #0A1828; margin: 0 0 24px; }
+.po-pillars__intro { font-size: 19px; line-height: 1.65; color: #475569; max-width: 56ch; margin: 0 auto; }
+.po-pillars__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.po-pillar-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #E2E8F0;
+  border-radius: 24px;
+  padding: 44px;
+  text-decoration: none; color: inherit;
+  transition: transform 280ms cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 280ms ease, border-color 280ms ease;
+  display: flex; flex-direction: column; min-height: 380px;
+  overflow: hidden;
+}
+.po-pillar-card::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: var(--accent-gradient);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 320ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.po-pillar-card:hover { transform: translateY(-6px); border-color: #94A3B8; box-shadow: 0 24px 56px rgba(10, 24, 40, 0.1); }
+.po-pillar-card:hover::before { transform: scaleX(1); }
+.po-pillar-card.migrate { --accent-gradient: linear-gradient(90deg, #2E5C8A, #4A7CB8); }
+.po-pillar-card.build { --accent-gradient: linear-gradient(90deg, #0A1828, #2E5C8A); }
+.po-pillar-card.fabric { --accent-gradient: linear-gradient(90deg, #FFB454, #FF8A4C); }
+.po-pillar-card.implement { --accent-gradient: linear-gradient(90deg, #1E3A5F, #FFB454); }
+
+.po-pillar-card__num { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #94A3B8; margin-bottom: 16px; }
+.po-pillar-card__icon {
+  width: 64px; height: 64px; border-radius: 14px;
+  display: grid; place-items: center;
+  margin-bottom: 24px;
+}
+.po-pillar-card.migrate .po-pillar-card__icon { background: linear-gradient(135deg, #2E5C8A, #4A7CB8); color: #fff; }
+.po-pillar-card.build .po-pillar-card__icon { background: linear-gradient(135deg, #0A1828, #2E5C8A); color: #fff; }
+.po-pillar-card.fabric .po-pillar-card__icon { background: linear-gradient(135deg, #FFB454, #FF8A4C); color: #fff; }
+.po-pillar-card.implement .po-pillar-card__icon { background: linear-gradient(135deg, #1E3A5F, #FFB454); color: #fff; }
+
+.po-pillar-card__name { font-size: 28px; font-weight: 560; line-height: 1.15; letter-spacing: -0.02em; color: #0A1828; margin: 0 0 14px; }
+.po-pillar-card__desc { font-size: 16px; line-height: 1.6; color: #475569; margin: 0 0 28px; flex: 1; }
+.po-pillar-card__meta {
+  display: flex; gap: 32px; padding: 20px 0; border-top: 1px solid #E2E8F0;
+  margin-bottom: 20px;
+}
+.po-pillar-card__meta-item { font-size: 13px; }
+.po-pillar-card__meta-key { color: #6B7280; margin-bottom: 4px; }
+.po-pillar-card__meta-val { color: #0A1828; font-weight: 580; }
+.po-pillar-card__meta-val.highlight { color: #FFB454; }
+.po-pillar-card__cta { font-size: 14px; font-weight: 540; color: #0A1828; display: inline-flex; align-items: center; gap: 6px; }
+.po-pillar-card__cta::after { content: "→"; transition: transform 200ms ease; }
+.po-pillar-card:hover .po-pillar-card__cta::after { transform: translateX(4px); }
+
+@media (max-width: 900px) { .po-pillars__grid { grid-template-columns: 1fr; } }
+
+/* ===== Pillar card photo — inline to guarantee load regardless of external CSS ===== */
+.po-pillar-card { background: #0A1828 !important; }
+.po-pillar-card__photo {
+  position: absolute; inset: 0; background-size: cover; background-position: center;
+  filter: brightness(0.52) saturate(0.65); z-index: 0;
+  transition: filter 400ms ease; border-radius: 24px;
+}
+.po-pillar-card:hover .po-pillar-card__photo { filter: brightness(0.30) saturate(0.45); }
+.po-pillar-card__photo::after {
+  content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 65%;
+  background: linear-gradient(0deg, rgba(10,24,40,0.92) 0%, transparent 100%);
+}
+/* Front face: push all content to bottom, above the gradient */
+.po-pillar-card__num { position: absolute !important; top: 20px !important; left: 20px !important; color: rgba(255,255,255,0.5) !important; margin-bottom: 0 !important; font-size: 10.5px !important; }
+.po-pillar-card__icon { position: relative; z-index: 2; margin-bottom: 16px; color: #fff !important; }
+.po-pillar-card.migrate .po-pillar-card__icon,
+.po-pillar-card.build .po-pillar-card__icon,
+.po-pillar-card.fabric .po-pillar-card__icon,
+.po-pillar-card.implement .po-pillar-card__icon { background: rgba(255,255,255,0.12) !important; color: #fff !important; }
+.po-pillar-card__name { color: #fff !important; position: relative; z-index: 2; margin-bottom: 6px; }
+.po-pillar-card__desc { display: none !important; }
+.po-pillar-card__meta { display: none !important; }
+.po-pillar-card__cta { color: rgba(255,255,255,0.75) !important; position: relative; z-index: 2; margin-top: 10px; }
+/* Front: full height, content at bottom */
+.po-pillar-card__front { position: relative; z-index: 2; flex: 1; display: flex !important; flex-direction: column !important; justify-content: flex-end !important; }
+/* Overlay reveal */
+.po-pillar-card__overlay {
+  position: absolute; inset: 0; z-index: 3; border-radius: 24px;
+  background: linear-gradient(135deg, rgba(10,24,40,0.95) 0%, rgba(26,41,66,0.92) 100%);
+  display: flex; flex-direction: column; padding: 40px;
+  opacity: 0; transform: translateY(10px);
+  transition: opacity 320ms ease, transform 320ms ease;
+}
+.po-pillar-card:hover .po-pillar-card__overlay { opacity: 1; transform: translateY(0); }
+.po-pillar-card__overlay-eyebrow { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #FFB454; margin-bottom: 14px; }
+.po-pillar-card__overlay-title { font-size: 22px; font-weight: 560; color: #fff; letter-spacing: -0.015em; line-height: 1.2; margin: 0 0 16px; }
+.po-pillar-card__overlay-desc { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.75); margin: 0 0 24px; flex: 1; }
+.po-pillar-card__overlay-links { display: flex; flex-direction: column; gap: 10px; margin-top: auto; }
+.po-pillar-card__overlay-link { font-size: 14px; color: #FFB454; font-weight: 560; text-decoration: none; }
+.po-pillar-card__overlay-link:hover { color: #FFC273; }
+
+/* ===== How EnterpriseFLOW engagements work ===== */
+.po-how { background: #fff; padding: 140px 32px; }
+.po-how__inner { max-width: 1280px; margin: 0 auto; }
+.po-how__head { max-width: 720px; margin: 0 0 64px; }
+.po-how__title { font-size: clamp(40px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 560; color: #0A1828; margin: 0 0 24px; max-width: 18ch; }
+.po-how__intro { font-size: 19px; line-height: 1.65; color: #475569; max-width: 56ch; }
+.po-how__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.po-how-step {
+  background: transparent !important; border: none !important;
+  border-radius: 16px; padding: 0 !important;
+  position: relative; min-height: 320px;
+  display: flex; flex-direction: column; overflow: hidden;
+}
+.po-how-step__num { display: none; }
+.po-how-step__title { display: none; }
+.po-how-step__desc { display: none; }
+/* Photo fills card */
+.po-how-step__photo { position: absolute; inset: 0; background-size: cover; background-position: center; filter: brightness(0.60) saturate(0.65); z-index: 0; border-radius: 16px; }
+.po-how-step__photo::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 50%; background: linear-gradient(0deg, rgba(10,24,40,0.9) 0%, transparent 100%); }
+/* Front face: invisible at rest */
+.po-how-step__front { position: relative; z-index: 2; flex: 1; opacity: 0; pointer-events: none; }
+/* Dot hint at bottom */
+.po-how-step::before { content: ""; position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); z-index: 3; width: 7px; height: 7px; border-radius: 50%; background: rgba(255,180,84,0.7); box-shadow: 0 0 0 4px rgba(255,180,84,0.15); transition: opacity 160ms ease; pointer-events: none; }
+.po-how-step:hover::before { opacity: 0; }
+/* Reveal on hover */
+.po-how-step__reveal { position: absolute; inset: 0; border-radius: 16px; z-index: 4; background: linear-gradient(135deg, rgba(10,24,40,0.96) 0%, rgba(26,41,66,0.92) 100%); padding: 32px; display: flex; flex-direction: column; justify-content: center; opacity: 0; transform: translateY(8px); transition: opacity 320ms ease, transform 320ms ease; }
+.po-how-step:hover .po-how-step__reveal { opacity: 1; transform: translateY(0); }
+.po-how-step:hover .po-how-step__photo { filter: brightness(0.30) saturate(0.4); }
+@media (max-width: 900px) { .po-how__grid { grid-template-columns: 1fr; } }
+
+/* ===== Comparison table — EnterpriseFLOW vs T&M ===== */
+.po-compare { background: #0A1828; color: #fff; padding: 140px 32px; position: relative; overflow: hidden; }
+.po-compare::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black, transparent 90%); }
+.po-compare__inner { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; }
+.po-compare__head { text-align: center; max-width: 720px; margin: 0 auto 64px; }
+.po-compare__eyebrow { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #FFB454; margin-bottom: 16px; display: inline-block; }
+.po-compare__title { font-size: clamp(36px, 4.5vw, 56px); line-height: 1.05; letter-spacing: -0.03em; font-weight: 560; margin: 0 0 24px; }
+.po-compare__intro { font-size: 19px; color: rgba(255,255,255,0.7); line-height: 1.6; }
+.po-compare__table {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.po-compare__row { display: grid; grid-template-columns: 2fr 1.5fr 1.5fr; align-items: center; }
+.po-compare__row:not(:first-child) { border-top: 1px solid rgba(255,255,255,0.06); }
+.po-compare__cell { padding: 24px 32px; font-size: 15px; line-height: 1.5; }
+.po-compare__cell.head { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; }
+.po-compare__cell.head.tm { color: rgba(255,255,255,0.5); }
+.po-compare__cell.head.ef { color: #FFB454; background: rgba(255,180,84,0.05); }
+.po-compare__cell.criteria { color: rgba(255,255,255,0.85); font-weight: 540; }
+.po-compare__cell.tm { color: rgba(255,255,255,0.55); }
+.po-compare__cell.ef { color: #fff; background: rgba(255,180,84,0.03); font-weight: 500; }
+.po-compare__cell.ef::before { content: "✓ "; color: #FFB454; font-weight: 700; }
+.po-compare__cell.tm::before { content: "○ "; color: rgba(255,255,255,0.3); }
+@media (max-width: 900px) { .po-compare__row { grid-template-columns: 1fr; } }
+
+/* ===== Customer proof section ===== */
+.po-proof { background: #FBF9F2; padding: 140px 32px; }
+.po-proof__inner { max-width: 1280px; margin: 0 auto; text-align: center; }
+.po-proof__title { font-size: clamp(40px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 560; color: #0A1828; margin: 0 0 64px; max-width: 18ch; margin-left: auto; margin-right: auto; }
+.po-proof__quote-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.po-proof-card {
+  background: #fff;
+  border: 1px solid #E2E8F0;
+  border-radius: 20px;
+  padding: 36px;
+  text-align: left;
+  display: flex; flex-direction: column;
+}
+.po-proof-card__logo { height: 28px; width: auto; margin-bottom: 24px; opacity: 0.85; }
+.po-proof-card__quote { font-size: 16px; line-height: 1.55; color: #1A1F2A; font-weight: 480; margin: 0 0 20px; flex: 1; }
+.po-proof-card__attribution { font-size: 13px; color: #6B7280; border-top: 1px solid #E2E8F0; padding-top: 16px; }
+.po-proof-card__attribution strong { color: #0A1828; font-weight: 560; display: block; margin-bottom: 2px; }
+@media (max-width: 900px) { .po-proof__quote-grid { grid-template-columns: 1fr; } }
+
+/* ===== CTA band ===== */
+.po-cta { background: #fff; padding: 140px 32px; }
+.po-cta__inner {
+  max-width: 1280px; margin: 0 auto;
+  background: linear-gradient(135deg, #0A1828 0%, #1A2942 100%);
+  border-radius: 32px;
+  padding: 80px 64px;
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+.po-cta__inner::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 50%, rgba(255,180,84,0.2), transparent 50%), radial-gradient(circle at 80% 50%, rgba(46,92,138,0.4), transparent 50%); }
+.po-cta__title { position: relative; font-size: clamp(36px, 5vw, 56px); line-height: 1.05; letter-spacing: -0.025em; font-weight: 560; color: #fff; margin: 0 0 24px; max-width: 18ch; margin-left: auto; margin-right: auto; }
+.po-cta__lede { position: relative; font-size: 18px; line-height: 1.6; color: rgba(255,255,255,0.78); margin: 0 auto 32px; max-width: 56ch; }
+.po-cta__buttons { position: relative; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.po-cta__btn-primary { display: inline-flex; align-items: center; gap: 8px; background: #FFB454; color: #0A1828; padding: 16px 28px; border-radius: 100px; font-weight: 580; font-size: 16px; text-decoration: none; transition: background 200ms ease; }
+.po-cta__btn-primary:hover { background: #FFC273; }
+.po-cta__btn-ghost { display: inline-flex; align-items: center; gap: 8px; color: #fff; border: 1px solid rgba(255,255,255,0.3); padding: 16px 28px; border-radius: 100px; font-weight: 500; font-size: 16px; text-decoration: none; }
+.po-cta__btn-ghost:hover { border-color: rgba(255,255,255,0.6); }
+@media (max-width: 768px) { .po-cta__inner { padding: 48px 32px; } }
+</style>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"EnterpriseFLOW Productized Accelerators","description":"Four fixed-fee productized accelerators by Prowess Software Services.","url":"https://www.prowesssoft.com/products/"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Migration Sprint MuleSoft","description":"Fixed-scope TIBCO / webMethods / IBM ACE / BizTalk / Boomi migration to MuleSoft Anypoint with named accelerator artifacts and a quoted week count.","provider":{"@type":"Organization","name":"Prowess Software Services"}},{"@type":"Service","name":"Migration Sprint Informatica","description":"PowerCenter / DataStage / SSIS / Talend to Informatica IDMC with automated conversion and optional MDM Golden Copy pilot.","provider":{"@type":"Organization","name":"Prowess Software Services"}},{"@type":"Service","name":"Implementation Accelerator","description":"4–6 week MuleSoft Anypoint pilot that ships a working API in production and seeds the API-led operating model.","provider":{"@type":"Organization","name":"Prowess Software Services"}},{"@type":"Service","name":"Agent Fabric Builder","description":"Scoped deployment of MuleSoft Agent Fabric — Agent Registry, Broker, Visualizer, Flex Gateway — for enterprises running Agentforce alongside Bedrock, Vertex AI, Copilot Studio.","provider":{"@type":"Organization","name":"Prowess Software Services"}},{"@type":"Service","name":"Managed Operations Sprint","description":"24/7 managed operations stand-up across MuleSoft, Informatica IDMC, and Agentforce with named SLAs and runbook handover.","provider":{"@type":"Organization","name":"Prowess Software Services"}},{"@type":"Service","name":"EnterpriseFLOW Run","description":"Run-services tier for MuleSoft Agent Fabric — Registry hygiene, Broker uptime, Flex Gateway policy management, Visualizer monitoring.","provider":{"@type":"Organization","name":"Prowess Software Services"}},{"@type":"Service","name":"Manufacturing Agent Suite","description":"Vertical agent suite — warranty, field-service, supply-chain — grounded in MuleSoft + Informatica master data on Agentforce + Agent Fabric.","provider":{"@type":"Organization","name":"Prowess Software Services"}},{"@type":"Service","name":"Retail Agent Suite","description":"Vertical agent suite — order-tracking, product-recommendation, FAQ + duplicate-order — grounded in customer master and order data.","provider":{"@type":"Organization","name":"Prowess Software Services"}}]}
+</script>
+</head>
+<body class="is-product">
+
+<!-- ===== Dark SaaS product nav ===== -->
+<nav class="p-nav">
+  <div class="p-nav__inner">
+    <a href="products.html" class="p-nav__brand">
+      <span class="p-nav__brand-mark">E</span>
+      <span class="p-nav__brand-text">EnterpriseFLOW<sup>™</sup></span>
+      <span class="p-nav__brand-sub">by Prowess</span>
+    </a>
+    <div class="p-nav__links">
+      <a href="products.html" class="active">Overview</a>
+      <a href="products/migrate.html">Migrate</a>
+      <a href="products/build.html">Build</a>
+      <a href="products/manage.html">Manage</a>
+      <a href="products/industry-agents.html">Industry Agents</a>
+      <a href="customers.html">Customers</a>
+      <a href="contact.html?type=demo">Schedule demo</a>
+    </div>
+    <div class="p-nav__cta">
+      <a href="index.html" class="p-nav__cta-back">prowesssoft.com ↗</a>
+      <a href="contact.html" class="p-nav__cta-primary">Talk to product</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<section class="po-hero">
+  <div class="po-hero__inner">
+    <div class="po-hero__layout">
+      <div>
+        <span class="po-hero__eyebrow">EnterpriseFLOW™ · Productized practice</span>
+        <h1 class="po-hero__title">Four pillars. Eight accelerators. <em>One productized practice.</em></h1>
+        <p class="po-hero__lede">
+          EnterpriseFLOW™ is the productized practice from Prowess. Migrate, Build, Manage, and Industry Agents — eight named accelerators with defined scope, named architects, and milestone-billed delivery. Built on ten years of integration patterns and two consecutive MuleSoft Above &amp; Beyond Partner of the Year awards.
+        </p>
+        <div class="po-hero__stats">
+          <div class="po-stat">
+            <div class="po-stat__num">4</div>
+            <div class="po-stat__label">Pillars across the integration and AI stack</div>
+          </div>
+          <div class="po-stat">
+            <div class="po-stat__num">8</div>
+            <div class="po-stat__label">Named accelerators with defined scope</div>
+          </div>
+          <div class="po-stat">
+            <div class="po-stat__num">4–14</div>
+            <div class="po-stat__label">Weeks from kickoff to first production milestone</div>
+          </div>
+          <div class="po-stat">
+            <div class="po-stat__num">100%</div>
+            <div class="po-stat__label">Architect-led from scope through handover</div>
+          </div>
+        </div>
+      </div>
+      <div class="po-hero__visual">
+        <div style="position:absolute; inset:-5%; background: radial-gradient(ellipse 70% 70% at 50% 55%, rgba(255,138,76,0.2) 0%, rgba(255,138,76,0.05) 45%, transparent 100%); z-index:0; pointer-events:none;"></div>
+        <div style="position:absolute; inset:0; clip-path: polygon(18% 4%, 82% 8%, 96% 44%, 88% 80%, 52% 96%, 8% 72%, 4% 28%); -webkit-clip-path: polygon(18% 4%, 82% 8%, 96% 44%, 88% 80%, 52% 96%, 8% 72%, 4% 28%); z-index:1; filter: drop-shadow(0 12px 24px rgba(0,0,0,0.6));">
+          <img src="assets/heroes/prowess-team-engineering.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter: brightness(0.78) saturate(0.85) contrast(1.05);">
+          <div style="position:absolute; inset:0; background: linear-gradient(180deg, transparent 0%, rgba(10,24,40,0.2) 55%, rgba(0,0,0,0.7) 100%); pointer-events:none;"></div>
+          <div style="position:absolute; inset:0; background: radial-gradient(ellipse 60% 60% at 50% 40%, transparent 35%, rgba(5,11,20,0.6) 80%, rgba(5,11,20,1) 100%); pointer-events:none;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Why now ===== -->
+<section class="po-signal">
+  <div class="po-signal__inner">
+    <div class="po-signal__text">
+      <span class="po-eyebrow">Why a productized practice now</span>
+      <h2 class="po-signal__title">The integration stack is moving faster than T&amp;M can absorb.</h2>
+      <div class="po-signal__body">
+        <p>Three vendor cycles are converging in 2026. SAP ECC end-of-life. Informatica PowerCenter end-of-support. MuleSoft Agent Fabric GA. Each cycle pulls integration and data work forward by a quarter.</p>
+        <p>EnterpriseFLOW productizes the patterns we have repeated for ten years into fixed-fee SKUs that ship before the window closes. Defined scope. Defined timeline. Architect on the call from week one.</p>
+      </div>
+    </div>
+    <div class="po-sig-canvas" data-sig-canvas aria-hidden="true">
+      <svg class="po-sig-lines" data-sig-lines xmlns="http://www.w3.org/2000/svg"></svg>
+
+      <!-- Scattered photos (bg-image inline so path resolves from HTML, not CSS) -->
+      <div class="po-sig-photo po-sig-photo--tl" data-anchor="sig-photo-top" style="background-image:url('assets/case-studies/sustainability-legacy-migration.png');"></div>
+      <div class="po-sig-photo po-sig-photo--ml" data-anchor="sig-photo-mid" style="background-image:url('assets/case-studies/novelis-aluminum-mfg.jpg');"></div>
+      <div class="po-sig-photo po-sig-photo--br" data-anchor="sig-photo-bottom" style="background-image:url('assets/case-studies/mfg-digital-modernization.jpg');"></div>
+
+      <!-- Signal cards -->
+      <div class="po-sig-card po-sig-card--dark" data-anchor="sig-card-3">
+        <div class="po-sig-card__icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <div>
+          <div class="po-sig-card__tier">Mar 2026 · Deadline</div>
+          <div class="po-sig-card__name">PowerCenter support ends</div>
+        </div>
+      </div>
+
+      <div class="po-sig-card po-sig-card--mid" data-anchor="sig-card-2">
+        <div class="po-sig-card__icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+        </div>
+        <div>
+          <div class="po-sig-card__tier">Jun 2026 · Platform</div>
+          <div class="po-sig-card__name">Agent Fabric general availability</div>
+        </div>
+      </div>
+
+      <div class="po-sig-card po-sig-card--light" data-anchor="sig-card-1">
+        <div class="po-sig-card__icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div>
+          <div class="po-sig-card__tier">Dec 2027 · SAP</div>
+          <div class="po-sig-card__name">ECC mainstream maintenance ends</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    (function () {
+      function drawSigLines() {
+        var canvas = document.querySelector('[data-sig-canvas]');
+        if (!canvas) return;
+        var svg = canvas.querySelector('[data-sig-lines]');
+        if (!svg) return;
+        var rect = canvas.getBoundingClientRect();
+        if (!rect.width) return;
+        svg.setAttribute('viewBox', '0 0 ' + rect.width + ' ' + rect.height);
+
+        var loop = ['sig-photo-top', 'sig-card-3', 'sig-card-2', 'sig-photo-bottom', 'sig-card-1', 'sig-photo-mid'];
+
+        function center(el) {
+          var r = el.getBoundingClientRect();
+          return { x: r.left + r.width / 2 - rect.left, y: r.top + r.height / 2 - rect.top };
+        }
+
+        var points = loop.map(function (id) {
+          var el = canvas.querySelector('[data-anchor="' + id + '"]');
+          return el ? center(el) : null;
+        }).filter(Boolean);
+        if (points.length < 3) return;
+        points.push(points[0]);
+
+        svg.innerHTML = '';
+        var fullPath = '';
+        var canvasCenter = { x: rect.width / 2, y: rect.height / 2 };
+
+        for (var i = 0; i < points.length - 1; i++) {
+          var p1 = points[i], p2 = points[i + 1];
+          var mx = (p1.x + p2.x) / 2, my = (p1.y + p2.y) / 2;
+          var ox = mx - canvasCenter.x, oy = my - canvasCenter.y;
+          var olen = Math.sqrt(ox * ox + oy * oy) || 1;
+          var bow = Math.min(36, olen * 0.18);
+          var cx = mx + (ox / olen) * bow, cy = my + (oy / olen) * bow;
+          var d = 'M ' + p1.x + ' ' + p1.y + ' Q ' + cx + ' ' + cy + ' ' + p2.x + ' ' + p2.y;
+
+          var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+          path.setAttribute('d', d);
+          path.setAttribute('stroke', 'rgba(46,92,138,0.55)');
+          path.setAttribute('stroke-width', '2');
+          path.setAttribute('stroke-dasharray', '6 5');
+          path.setAttribute('fill', 'none');
+          path.setAttribute('stroke-linecap', 'round');
+          svg.appendChild(path);
+
+          var anim = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
+          anim.setAttribute('attributeName', 'stroke-dashoffset');
+          anim.setAttribute('values', '0;-22');
+          anim.setAttribute('dur', '2s');
+          anim.setAttribute('repeatCount', 'indefinite');
+          path.appendChild(anim);
+
+          if (i === 0) {
+            fullPath += 'M ' + p1.x + ' ' + p1.y + ' Q ' + cx + ' ' + cy + ' ' + p2.x + ' ' + p2.y;
+          } else {
+            fullPath += ' Q ' + cx + ' ' + cy + ' ' + p2.x + ' ' + p2.y;
+          }
+        }
+
+        var dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        dot.setAttribute('r', '4');
+        dot.setAttribute('fill', '#FFB454');
+        dot.setAttribute('filter', 'drop-shadow(0 0 6px rgba(255,180,84,0.95))');
+        var motion = document.createElementNS('http://www.w3.org/2000/svg', 'animateMotion');
+        motion.setAttribute('path', fullPath);
+        motion.setAttribute('dur', '9s');
+        motion.setAttribute('repeatCount', 'indefinite');
+        motion.setAttribute('rotate', 'auto');
+        dot.appendChild(motion);
+        svg.appendChild(dot);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', drawSigLines);
+      } else {
+        drawSigLines();
+      }
+      window.addEventListener('load', drawSigLines);
+      window.addEventListener('resize', drawSigLines);
+    })();
+    </script>
+  </div>
+</section>
+
+<!-- ===== The 4 pillars ===== -->
+<section class="po-pillars">
+  <div class="po-pillars__inner">
+    <div class="po-pillars__head">
+      <span class="po-pillars__eyebrow">The four pillars</span>
+      <h2 class="po-pillars__title">Four pillars. Eight accelerators. One coherent buyer map.</h2>
+      <p class="po-pillars__intro">Each pillar maps to one persona and one buying motion. Each accelerator inside a pillar has named scope, a working pilot or cutover milestone, and an architect on the call from week one. Compose them, or buy a single accelerator.</p>
+    </div>
+    <div class="po-pillars__grid">
+
+      <!-- Pillar 01 · Migrate -->
+      <div class="po-pillar-card migrate">
+        <div class="po-pillar-card__photo" style="background-image:url('assets/case-studies/sustainability-legacy-migration.png');"></div>
+        <div class="po-pillar-card__front">
+          <div class="po-pillar-card__num">Pillar 01 · Migrate</div>
+          <div class="po-pillar-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h6v6H4z"/><path d="M14 13h6v6h-6z"/><path d="M10 8h4l2 2v3"/></svg>
+          </div>
+          <h3 class="po-pillar-card__name">Migrate</h3>
+          <p class="po-pillar-card__desc">For the VP of Enterprise Architecture exiting legacy ESB or PowerCenter. Fixed scope, artifact inventory by week two, defensible cutover plan.</p>
+          <span class="po-pillar-card__cta">See accelerators</span>
+        </div>
+        <div class="po-pillar-card__overlay">
+          <span class="po-pillar-card__overlay-eyebrow">Pillar 01 · Migrate</span>
+          <h3 class="po-pillar-card__overlay-title">Move your ESB and PowerCenter estates before the deadlines hit.</h3>
+          <p class="po-pillar-card__overlay-desc">Two sprints that move integration and data estates onto MuleSoft Anypoint and Informatica IDMC with named scope, artifact inventory in week two, and a defensible cutover plan.</p>
+          <div class="po-pillar-card__overlay-links">
+            <a href="products/migration-sprint-mulesoft.html" class="po-pillar-card__overlay-link">Migration Sprint · MuleSoft →</a>
+            <a href="products/migration-sprint-informatica.html" class="po-pillar-card__overlay-link">Migration Sprint · Informatica →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pillar 02 · Build -->
+      <div class="po-pillar-card build">
+        <div class="po-pillar-card__photo" style="background-image:url('assets/case-studies/mfg-digital-modernization.jpg');"></div>
+        <div class="po-pillar-card__front">
+          <div class="po-pillar-card__num">Pillar 02 · Build</div>
+          <div class="po-pillar-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M3 12h6M15 12h6M12 3v6M12 15v6"/></svg>
+          </div>
+          <h3 class="po-pillar-card__name">Build</h3>
+          <p class="po-pillar-card__desc">For the CDO with Agentforce licenses but no production agents. API-led foundation and Agent Fabric deployed before pilots die.</p>
+          <span class="po-pillar-card__cta">See accelerators</span>
+        </div>
+        <div class="po-pillar-card__overlay">
+          <span class="po-pillar-card__overlay-eyebrow">Pillar 02 · Build</span>
+          <h3 class="po-pillar-card__overlay-title">Stand up API-led foundations and ship Agent Fabric before the board check-in.</h3>
+          <p class="po-pillar-card__overlay-desc">Implementation Accelerator ships a working pilot in four to six weeks. Agent Fabric Builder deploys Agent Registry, Broker, Visualizer, and Flex Gateway — CISO-defensible from day one.</p>
+          <div class="po-pillar-card__overlay-links">
+            <a href="products/implementation-accelerator.html" class="po-pillar-card__overlay-link">Implementation Accelerator →</a>
+            <a href="products/agent-fabric-builder.html" class="po-pillar-card__overlay-link">Agent Fabric Builder →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pillar 03 · Manage -->
+      <div class="po-pillar-card fabric">
+        <div class="po-pillar-card__photo" style="background-image:url('assets/case-studies/platform-support-impl.jpg');"></div>
+        <div class="po-pillar-card__front">
+          <div class="po-pillar-card__num">Pillar 03 · Manage</div>
+          <div class="po-pillar-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
+          </div>
+          <h3 class="po-pillar-card__name">Manage</h3>
+          <p class="po-pillar-card__desc">For the CIO converting architect bench cost into predictable monthly run. Named SLAs, runbook library handed back, no lock-in.</p>
+          <span class="po-pillar-card__cta">See accelerators</span>
+        </div>
+        <div class="po-pillar-card__overlay">
+          <span class="po-pillar-card__overlay-eyebrow">Pillar 03 · Manage</span>
+          <h3 class="po-pillar-card__overlay-title">24/7 managed run across MuleSoft, Informatica, Agentforce, and Agent Fabric.</h3>
+          <p class="po-pillar-card__overlay-desc">Six weeks to stand up coverage. Named SLA matrix. Runbook library handed to the customer in week six — customer-owned thereafter. No MSP lock-in.</p>
+          <div class="po-pillar-card__overlay-links">
+            <a href="products/managed-operations-sprint.html" class="po-pillar-card__overlay-link">Managed Operations Sprint →</a>
+            <a href="products/enterpriseflow-run.html" class="po-pillar-card__overlay-link">EnterpriseFLOW Run →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pillar 04 · Industry Agents -->
+      <div class="po-pillar-card implement">
+        <div class="po-pillar-card__photo" style="background-image:url('assets/case-studies/enosix-mulesoft-retail.jpg');"></div>
+        <div class="po-pillar-card__front">
+          <div class="po-pillar-card__num">Pillar 04 · Industry Agents</div>
+          <div class="po-pillar-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4-9 4-9-4 9-4z"/><path d="M3 10l9 4 9-4M3 14l9 4 9-4"/></svg>
+          </div>
+          <h3 class="po-pillar-card__name">Industry Agents</h3>
+          <p class="po-pillar-card__desc">For the COO who wants a warranty agent or store-ops agent on day 30 — not a horizontal toolkit. Grounded in real master data.</p>
+          <span class="po-pillar-card__cta">See suites</span>
+        </div>
+        <div class="po-pillar-card__overlay">
+          <span class="po-pillar-card__overlay-eyebrow">Pillar 04 · Industry Agents</span>
+          <h3 class="po-pillar-card__overlay-title">Vertical agents grounded in MuleSoft + Informatica master data — not prompt-engineered shells.</h3>
+          <p class="po-pillar-card__overlay-desc">Manufacturing and Retail Agent Suites with named agents, grounded in plant integration and MDM golden copies. In production in eight to fourteen weeks.</p>
+          <div class="po-pillar-card__overlay-links">
+            <a href="products/manufacturing-agent-suite.html" class="po-pillar-card__overlay-link">Manufacturing Agent Suite →</a>
+            <a href="products/retail-agent-suite.html" class="po-pillar-card__overlay-link">Retail Agent Suite →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== We get it — proof we belong in this conversation ===== -->
+<section class="po-how">
+  <div class="po-how__inner">
+    <div class="po-how__head">
+      <span class="po-eyebrow">Why this practice, why now</span>
+      <h2 class="po-how__title">Productized because the integration stack moves faster than T&amp;M absorbs it.</h2>
+      <p class="po-how__intro">Every accelerator below is an answer to a buyer problem the architect on the call has solved before. Named scope. Named architect. Named milestone.</p>
+    </div>
+    <div class="po-how__grid">
+      <div class="po-how-step">
+        <div class="po-how-step__photo" style="background-image:url('assets/case-studies/novelis-aluminum-mfg.jpg');"></div>
+        <div class="po-how-step__front">
+          <div class="po-how-step__num">01</div>
+          <h3 class="po-how-step__title">Buyer problem first.</h3>
+          <p class="po-how-step__desc">Every accelerator opens with the persona, the problem in their language, and the market signal that makes it urgent in 2026.</p>
+        </div>
+        <div class="po-how-step__reveal">
+          <div class="po-how-step__reveal-num">01</div>
+          <h3 class="po-how-step__reveal-title">Buyer problem first.</h3>
+          <p class="po-how-step__reveal-desc">Every accelerator opens with the persona, the customer problem in their own language, and the market signal that makes it urgent in 2026. No generic capability slides.</p>
+        </div>
+      </div>
+      <div class="po-how-step">
+        <div class="po-how-step__photo" style="background-image:url('assets/case-studies/logistics-major-api.jpg');"></div>
+        <div class="po-how-step__front">
+          <div class="po-how-step__num">02</div>
+          <h3 class="po-how-step__title">Outcomes you can defend.</h3>
+          <p class="po-how-step__desc">Quantified benefits, named features, and a representative use case — written for an architecture review board, not a marketing deck.</p>
+        </div>
+        <div class="po-how-step__reveal">
+          <div class="po-how-step__reveal-num">02</div>
+          <h3 class="po-how-step__reveal-title">Outcomes you can defend.</h3>
+          <p class="po-how-step__reveal-desc">Quantified benefits, named features, and a representative use case with problem-solution-outcome. Written for an architecture review board, not a marketing deck.</p>
+        </div>
+      </div>
+      <div class="po-how-step">
+        <div class="po-how-step__photo" style="background-image:url('assets/heroes/prowess-team-mulesoft-awards.jpg');"></div>
+        <div class="po-how-step__front">
+          <div class="po-how-step__num">03</div>
+          <h3 class="po-how-step__title">Credentials on the wall.</h3>
+          <p class="po-how-step__desc">Two-time MuleSoft Above &amp; Beyond Partner of the Year. Salesforce Summit Partner. ISO 27001 + SOC 2 Type II posture.</p>
+        </div>
+        <div class="po-how-step__reveal">
+          <div class="po-how-step__reveal-num">03</div>
+          <h3 class="po-how-step__reveal-title">Credentials on the wall.</h3>
+          <p class="po-how-step__reveal-desc">Two-time MuleSoft Above &amp; Beyond Partner of the Year — Americas. Salesforce Summit Consulting Partner. ISO 27001 + AICPA SOC 2 Type II posture. The architect on the call has shipped this work before.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Customer proof ===== -->
+<section class="po-proof">
+  <div class="po-proof__inner">
+    <h2 class="po-proof__title">Customers who run on this practice.</h2>
+    <div class="po-proof__quote-grid">
+      <div class="po-proof-card">
+        <img src="assets/customers/novelis.webp" alt="Novelis" class="po-proof-card__logo">
+        <blockquote class="po-proof-card__quote">"Significantly shorter development timelines and a solid architectural foundation for the Novelis data integration layer."</blockquote>
+        <div class="po-proof-card__attribution"><strong>Twinkle Khanna Rajendran</strong>Senior Manager, Novelis</div>
+      </div>
+      <div class="po-proof-card">
+        <img src="assets/customers/ceva-logistics.webp" alt="CEVA Logistics" class="po-proof-card__logo">
+        <blockquote class="po-proof-card__quote">"The partnership with Prowess Software Services has matured in many ways and is making waves in delivering customer implementations with diligence and high quality."</blockquote>
+        <div class="po-proof-card__attribution"><strong>Pratap Pillai</strong>Integration COE Delivery Manager, CEVA Logistics</div>
+      </div>
+      <div class="po-proof-card">
+        <img src="assets/customers/syncron.webp" alt="Syncron" class="po-proof-card__logo">
+        <blockquote class="po-proof-card__quote">"The Prowess team demonstrates remarkable commitment, diligence, and efficiency."</blockquote>
+        <div class="po-proof-card__attribution"><strong>Sandeep Patil</strong>VP Expert Services, Syncron</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA band ===== -->
+<section class="po-cta" id="demo">
+  <div class="po-cta__inner">
+    <h2 class="po-cta__title">Pick the pillar. See the working demo. Talk to the architect.</h2>
+    <p class="po-cta__lede">Every accelerator engagement starts with a 30-minute scoping call and a working demo of the relevant component — Migration Sprint, Agent Fabric, Industry Agent, or Managed Operations. The architect on the call would lead the engagement.</p>
+    <div class="po-cta__buttons">
+      <a href="contact.html?type=demo" class="po-cta__btn-primary">Schedule a demo</a>
+      <a href="customers.html" class="po-cta__btn-ghost">See customer stories</a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

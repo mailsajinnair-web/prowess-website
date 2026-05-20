@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Migration Sprint Informatica: Legacy ETL to IDMC + MDM | Prowess</title>
+<meta name="description" content="PowerCenter, DataStage, SSIS, Talend to Informatica IDMC and MDM. Fixed-fee, milestone-billed. 12–20 weeks to production. Built for AI-ready master data.">
+<link rel="canonical" href="https://www.prowesssoft.com/products/migration-sprint-informatica/">
+<link rel="icon" type="image/png" href="../assets/brand/favicon.png">
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Migration Sprint Informatica">
+<meta property="og:description" content="Legacy ETL to Informatica IDMC + MDM. Fixed-fee, milestone-billed.">
+<meta property="og:url" content="https://www.prowesssoft.com/products/migration-sprint-informatica/">
+<meta property="og:image" content="https://www.prowesssoft.com/assets/brand/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Migration Sprint Informatica">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Migration Sprint Informatica",
+  "description": "Modernization from PowerCenter, DataStage, SSIS, or Talend onto Informatica IDMC and MDM.",
+  "provider": { "@type": "Organization", "name": "Prowess Software Services" },
+  "serviceType": "Data Integration and MDM",
+  "areaServed": ["US","IN","SG"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Migration Sprint Informatica — four-phase method",
+  "step": [
+    { "@type": "HowToStep", "name": "Discovery and inventory", "text": "Source-platform inventory, data-quality baseline, lineage extraction, MDM domain identification.", "timeRequired": "P3W" },
+    { "@type": "HowToStep", "name": "Design", "text": "Target IDMC architecture, MDM domain design, golden-record rules, reference-data structure, integration mapping with MuleSoft.", "timeRequired": "P4W" },
+    { "@type": "HowToStep", "name": "Implementation", "text": "ETL conversion, MDM standup, data-quality rule deployment, reference data load.", "timeRequired": "P10W" },
+    { "@type": "HowToStep", "name": "Cut-over and stabilization", "text": "Parallel run, reconciliation, cut-over, runbook handover, hyper-care.", "timeRequired": "P3W" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Prowess Software Services",
+  "award": ["MuleSoft Above & Beyond Partner of the Year — Americas, 2024","MuleSoft Above & Beyond Partner of the Year — Americas, 2025","Salesforce Summit Consulting Partner","ISO/IEC 27001","ISO 9001"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Why Informatica over Snowflake-native ETL or dbt?", "acceptedAnswer": { "@type": "Answer", "text": "Snowflake is the warehouse. dbt is transformation in the warehouse. Informatica IDMC is the integration and data-management layer above the warehouse, with MDM and Data Quality as services the warehouse does not provide natively. For enterprises that need master data, governance, and lineage across multiple consumers, IDMC plus MDM remains the cleanest pattern." }},
+    { "@type": "Question", "name": "Do we have to use MuleSoft alongside IDMC?", "acceptedAnswer": { "@type": "Answer", "text": "No. The Informatica Sprint is platform-independent for the integration layer. MuleSoft and IDMC together is the most common pattern in our manufacturing book, but IDMC alone, IDMC plus Snowflake, and IDMC plus a Kafka backbone are all supported." }},
+    { "@type": "Question", "name": "How do you handle data-quality remediation during migration?", "acceptedAnswer": { "@type": "Answer", "text": "The discovery phase produces a data-quality baseline. The design phase decides which DQ rules ship with the migration and which are sequenced after stabilization. We do not block migration on full DQ remediation; we baseline, deploy, then iterate." }},
+    { "@type": "Question", "name": "Cloud-only or hybrid?", "acceptedAnswer": { "@type": "Answer", "text": "IDMC is cloud-native, but we support hybrid topologies where on-prem agents read source systems that cannot be exposed." }},
+    { "@type": "Question", "name": "Who reviews the MDM domain model?", "acceptedAnswer": { "@type": "Answer", "text": "The Principal Architect plus a customer-side data steward. The model is reviewed before Step 3 begins, so implementation does not start against an unconfirmed domain design." }},
+    { "@type": "Question", "name": "Will this slow our existing AI projects?", "acceptedAnswer": { "@type": "Answer", "text": "The opposite. The Sprint surfaces the master-data layer your AI projects already depend on. Most teams find one of their stalled agent pilots unblocks during Sprint Step 2." }}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.prowesssoft.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.prowesssoft.com/products/" },
+    { "@type": "ListItem", "position": 3, "name": "Migration Sprint Informatica", "item": "https://www.prowesssoft.com/products/migration-sprint-informatica/" }
+  ]
+}
+</script>
+</head>
+<body class="is-product has-sticky-cta">
+
+<header class="site-header product-chrome">
+  <div class="container site-header__inner">
+    <a href="../index.html" class="brand"><span class="brand__mark">E</span><span>EnterpriseFLOW<sup>™</sup></span></a>
+    <nav class="primary-nav"><a href="../products.html">Products</a><a href="../services.html">Services</a><a href="../industries.html">Industries</a><a href="../customers.html">Customers</a><a href="../about.html">About</a><a href="../trust.html">Trust</a></nav>
+    <div class="header-cta"><a href="../contact.html?cal=bookings" class="btn btn--primary btn--sm">Book a scoping call <span class="arrow">→</span></a></div>
+    <button class="nav-toggle" data-nav-toggle aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu" style="color:#fff;border-color:rgba(255,255,255,0.3);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav" data-mobile-nav><a href="../products.html">Products</a><a href="../services.html">Services</a><a href="../industries.html">Industries</a><a href="../customers.html">Customers</a><a href="../about.html">About</a><a href="../trust.html">Trust</a><a href="../contact.html?cal=bookings" class="btn btn--primary">Book a scoping call</a></div>
+</header>
+
+<nav class="breadcrumbs" style="background:var(--ink-soft);color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.1);"><div class="container"><a href="../index.html" style="color:rgba(255,255,255,0.7);">Home</a><span class="sep">/</span><a href="../products.html" style="color:rgba(255,255,255,0.7);">Products</a><span class="sep">/</span>Migration Sprint Informatica</div></nav>
+
+<main>
+
+  <section class="surface-ink" style="padding-top: var(--s-9); padding-bottom: var(--s-9);">
+    <div class="container">
+      <div class="hero__layout">
+        <div class="hero__copy">
+          <span class="eyebrow on-dark">EnterpriseFLOW · Migration Sprint · Informatica</span>
+          <h1 class="display" style="color:#fff;">Migration Sprint Informatica — PowerCenter, DataStage, SSIS, or Talend onto IDMC and MDM.</h1>
+          <p class="hero__subhead" style="color:rgba(255,255,255,0.78);">The data foundation your AI roadmap is missing. Fixed-fee, milestone-billed. 12 to 20 weeks to production.</p>
+          <div class="hero__ctas">
+            <a href="../contact.html?type=data-assessment" class="btn btn--on-dark btn--lg" data-cta-id="msi_hero_assessment" data-page="msi" data-stage="decision">Get a fixed-fee assessment <span class="arrow">→</span></a>
+            <a href="#" class="btn btn--ghost-on-dark btn--lg" data-cta-id="msi_hero_stack" data-page="msi" data-stage="consideration">See the Data Foundations stack <span class="arrow">→</span></a>
+          </div>
+        </div>
+        <div class="hero__visual" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);">
+          <div class="placeholder" style="border:none;background:transparent;height:100%;color:rgba(255,255,255,0.65);">
+            <span class="placeholder__id">DIAG-02</span>
+            <span class="placeholder__desc" style="color:rgba(255,255,255,0.65);">PowerCenter → IDMC architecture diagram (COMMISSION-SVG).</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards strip -->
+  <section class="awards-strip">
+    <div class="container">
+      <div class="awards-strip__grid">
+        <span class="award-chip"><img src="../assets/certifications/mulesoft-poty-2024.webp" alt=""><strong>MuleSoft Above &amp; Beyond Americas</strong> · 2024</span>
+        <span class="award-chip"><img src="../assets/certifications/mulesoft-poty-2025.webp" alt=""><strong>MuleSoft Above &amp; Beyond Americas</strong> · 2025</span>
+        <span class="award-chip"><img src="../assets/certifications/salesforce-summit-partner.webp" alt=""><strong>Salesforce Summit</strong> Partner</span>
+        <span class="award-chip"><img src="../assets/certifications/iso-27001.webp" alt=""><strong>ISO/IEC 27001</strong> Certified</span>
+        <span class="award-chip"><img src="../assets/certifications/iso-9001.webp" alt=""><strong>ISO 9001</strong> Certified</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="prose">
+        <span class="eyebrow">Why master data sits underneath AI</span>
+        <h2>Master data is the foundation production AI runs on.</h2>
+        <p>AI agents reason over whichever customer, account, or contract record the integration layer hands them. When the master-data layer reconciles those records cleanly, the agent answers correctly. When it does not, the use case stalls in pilot.</p>
+        <p>Informatica IDMC and MDM are the master-data and data-management layer that gives the agent a single, governed view. We migrate legacy ETL and master-data tooling onto IDMC and MDM as a fixed-fee Sprint so the data foundation is in place before the agent goes near production.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="surface">
+    <div class="container">
+      <div style="margin-bottom: var(--s-7);">
+        <span class="eyebrow">Source platforms</span>
+        <h2>Source platforms we have migrated.</h2>
+      </div>
+      <div class="grid grid--3">
+        <article class="card"><h3 class="card__title">Informatica PowerCenter</h3><p class="muted">To IDMC. Mapping, mapplet, and workflow conversion plus parameter-file remediation.</p></article>
+        <article class="card"><h3 class="card__title">IBM DataStage</h3><p class="muted">To IDMC. Job conversion, sequencer translation, parameter handling.</p></article>
+        <article class="card"><h3 class="card__title">Microsoft SSIS</h3><p class="muted">To IDMC. Package conversion, control-flow translation, deployment automation.</p></article>
+        <article class="card"><h3 class="card__title">Talend</h3><p class="muted">To IDMC. Job conversion, context-variable migration, tFlowMeter to IDMC native monitoring.</p></article>
+        <article class="card"><h3 class="card__title">Custom SQL / stored-procedure ETL</h3><p class="muted">To IDMC. Where the legacy is bespoke PL/SQL or T-SQL pipelines.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div style="margin-bottom: var(--s-7);">
+        <span class="eyebrow">Method</span>
+        <h2>The four-phase method.</h2>
+      </div>
+      <div class="grid grid--4">
+        <article class="card"><div class="card__eyebrow">Step 1 · 2–3 weeks</div><h3 class="card__title">Discovery and inventory.</h3><p class="muted">Source-platform inventory, data-quality baseline, lineage extraction, MDM domain identification.</p><p class="small"><strong>You leave with:</strong> migration scope document, data-quality report, fixed-fee SOW.</p></article>
+        <article class="card"><div class="card__eyebrow">Step 2 · 3–4 weeks</div><h3 class="card__title">Design.</h3><p class="muted">Target IDMC architecture, MDM domain design (customer, product, supplier, asset), golden-record rules, reference-data structure, integration mapping with MuleSoft.</p><p class="small"><strong>You leave with:</strong> Informatica IDMC and MDM design package.</p></article>
+        <article class="card"><div class="card__eyebrow">Step 3 · 5–10 weeks</div><h3 class="card__title">Implementation.</h3><p class="muted">ETL conversion, MDM standup, data-quality rule deployment, reference data load, integration with downstream consumers.</p><p class="small"><strong>You leave with:</strong> in-scope pipelines and master-data domains live on IDMC.</p></article>
+        <article class="card"><div class="card__eyebrow">Step 4 · 2–3 weeks</div><h3 class="card__title">Cut-over and stabilization.</h3><p class="muted">Parallel run, reconciliation, cut-over, runbook handover, hyper-care.</p><p class="small"><strong>You leave with:</strong> production IDMC + MDM estate with runbook.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer reference (placeholder) -->
+  <section class="surface">
+    <div class="container">
+      <div class="grid grid--6040">
+        <div>
+          <span class="eyebrow">Customer · Pacific International Lines</span>
+          <h2>Pacific International Lines: red-to-green Informatica recovery.</h2>
+          <p>PIL had taken on an Informatica migration with another partner. The program slipped into red. The Prowess team was brought in to recover the engagement, completing the recovery in approximately 2.5 months.</p>
+          <p class="small muted">Customer-specific outcomes available on request under NDA.</p>
+          <a href="../customers.html" class="btn btn--primary" data-cta-id="msi_pil_story" data-page="msi" data-stage="consideration">All customer stories <span class="arrow">→</span></a>
+        </div>
+        <div class="placeholder">
+          <span class="placeholder__id">LOGO-13</span>
+          <span class="placeholder__desc">PIL logo (COMMISSION pending consent).</span>
+        </div>
+      </div>
+      <p class="small muted mt-6">Until consent is secured, four anonymized use-case metrics from data-foundations-capabilities also apply: Customer 360 manufacturing 30–40% faster reporting; Oil &amp; Gas 25% faster incident response; Retail ETL 40% faster; Media 30% faster onboarding.</p>
+    </div>
+  </section>
+
+  <!-- The practice -->
+  <section>
+    <div class="container">
+      <div class="grid grid--6040">
+        <div>
+          <span class="eyebrow">The Informatica practice</span>
+          <h2>A practice, not a side capability.</h2>
+          <p>We have built Informatica integrations for a decade. The Informatica practice operates as a named team inside the firm, led by a Principal Architect who joined Prowess in May 2026 from a global Informatica delivery role.</p>
+          <p>The practice runs against the full IDMC catalog — Cloud Data Integration, Cloud Data Quality, Cloud MDM, Cloud Data Governance and Catalog — plus the legacy migration paths from PowerCenter, DataStage, SSIS, and Talend.</p>
+          <p><a class="text-link" href="#">Meet the architect <span class="arrow">→</span></a></p>
+        </div>
+        <div class="placeholder">
+          <span class="placeholder__id">ARCHITECT-INF-01</span>
+          <span class="placeholder__desc">Informatica Principal Architect headshot — commission after onboarding.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="surface">
+    <div class="container">
+      <div class="prose">
+        <span class="eyebrow">Engagement bands</span>
+        <h2>Three price bands. Disclosed.</h2>
+        <table class="comparison-table">
+          <thead><tr><th>Band</th><th>Scope</th><th>Timeline</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Sprint A</strong></td><td>Single source platform, up to 50 pipelines, single MDM domain</td><td>12 weeks</td></tr>
+            <tr><td><strong>Sprint B</strong></td><td>One or two source platforms, 50–150 pipelines, two MDM domains</td><td>16 weeks</td></tr>
+            <tr><td><strong>Sprint C</strong></td><td>Multi-source, 150+ pipelines, three or more MDM domains</td><td>20 weeks</td></tr>
+          </tbody>
+        </table>
+        <p class="small muted">Migration Assessment is a fixed-fee scoping engagement that credits against the Sprint on proceed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="container">
+      <div style="margin-bottom: var(--s-7);">
+        <span class="eyebrow">FAQ</span>
+        <h2>Questions we get on the scoping call.</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Why Informatica over Snowflake-native ETL or dbt?</summary><div class="faq-item__body">Snowflake is the warehouse. dbt is transformation in the warehouse. Informatica IDMC is the integration and data-management layer above the warehouse, with MDM and Data Quality as services the warehouse does not provide natively. For enterprises that need master data, governance, and lineage across multiple consumers, IDMC plus MDM remains the cleanest pattern.</div></details>
+        <details class="faq-item"><summary>Do we have to use MuleSoft alongside IDMC?</summary><div class="faq-item__body">No. The Informatica Sprint is platform-independent for the integration layer. MuleSoft and IDMC together is the most common pattern in our manufacturing book, but IDMC alone, IDMC plus Snowflake, and IDMC plus a Kafka backbone are all supported.</div></details>
+        <details class="faq-item"><summary>How do you handle data-quality remediation during migration?</summary><div class="faq-item__body">The discovery phase produces a data-quality baseline. The design phase decides which DQ rules ship with the migration and which are sequenced after stabilization. We do not block migration on full DQ remediation; we baseline, deploy, then iterate.</div></details>
+        <details class="faq-item"><summary>Cloud-only or hybrid?</summary><div class="faq-item__body">IDMC is cloud-native, but we support hybrid topologies where on-prem agents read source systems that cannot be exposed.</div></details>
+        <details class="faq-item"><summary>Who reviews the MDM domain model?</summary><div class="faq-item__body">The Principal Architect plus a customer-side data steward. The model is reviewed before Step 3 begins, so implementation does not start against an unconfirmed domain design.</div></details>
+        <details class="faq-item"><summary>Will this slow our existing AI projects?</summary><div class="faq-item__body">The opposite. The Sprint surfaces the master-data layer your AI projects already depend on. Most teams find one of their stalled agent pilots unblocks during Sprint Step 2.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band__layout">
+        <div>
+          <span class="eyebrow on-dark">Start</span>
+          <h2>Start with a data assessment.</h2>
+          <p>One scoping call, one written scope. Assessment fee credits against the Sprint.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a href="../contact.html?type=data-assessment" class="btn btn--on-dark btn--lg" data-cta-id="msi_cta_assessment" data-page="msi" data-stage="decision">Get a fixed-fee assessment <span class="arrow">→</span></a>
+          <a href="#" class="btn btn--ghost-on-dark btn--lg">See the Data Foundations stack</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter band -->
+  <section class="surface-warm">
+    <div class="container">
+      <div class="grid grid--6040">
+        <div>
+          <span class="eyebrow">Newsletter</span>
+          <h2>The Prowess newsletter.</h2>
+          <p class="lead">A monthly briefing from our architects on integration patterns, agent governance, and enterprise data modernization.</p>
+        </div>
+        <form class="form"><div class="field"><label for="nl-email">Work email</label><input id="nl-email" type="email" name="email" placeholder="you@company.com"></div><button class="btn btn--primary">Subscribe</button></form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="sticky-mobile-cta"><a href="../contact.html?type=data-assessment" class="btn btn--primary" data-cta-id="msi_sticky_cta" data-page="msi" data-stage="decision">Get a data assessment</a></div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col"><h4>Prowess</h4><ul><li><a href="../about.html">About</a></li><li><a href="../about/founders.html">Founders</a></li><li><a href="../why-prowess.html">Why Prowess</a></li><li><a href="../trust.html">Trust &amp; awards</a></li></ul></div>
+      <div class="footer__col"><h4>EnterpriseFLOW</h4><ul><li><a href="../products/migration-sprint-mulesoft.html">Migration Sprint · MuleSoft</a></li><li><a href="../products/migration-sprint-informatica.html">Migration Sprint · Informatica</a></li><li><a href="../products/agent-fabric-builder.html">Agent Fabric Builder</a></li><li><a href="../products/implementation-accelerator.html">Implementation Accelerator</a></li></ul></div>
+      <div class="footer__col"><h4>Industries</h4><ul><li><a href="../industries/manufacturing.html">Manufacturing</a></li><li><a href="../industries/logistics.html">Logistics</a></li><li><a href="../industries.html">All industries</a></li></ul></div>
+      <div class="footer__col"><h4>Customers</h4><ul><li><a href="../customers/novelis.html">Novelis</a></li><li><a href="../customers/ceva-logistics.html">CEVA Logistics</a></li><li><a href="../customers/syncron.html">Syncron</a></li><li><a href="../customers/keystone-logistics.html">Keystone Logistics</a></li><li><a href="../customers/rich-products.html">Rich Products</a></li><li><a href="../customers.html">All customers</a></li></ul></div>
+      <div class="footer__col"><h4>Connect</h4><ul><li><a href="../contact.html">Contact</a></li><li><a href="../newsletter.html">Newsletter</a></li><li><a href="../services.html">Services</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><span>&copy; <span data-year>2026</span> Prowess Software Services.</span><span class="footer__legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Security</a></span></div>
+  </div>
+</footer>
+
+<script src="../script.js" defer></script>
+
+<!--
+SOURCE VERIFICATION (copy/migration-sprint-informatica.md):
+- Source platforms verified on /data-foundations-capabilities/
+- IDMC, MDM, DQ, DG&C verified on same URL
+- Four anonymized use-case metrics verified
+- Informatica Principal Architect joining May 2026 [CONFIRM name + photo]
+- PIL story [CONFIRM consent + metrics]
+- Price bands [CONFIRM]
+-->
+
+</body>
+</html>
