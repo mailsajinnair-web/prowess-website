@@ -326,20 +326,43 @@
 
 
 /* ===== v2 — Elevated wins section (dark numbered list) ===== */
+/* ── Where Prowess Wins ───────────────────────────────────────── */
 .pb-wins-elevated {
-  background: #fff; padding: 100px 32px; position: relative; overflow: hidden;
-  border-top: 1px solid #E2E8F0;
+  background: #F4F7FF;
+  padding: 100px 32px; position: relative; overflow: hidden;
 }
-.pb-wins-elevated::before { display: none; }
+/* Dot-grid texture */
+.pb-wins-elevated::before {
+  content: ""; position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(46,92,138,0.10) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse 80% 80% at 70% 50%, black 30%, transparent 85%);
+  pointer-events: none; z-index: 0;
+}
+/* Floating amber orb — slow drift */
 .pb-wins-elevated::after {
-  content: ""; position: absolute; top: -120px; right: -120px;
-  width: 480px; height: 480px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,180,84,0.07), transparent 70%);
-  filter: blur(60px); pointer-events: none;
+  content: ""; position: absolute; bottom: -60px; left: 8%;
+  width: 560px; height: 560px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,180,84,0.14), transparent 65%);
+  filter: blur(55px); pointer-events: none; z-index: 0;
+  animation: pb-wins-orb 12s ease-in-out infinite alternate;
 }
+@keyframes pb-wins-orb {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(70px, -45px) scale(1.08); }
+}
+
 .pb-wins-elevated__inner { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; }
 .pb-wins-elevated__layout { display: grid; grid-template-columns: 360px 1fr; gap: 88px; align-items: start; }
-.pb-wins-elevated__intro { }
+
+/* Left column: eyebrow, title, subtitle + decorative accent */
+.pb-wins-elevated__intro { position: relative; }
+.pb-wins-elevated__intro::after {
+  content: ""; position: absolute; left: -20px; top: 56px;
+  width: 3px; height: 80px;
+  background: linear-gradient(180deg, #FFB454 0%, rgba(255,180,84,0) 100%);
+  border-radius: 2px;
+}
 .pb-wins-elevated__eyebrow {
   font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700;
   color: #2E5C8A; margin-bottom: 20px;
@@ -351,28 +374,62 @@
   font-weight: 560; color: #0A1828; margin: 0 0 20px;
 }
 .pb-wins-elevated__sub { font-size: 15px; line-height: 1.7; color: #64748B; margin: 0; }
-.pb-wins-elevated__items { display: flex; flex-direction: column; }
+
+/* Items as cards with amber left-accent on hover */
+.pb-wins-elevated__items { display: flex; flex-direction: column; gap: 12px; }
 .pb-wins-item {
-  display: grid; grid-template-columns: 60px 1fr; gap: 24px; align-items: start;
-  padding: 32px 0; border-bottom: 1px solid #E2E8F0;
-  transition: border-color 240ms ease;
+  display: grid; grid-template-columns: 72px 1fr; gap: 0; align-items: center;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid rgba(10,24,40,0.07);
+  border-left: 3px solid transparent;
+  overflow: hidden;
+  padding: 0 32px 0 0;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-left-color 220ms ease;
+  /* Scroll-reveal: start hidden */
+  opacity: 0; transform: translateX(24px);
 }
-.pb-wins-item:last-child { border-bottom: none; padding-bottom: 0; }
-.pb-wins-item:hover { border-bottom-color: rgba(255,180,84,0.5); }
+.pb-wins-item.is-visible {
+  opacity: 1; transform: translateX(0);
+  transition: opacity 480ms ease, transform 480ms ease,
+              box-shadow 220ms ease, border-left-color 220ms ease;
+}
+.pb-wins-item:nth-child(1) { transition-delay: 0ms; }
+.pb-wins-item:nth-child(2) { transition-delay: 80ms; }
+.pb-wins-item:nth-child(3) { transition-delay: 160ms; }
+.pb-wins-item:nth-child(4) { transition-delay: 240ms; }
+.pb-wins-item:hover {
+  transform: translateX(6px);
+  box-shadow: -4px 6px 24px rgba(10,24,40,0.09);
+  border-left-color: #FFB454;
+}
 .pb-wins-item__num {
-  font-size: 44px; font-weight: 700; line-height: 1;
-  color: rgba(255,180,84,0.35); letter-spacing: -0.04em;
-  user-select: none; padding-top: 4px;
+  font-size: 42px; font-weight: 800; line-height: 1;
+  color: rgba(255,180,84,0.32); letter-spacing: -0.04em;
+  user-select: none;
+  display: flex; align-items: center; justify-content: center;
+  padding: 28px 0;
+  align-self: stretch;
+  background: rgba(255,180,84,0.04);
+  border-right: 1px solid rgba(255,180,84,0.12);
+  transition: color 220ms ease, background 220ms ease;
 }
+.pb-wins-item:hover .pb-wins-item__num {
+  color: rgba(255,180,84,0.7);
+  background: rgba(255,180,84,0.07);
+}
+.pb-wins-item__body { padding: 26px 0 26px 28px; }
 .pb-wins-item__title {
-  font-size: 18px; font-weight: 580; line-height: 1.25; color: #0A1828; margin: 0 0 10px;
+  font-size: 17px; font-weight: 600; line-height: 1.25; color: #0A1828; margin: 0 0 8px;
   letter-spacing: -0.01em;
 }
-.pb-wins-item__text { font-size: 14.5px; line-height: 1.65; color: #475569; margin: 0; }
+.pb-wins-item__text { font-size: 14px; line-height: 1.65; color: #475569; margin: 0; }
+
 @media (max-width: 900px) {
   .pb-wins-elevated__layout { grid-template-columns: 1fr; gap: 48px; }
-  .pb-wins-item { grid-template-columns: 48px 1fr; gap: 16px; }
-  .pb-wins-item__num { font-size: 34px; }
+  .pb-wins-elevated__intro::after { display: none; }
+  .pb-wins-item { grid-template-columns: 60px 1fr; }
+  .pb-wins-item__num { font-size: 30px; }
 }
 
 
