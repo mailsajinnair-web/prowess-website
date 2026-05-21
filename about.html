@@ -205,8 +205,8 @@
 .ab-testimonials { padding: 100px 0; background: #fff; }
 .ab-carousel { position: relative; overflow: hidden; margin-top: 48px; }
 .ab-carousel__track { display: flex; transition: transform 550ms cubic-bezier(0.4, 0, 0.2, 1); will-change: transform; }
-.ab-carousel__slide { min-width: 100%; box-sizing: border-box; padding: 0 80px; }
-@media (max-width: 768px) { .ab-carousel__slide { padding: 0 48px; } }
+.ab-carousel__slide { min-width: 100%; box-sizing: border-box; padding: 0 40px; }
+@media (max-width: 768px) { .ab-carousel__slide { padding: 0 20px; } }
 .ab-carousel__btn {
   position: absolute; top: 45%; transform: translateY(-50%);
   width: 48px; height: 48px; border-radius: 50%;
@@ -244,16 +244,21 @@
 @media (max-width: 900px) { .ab-mvw__grid { grid-template-columns: 1fr; } }
 .ab-mvw__card {
   background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 20px; padding: 40px 36px;
-  transition: transform 280ms ease, border-color 280ms ease, background 280ms ease;
+  border-radius: 20px; padding: 0; overflow: hidden;
+  transition: transform 280ms ease, border-color 280ms ease;
 }
-.ab-mvw__card:hover { transform: translateY(-6px); border-color: rgba(255,180,84,0.40); background: rgba(255,255,255,0.07); }
+.ab-mvw__card:hover { transform: translateY(-6px); border-color: rgba(255,180,84,0.40); }
+.ab-mvw__card-img { height: 190px; overflow: hidden; position: relative; }
+.ab-mvw__card-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.62) saturate(0.55); transition: transform 500ms ease; display: block; }
+.ab-mvw__card:hover .ab-mvw__card-img img { transform: scale(1.04); }
+.ab-mvw__card-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 30%, rgba(10,24,40,0.72) 100%); }
+.ab-mvw__card-body { padding: 28px 32px 36px; }
 .ab-mvw__icon {
-  width: 48px; height: 48px; background: rgba(255,180,84,0.10);
-  border: 1px solid rgba(255,180,84,0.28); border-radius: 12px;
-  display: grid; place-items: center; color: #FFB454; margin-bottom: 24px;
+  width: 44px; height: 44px; background: rgba(255,180,84,0.10);
+  border: 1px solid rgba(255,180,84,0.28); border-radius: 10px;
+  display: grid; place-items: center; color: #FFB454; margin-bottom: 20px;
 }
-.ab-mvw__rule { width: 40px; height: 2px; background: #FFB454; margin-bottom: 18px; }
+.ab-mvw__rule { width: 40px; height: 2px; background: #FFB454; margin-bottom: 16px; }
 .ab-mvw__label { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; color: #FFB454; margin: 0 0 12px; }
 .ab-mvw__body { font-size: 15px; line-height: 1.72; color: rgba(255,255,255,0.72); margin: 0; }
 </style>
@@ -513,28 +518,28 @@
       <div class="ab-carousel" id="testimonialCarousel">
         <div class="ab-carousel__track" id="carouselTrack">
           <div class="ab-carousel__slide">
-            <figure style="margin:0 auto; max-width:860px; background:linear-gradient(135deg,#FBF9F2 0%,#fff 100%); padding:44px 52px; border-radius:22px; border-left:4px solid #FFB454; box-shadow:0 18px 48px rgba(10,24,40,0.08);">
+            <figure style="margin:0 auto; max-width:980px; background:linear-gradient(135deg,#FBF9F2 0%,#fff 100%); padding:44px 52px; border-radius:22px; border-left:4px solid #FFB454; box-shadow:0 18px 48px rgba(10,24,40,0.08);">
               <blockquote style="margin:0; padding:0; border:none; font-size:22px; line-height:1.52; color:#0A1828; font-weight:500; letter-spacing:-0.01em;">"The partnership with Prowess Software Services has matured in many ways and is making waves in delivering customer implementations with diligence and high quality."</blockquote>
               <figcaption style="display:flex; align-items:center; gap:16px; margin-top:32px;">
-                <img src="assets/testimonials/pratap-pillai-ceva.png" alt="Pratap Pillai" style="width:54px; height:54px; border-radius:50%; object-fit:cover; border:2px solid #FFB454;">
+                <img src="assets/testimonials/pratap-pillai-ceva.png" alt="Pratap Pillai" style="width:72px; height:72px; border-radius:50%; object-fit:cover; border:2px solid #FFB454;">
                 <div><strong style="color:#0A1828; font-size:15px; display:block;">Pratap Pillai</strong><span style="color:#475569; font-size:13px;">Integration COE Delivery Manager · CEVA Logistics</span></div>
               </figcaption>
             </figure>
           </div>
           <div class="ab-carousel__slide">
-            <figure style="margin:0 auto; max-width:860px; background:linear-gradient(135deg,#F0FAF5 0%,#fff 100%); padding:44px 52px; border-radius:22px; border-left:4px solid #047857; box-shadow:0 18px 48px rgba(10,24,40,0.08);">
+            <figure style="margin:0 auto; max-width:980px; background:linear-gradient(135deg,#F0FAF5 0%,#fff 100%); padding:44px 52px; border-radius:22px; border-left:4px solid #047857; box-shadow:0 18px 48px rgba(10,24,40,0.08);">
               <blockquote style="margin:0; padding:0; border:none; font-size:22px; line-height:1.52; color:#0A1828; font-weight:500; letter-spacing:-0.01em;">"The Prowess team demonstrates remarkable commitment, diligence, and efficiency."</blockquote>
               <figcaption style="display:flex; align-items:center; gap:16px; margin-top:32px;">
-                <img src="assets/testimonials/sandeep-patil-syncron.jpg" alt="Sandeep Patil" style="width:54px; height:54px; border-radius:50%; object-fit:cover; border:2px solid #047857;">
+                <img src="assets/testimonials/sandeep-patil-syncron.jpg" alt="Sandeep Patil" style="width:72px; height:72px; border-radius:50%; object-fit:cover; border:2px solid #047857;">
                 <div><strong style="color:#0A1828; font-size:15px; display:block;">Sandeep Patil</strong><span style="color:#475569; font-size:13px;">VP Expert Services · Syncron</span></div>
               </figcaption>
             </figure>
           </div>
           <div class="ab-carousel__slide">
-            <figure style="margin:0 auto; max-width:860px; background:linear-gradient(135deg,#FBF6FF 0%,#fff 100%); padding:44px 52px; border-radius:22px; border-left:4px solid #8557C2; box-shadow:0 18px 48px rgba(10,24,40,0.08);">
+            <figure style="margin:0 auto; max-width:980px; background:linear-gradient(135deg,#FBF6FF 0%,#fff 100%); padding:44px 52px; border-radius:22px; border-left:4px solid #8557C2; box-shadow:0 18px 48px rgba(10,24,40,0.08);">
               <blockquote style="margin:0; padding:0; border:none; font-size:22px; line-height:1.52; color:#0A1828; font-weight:500; letter-spacing:-0.01em;">"Over the past three years, the Prowess team has partnered with Keystone to deliver some of the most notable successes in Omnichannel fulfillment for leading retailers in North America."</blockquote>
               <figcaption style="display:flex; align-items:center; gap:16px; margin-top:32px;">
-                <img src="assets/testimonials/ravi-joshi-keystone.png" alt="Ravi Joshi" style="width:54px; height:54px; border-radius:50%; object-fit:cover; border:2px solid #8557C2;">
+                <img src="assets/testimonials/ravi-joshi-keystone.png" alt="Ravi Joshi" style="width:72px; height:72px; border-radius:50%; object-fit:cover; border:2px solid #8557C2;">
                 <div><strong style="color:#0A1828; font-size:15px; display:block;">Ravi Joshi</strong><span style="color:#475569; font-size:13px;">Managing Partner · Keystone Logistics</span></div>
               </figcaption>
             </figure>
@@ -695,28 +700,43 @@
       </div>
       <div class="ab-mvw__grid">
         <div class="ab-mvw__card">
-          <div class="ab-mvw__icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <div class="ab-mvw__card-img">
+            <img src="assets/heroes/prowess-team-engineering.jpg" alt="" loading="lazy">
           </div>
-          <div class="ab-mvw__rule"></div>
-          <p class="ab-mvw__label">Mission</p>
-          <p class="ab-mvw__body">To engineer integration, data, and AI-agent platforms that move enterprise programs from pilot to production with measurable outcomes.</p>
+          <div class="ab-mvw__card-body">
+            <div class="ab-mvw__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div class="ab-mvw__rule"></div>
+            <p class="ab-mvw__label">Mission</p>
+            <p class="ab-mvw__body">To engineer integration, data, and AI-agent platforms that move enterprise programs from pilot to production with measurable outcomes.</p>
+          </div>
         </div>
         <div class="ab-mvw__card">
-          <div class="ab-mvw__icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <div class="ab-mvw__card-img">
+            <img src="assets/heroes/prowess-team-mulesoft-awards.jpg" alt="" loading="lazy">
           </div>
-          <div class="ab-mvw__rule"></div>
-          <p class="ab-mvw__label">Vision</p>
-          <p class="ab-mvw__body">To be the integration and data architecture firm that AI-native enterprises rely on for foundational modernization at scale.</p>
+          <div class="ab-mvw__card-body">
+            <div class="ab-mvw__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <div class="ab-mvw__rule"></div>
+            <p class="ab-mvw__label">Vision</p>
+            <p class="ab-mvw__body">To be the integration and data architecture firm that AI-native enterprises rely on for foundational modernization at scale.</p>
+          </div>
         </div>
         <div class="ab-mvw__card">
-          <div class="ab-mvw__icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <div class="ab-mvw__card-img">
+            <img src="assets/heroes/prowess-team-conference.jpg" alt="" loading="lazy">
           </div>
-          <div class="ab-mvw__rule"></div>
-          <p class="ab-mvw__label">How we work</p>
-          <p class="ab-mvw__body">Certified architects engaged from the first conversation through delivery. Named engineers, published methodology, and customer references available on request — not after the proposal.</p>
+          <div class="ab-mvw__card-body">
+            <div class="ab-mvw__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="ab-mvw__rule"></div>
+            <p class="ab-mvw__label">How we work</p>
+            <p class="ab-mvw__body">Certified architects engaged from the first conversation through delivery. Named engineers, published methodology, and customer references available on request — not after the proposal.</p>
+          </div>
         </div>
       </div>
     </div>

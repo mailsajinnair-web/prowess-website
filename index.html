@@ -756,9 +756,15 @@ html { scroll-behavior: smooth; }
   padding: 5px 12px; border-radius: 6px;
   border: 1px solid rgba(255,180,84,0.35);
 }
+/* ===== Offering arch — layer 2 & 3 side by side on top of layer 1 ===== */
+.h-arch__upper { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.h-arch__layer--compact { padding: 26px 30px; grid-template-columns: 44px 1fr auto; gap: 20px; }
+.h-arch__layer--compact .h-arch__layer-name { font-size: 19px; }
+.h-arch__layer--compact .h-arch__layer-icon { width: 44px; height: 44px; }
 @media (max-width: 900px) {
   .h-arch__layer { grid-template-columns: 1fr; gap: 16px; padding: 28px; }
   .h-arch__layer-icon { width: 44px; height: 44px; }
+  .h-arch__upper { grid-template-columns: 1fr; }
 }
 
 /* ====== Stats — dark band with floating gradient orbs ====== */
