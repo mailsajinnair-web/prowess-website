@@ -758,9 +758,18 @@ html { scroll-behavior: smooth; }
 }
 /* ===== Offering arch — layer 2 & 3 side by side on top of layer 1 ===== */
 .h-arch__upper { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.h-arch__layer--compact { padding: 26px 30px; grid-template-columns: 44px 1fr auto; gap: 20px; }
+.h-arch__layer--compact {
+  padding: 26px 28px 28px;
+  grid-template-columns: 44px 1fr;
+  grid-template-rows: auto auto auto;
+  row-gap: 14px; column-gap: 14px;
+  align-items: start;
+}
+.h-arch__layer--compact .h-arch__layer-icon { width: 44px; height: 44px; grid-column: 1; grid-row: 1; align-self: center; }
+.h-arch__layer--compact > div:not(.h-arch__layer-icon):not(.h-arch__layer-items) { grid-column: 2; grid-row: 1; }
 .h-arch__layer--compact .h-arch__layer-name { font-size: 19px; }
-.h-arch__layer--compact .h-arch__layer-icon { width: 44px; height: 44px; }
+.h-arch__layer--compact .h-arch__layer-items { grid-column: 1 / -1; grid-row: 2; font-size: 13.5px; }
+.h-arch__layer--compact .h-arch__layer-cta { grid-column: 1 / -1; grid-row: 3; }
 @media (max-width: 900px) {
   .h-arch__layer { grid-template-columns: 1fr; gap: 16px; padding: 28px; }
   .h-arch__layer-icon { width: 44px; height: 44px; }
