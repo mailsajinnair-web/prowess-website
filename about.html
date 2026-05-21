@@ -200,6 +200,62 @@
 .tw-stat--off-2 { margin-top: 64px; }
 .tw-stat--off-3 { margin-top: 96px; }
 @media (max-width: 1024px) { .tw-stat--off-1, .tw-stat--off-2, .tw-stat--off-3 { margin-top: 0; } }
+
+/* ===== Testimonial Carousel ===== */
+.ab-testimonials { padding: 100px 0; background: #fff; }
+.ab-carousel { position: relative; overflow: hidden; margin-top: 48px; }
+.ab-carousel__track { display: flex; transition: transform 550ms cubic-bezier(0.4, 0, 0.2, 1); will-change: transform; }
+.ab-carousel__slide { min-width: 100%; box-sizing: border-box; padding: 0 80px; }
+@media (max-width: 768px) { .ab-carousel__slide { padding: 0 48px; } }
+.ab-carousel__btn {
+  position: absolute; top: 45%; transform: translateY(-50%);
+  width: 48px; height: 48px; border-radius: 50%;
+  background: #fff; border: 1px solid #E2E8F0;
+  cursor: pointer; display: grid; place-items: center; color: #0A1828;
+  box-shadow: 0 4px 20px rgba(10,24,40,0.10);
+  transition: background 200ms ease, color 200ms ease, border-color 200ms ease, transform 200ms ease;
+  z-index: 4;
+}
+.ab-carousel__btn:hover { background: #0A1828; color: #fff; border-color: #0A1828; transform: translateY(-50%) scale(1.06); }
+.ab-carousel__btn--prev { left: 12px; }
+.ab-carousel__btn--next { right: 12px; }
+.ab-carousel__dots { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 32px; }
+.ab-carousel__dot {
+  width: 8px; height: 8px; border-radius: 100px;
+  background: #E2E8F0; border: none; cursor: pointer;
+  transition: all 300ms ease; padding: 0;
+}
+.ab-carousel__dot--active { background: #FFB454; width: 24px; }
+
+/* ===== Mission / Vision / How We Work — elevated ===== */
+.ab-mvw { background: #0A1828; padding: 100px 32px; position: relative; overflow: hidden; }
+.ab-mvw::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 80%);
+}
+.ab-mvw__inner { max-width: 1280px; margin: 0 auto; position: relative; z-index: 2; }
+.ab-mvw__head { text-align: center; max-width: 640px; margin: 0 auto 64px; }
+.ab-mvw__eyebrow { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; color: #FFB454; margin-bottom: 16px; display: block; }
+.ab-mvw__title { font-size: clamp(26px, 3vw, 38px); font-weight: 560; color: #fff; letter-spacing: -0.02em; line-height: 1.18; margin: 0; }
+.ab-mvw__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 900px) { .ab-mvw__grid { grid-template-columns: 1fr; } }
+.ab-mvw__card {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px; padding: 40px 36px;
+  transition: transform 280ms ease, border-color 280ms ease, background 280ms ease;
+}
+.ab-mvw__card:hover { transform: translateY(-6px); border-color: rgba(255,180,84,0.40); background: rgba(255,255,255,0.07); }
+.ab-mvw__icon {
+  width: 48px; height: 48px; background: rgba(255,180,84,0.10);
+  border: 1px solid rgba(255,180,84,0.28); border-radius: 12px;
+  display: grid; place-items: center; color: #FFB454; margin-bottom: 24px;
+}
+.ab-mvw__rule { width: 40px; height: 2px; background: #FFB454; margin-bottom: 18px; }
+.ab-mvw__label { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; color: #FFB454; margin: 0 0 12px; }
+.ab-mvw__body { font-size: 15px; line-height: 1.72; color: rgba(255,255,255,0.72); margin: 0; }
 </style>
 </head>
 <body>
@@ -327,6 +383,52 @@
     </div>
   </section>
 
+  <!-- Section 3 — Animated stat ticker -->
+  <section class="surface" style="background:linear-gradient(180deg, #0A1828 0%, #050B14 100%); color:#fff; padding: 100px 0;">
+    <div class="container">
+      <span class="eyebrow" style="color:#FFB454;">Company at a glance</span>
+      <h2 style="margin-bottom: var(--s-7); color:#fff;">The scale behind every engagement.</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:24px;">
+        <div data-counter="350" data-suffix="+" style="padding:24px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:16px; border-top:3px solid #FFB454; transition:transform 240ms ease, border-color 240ms ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='#FFB454';" onmouseout="this.style.transform='none';"><div class="js-counter" style="font-size:56px; font-weight:600; letter-spacing:-0.03em; line-height:1; color:#FFB454; font-feature-settings:'tnum';">350+</div><div style="font-size:13px; color:rgba(255,255,255,0.7); margin-top:10px; line-height:1.4;">Certified architects</div></div>
+        <div data-counter="175" data-suffix="+" style="padding:24px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:16px; border-top:3px solid #34D399; transition:transform 240ms ease, border-color 240ms ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='#34D399';" onmouseout="this.style.transform='none';"><div class="js-counter" style="font-size:56px; font-weight:600; letter-spacing:-0.03em; line-height:1; color:#34D399; font-feature-settings:'tnum';">175+</div><div style="font-size:13px; color:rgba(255,255,255,0.7); margin-top:10px; line-height:1.4;">Customers worldwide</div></div>
+
+        <div data-counter="25" data-suffix="+" style="padding:24px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:16px; border-top:3px solid #D9B5FF; transition:transform 240ms ease, border-color 240ms ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='#D9B5FF';" onmouseout="this.style.transform='none';"><div class="js-counter" style="font-size:56px; font-weight:600; letter-spacing:-0.03em; line-height:1; color:#D9B5FF; font-feature-settings:'tnum';">25+</div><div style="font-size:13px; color:rgba(255,255,255,0.7); margin-top:10px; line-height:1.4;">Industries served</div></div>
+        <div data-counter="4" style="padding:24px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:16px; border-top:3px solid #FFB454; transition:transform 240ms ease, border-color 240ms ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='#FFB454';" onmouseout="this.style.transform='none';"><div class="js-counter" style="font-size:56px; font-weight:600; letter-spacing:-0.03em; line-height:1; color:#FFB454; font-feature-settings:'tnum';">4</div><div style="font-size:13px; color:rgba(255,255,255,0.7); margin-top:10px; line-height:1.4;">Offices: Atlanta, Hyderabad, Bengaluru, Singapore</div></div>
+        <div data-counter="2" data-suffix="×" style="padding:24px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:16px; border-top:3px solid #FFB454; transition:transform 240ms ease, border-color 240ms ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='#FFB454';" onmouseout="this.style.transform='none';"><div class="js-counter" style="font-size:56px; font-weight:600; letter-spacing:-0.03em; line-height:1; color:#FFB454; font-feature-settings:'tnum';">2×</div><div style="font-size:13px; color:rgba(255,255,255,0.7); margin-top:10px; line-height:1.4;">MuleSoft Above &amp; Beyond Partner of the Year — Americas (2024, 2025)</div></div>
+      </div>
+      <p style="margin-top: 36px; color:rgba(255,255,255,0.65); font-size:14px;">The leadership team brings more than 60 cumulative years of enterprise integration experience. Aravind, Ajay, Maruthi, Kiran, and the practice heads each have 15-plus years individually.</p>
+    </div>
+    <script>
+    (function(){
+      var counters = document.querySelectorAll('[data-counter] .js-counter');
+      function animate(el, target, suffix){
+        var dur = 1400, start = 0, t0 = performance.now();
+        function tick(t){
+          var p = Math.min(1, (t-t0)/dur);
+          var eased = 1 - Math.pow(1-p, 3);
+          var n = Math.floor(eased * target);
+          el.textContent = n + (suffix||'');
+          if(p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){
+            var card = e.target;
+            var num = parseInt(card.getAttribute('data-counter'),10);
+            var suf = card.getAttribute('data-suffix') || '';
+            var el = card.querySelector('.js-counter');
+            animate(el, num, suf);
+            io.unobserve(card);
+          }
+        });
+      }, {threshold: 0.35});
+      document.querySelectorAll('[data-counter]').forEach(function(c){ io.observe(c); });
+    })();
+    </script>
+  </section>
+
   <!-- ====== TIER 1 — EARNED ====== -->
   <section class="tw-tier tw-tier--earned">
     <div class="tw-tier__inner">
@@ -401,110 +503,75 @@
     </div>
   </section>
 
-  <!-- ====== TIER 3 — ATTESTED ====== -->
-  <section class="tw-tier tw-tier--attested">
-    <div class="tw-tier__inner">
-      <div class="tw-tier__head">
-        <span class="tw-tier__eyebrow"><span class="dot"></span>Attested · customers verify</span>
-        <p class="tw-tier__context">What buyers find when they check us themselves.</p>
-      </div>
-      <div class="tw-tier__grid--attested">
-        <div class="tw-stat tw-stat--hero">
-          <div class="tw-stat__rule"></div>
-          <div class="tw-stat__num">350+</div>
-          <div class="tw-stat__label">Certified architects on staff — across MuleSoft, Informatica, and Salesforce ecosystems</div>
-        </div>
-        <div class="tw-stat tw-stat--off-1">
-          <div class="tw-stat__num">175+</div>
-          <div class="tw-stat__label">Customers served since 2016</div>
-        </div>
-        <div class="tw-stat tw-stat--off-2">
-          <div class="tw-stat__num">129</div>
-          <div class="tw-stat__label">Salesforce-certified experts</div>
-        </div>
-        <div class="tw-stat tw-stat--off-3">
-          <div class="tw-stat__num">14</div>
-          <div class="tw-stat__label">Public AppExchange reviews · 4.9 / 5.0 average</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 2 — diligence anchor -->
-  <section>
+  <!-- Testimonial carousel -->
+  <section class="ab-testimonials">
     <div class="container">
-      <div style="margin-bottom: var(--s-7);">
+      <div style="margin-bottom: 48px;">
         <span class="eyebrow">What customers say</span>
         <h2 style="margin:0;">Customers describe the engagement in consistent terms — across years, geographies, and platforms.</h2>
       </div>
-      <div style="display:grid; gap:24px; grid-template-columns:repeat(auto-fit, minmax(380px,1fr));">
-        <figure style="margin:0; background:linear-gradient(135deg, #FBF9F2 0%, #fff 100%); padding:36px; border-radius:18px; border-left:4px solid #FFB454; box-shadow:0 14px 32px rgba(10,24,40,0.06);">
-          <blockquote style="margin:0; padding:0; border:none; font-size:22px; line-height:1.45; color:#0A1828; font-weight:500; letter-spacing:-0.01em;">"The partnership with Prowess Software Services has matured in many ways and is making waves in delivering customer implementations with diligence and high quality."</blockquote>
-          <figcaption style="display:flex; align-items:center; gap:14px; margin-top:24px;">
-            <img src="assets/testimonials/pratap-pillai-ceva.png" alt="Pratap Pillai" style="width:48px; height:48px; border-radius:50%; object-fit:cover;">
-            <div><strong style="color:#0A1828; font-size:15px;">Pratap Pillai</strong><br><span style="color:#475569; font-size:13px;">Integration COE Delivery Manager · CEVA Logistics</span></div>
-          </figcaption>
-        </figure>
-        <figure style="margin:0; background:linear-gradient(135deg, #F0FAF5 0%, #fff 100%); padding:36px; border-radius:18px; border-left:4px solid #047857; box-shadow:0 14px 32px rgba(10,24,40,0.06);">
-          <blockquote style="margin:0; padding:0; border:none; font-size:22px; line-height:1.45; color:#0A1828; font-weight:500; letter-spacing:-0.01em;">"The Prowess team demonstrates remarkable commitment, diligence, and efficiency."</blockquote>
-          <figcaption style="display:flex; align-items:center; gap:14px; margin-top:24px;">
-            <img src="assets/testimonials/sandeep-patil-syncron.jpg" alt="Sandeep Patil" style="width:48px; height:48px; border-radius:50%; object-fit:cover;">
-            <div><strong style="color:#0A1828; font-size:15px;">Sandeep Patil</strong><br><span style="color:#475569; font-size:13px;">VP Expert Services · Syncron</span></div>
-          </figcaption>
-        </figure>
-        <figure style="margin:0; background:linear-gradient(135deg, #FBF6FF 0%, #fff 100%); padding:36px; border-radius:18px; border-left:4px solid #8557C2; box-shadow:0 14px 32px rgba(10,24,40,0.06);">
-          <blockquote style="margin:0; padding:0; border:none; font-size:22px; line-height:1.45; color:#0A1828; font-weight:500; letter-spacing:-0.01em;">"Over the past three years, the Prowess team has partnered with Keystone to deliver some of the most notable successes in Omnichannel fulfillment for leading retailers in North America."</blockquote>
-          <figcaption style="display:flex; align-items:center; gap:14px; margin-top:24px;">
-            <img src="assets/testimonials/ravi-joshi-keystone.png" alt="Ravi Joshi" style="width:48px; height:48px; border-radius:50%; object-fit:cover;">
-            <div><strong style="color:#0A1828; font-size:15px;">Ravi Joshi</strong><br><span style="color:#475569; font-size:13px;">Managing Partner · Keystone Logistics</span></div>
-          </figcaption>
-        </figure>
+      <div class="ab-carousel" id="testimonialCarousel">
+        <div class="ab-carousel__track" id="carouselTrack">
+          <div class="ab-carousel__slide">
+            <figure style="margin:0 auto; max-width:860px; background:linear-gradient(135deg,#FBF9F2 0%,#fff 100%); padding:44px 52px; border-radius:22px; border-left:4px solid #FFB454; box-shadow:0 18px 48px rgba(10,24,40,0.08);">
+              <blockquote style="margin:0; padding:0; border:none; font-size:22px; line-height:1.52; color:#0A1828; font-weight:500; letter-spacing:-0.01em;">"The partnership with Prowess Software Services has matured in many ways and is making waves in delivering customer implementations with diligence and high quality."</blockquote>
+              <figcaption style="display:flex; align-items:center; gap:16px; margin-top:32px;">
+                <img src="assets/testimonials/pratap-pillai-ceva.png" alt="Pratap Pillai" style="width:54px; height:54px; border-radius:50%; object-fit:cover; border:2px solid #FFB454;">
+                <div><strong style="color:#0A1828; font-size:15px; display:block;">Pratap Pillai</strong><span style="color:#475569; font-size:13px;">Integration COE Delivery Manager · CEVA Logistics</span></div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="ab-carousel__slide">
+            <figure style="margin:0 auto; max-width:860px; background:linear-gradient(135deg,#F0FAF5 0%,#fff 100%); padding:44px 52px; border-radius:22px; border-left:4px solid #047857; box-shadow:0 18px 48px rgba(10,24,40,0.08);">
+              <blockquote style="margin:0; padding:0; border:none; font-size:22px; line-height:1.52; color:#0A1828; font-weight:500; letter-spacing:-0.01em;">"The Prowess team demonstrates remarkable commitment, diligence, and efficiency."</blockquote>
+              <figcaption style="display:flex; align-items:center; gap:16px; margin-top:32px;">
+                <img src="assets/testimonials/sandeep-patil-syncron.jpg" alt="Sandeep Patil" style="width:54px; height:54px; border-radius:50%; object-fit:cover; border:2px solid #047857;">
+                <div><strong style="color:#0A1828; font-size:15px; display:block;">Sandeep Patil</strong><span style="color:#475569; font-size:13px;">VP Expert Services · Syncron</span></div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="ab-carousel__slide">
+            <figure style="margin:0 auto; max-width:860px; background:linear-gradient(135deg,#FBF6FF 0%,#fff 100%); padding:44px 52px; border-radius:22px; border-left:4px solid #8557C2; box-shadow:0 18px 48px rgba(10,24,40,0.08);">
+              <blockquote style="margin:0; padding:0; border:none; font-size:22px; line-height:1.52; color:#0A1828; font-weight:500; letter-spacing:-0.01em;">"Over the past three years, the Prowess team has partnered with Keystone to deliver some of the most notable successes in Omnichannel fulfillment for leading retailers in North America."</blockquote>
+              <figcaption style="display:flex; align-items:center; gap:16px; margin-top:32px;">
+                <img src="assets/testimonials/ravi-joshi-keystone.png" alt="Ravi Joshi" style="width:54px; height:54px; border-radius:50%; object-fit:cover; border:2px solid #8557C2;">
+                <div><strong style="color:#0A1828; font-size:15px; display:block;">Ravi Joshi</strong><span style="color:#475569; font-size:13px;">Managing Partner · Keystone Logistics</span></div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <button class="ab-carousel__btn ab-carousel__btn--prev" id="carouselPrev" aria-label="Previous testimonial">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="ab-carousel__btn ab-carousel__btn--next" id="carouselNext" aria-label="Next testimonial">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="ab-carousel__dots" id="carouselDots">
+          <button class="ab-carousel__dot ab-carousel__dot--active" aria-label="Testimonial 1"></button>
+          <button class="ab-carousel__dot" aria-label="Testimonial 2"></button>
+          <button class="ab-carousel__dot" aria-label="Testimonial 3"></button>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Section 3 — Animated stat ticker -->
-  <section class="surface" style="background:linear-gradient(180deg, #0A1828 0%, #050B14 100%); color:#fff; padding: 100px 0;">
-    <div class="container">
-      <span class="eyebrow" style="color:#FFB454;">Company at a glance</span>
-      <h2 style="margin-bottom: var(--s-7); color:#fff;">The scale behind every engagement.</h2>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:24px;">
-        <div data-counter="350" data-suffix="+" style="padding:24px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:16px; border-top:3px solid #FFB454; transition:transform 240ms ease, border-color 240ms ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='#FFB454';" onmouseout="this.style.transform='none';"><div class="js-counter" style="font-size:56px; font-weight:600; letter-spacing:-0.03em; line-height:1; color:#FFB454; font-feature-settings:'tnum';">350+</div><div style="font-size:13px; color:rgba(255,255,255,0.7); margin-top:10px; line-height:1.4;">Certified architects</div></div>
-        <div data-counter="175" data-suffix="+" style="padding:24px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:16px; border-top:3px solid #34D399; transition:transform 240ms ease, border-color 240ms ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='#34D399';" onmouseout="this.style.transform='none';"><div class="js-counter" style="font-size:56px; font-weight:600; letter-spacing:-0.03em; line-height:1; color:#34D399; font-feature-settings:'tnum';">175+</div><div style="font-size:13px; color:rgba(255,255,255,0.7); margin-top:10px; line-height:1.4;">Customers worldwide</div></div>
-        <div data-counter="120" data-suffix="+" style="padding:24px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:16px; border-top:3px solid #B8D4FF; transition:transform 240ms ease, border-color 240ms ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='#B8D4FF';" onmouseout="this.style.transform='none';"><div class="js-counter" style="font-size:56px; font-weight:600; letter-spacing:-0.03em; line-height:1; color:#B8D4FF; font-feature-settings:'tnum';">120+</div><div style="font-size:13px; color:rgba(255,255,255,0.7); margin-top:10px; line-height:1.4;">New MuleSoft clients onboarded in 2024</div></div>
-        <div data-counter="25" data-suffix="+" style="padding:24px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:16px; border-top:3px solid #D9B5FF; transition:transform 240ms ease, border-color 240ms ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='#D9B5FF';" onmouseout="this.style.transform='none';"><div class="js-counter" style="font-size:56px; font-weight:600; letter-spacing:-0.03em; line-height:1; color:#D9B5FF; font-feature-settings:'tnum';">25+</div><div style="font-size:13px; color:rgba(255,255,255,0.7); margin-top:10px; line-height:1.4;">Industries served</div></div>
-        <div data-counter="4" style="padding:24px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:16px; border-top:3px solid #FFB454; transition:transform 240ms ease, border-color 240ms ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='#FFB454';" onmouseout="this.style.transform='none';"><div class="js-counter" style="font-size:56px; font-weight:600; letter-spacing:-0.03em; line-height:1; color:#FFB454; font-feature-settings:'tnum';">4</div><div style="font-size:13px; color:rgba(255,255,255,0.7); margin-top:10px; line-height:1.4;">Offices: Atlanta, Hyderabad, Bengaluru, Singapore</div></div>
-        <div data-counter="2" data-suffix="×" style="padding:24px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:16px; border-top:3px solid #FFB454; transition:transform 240ms ease, border-color 240ms ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='#FFB454';" onmouseout="this.style.transform='none';"><div class="js-counter" style="font-size:56px; font-weight:600; letter-spacing:-0.03em; line-height:1; color:#FFB454; font-feature-settings:'tnum';">2×</div><div style="font-size:13px; color:rgba(255,255,255,0.7); margin-top:10px; line-height:1.4;">MuleSoft Above &amp; Beyond Partner of the Year — Americas (2024, 2025)</div></div>
-      </div>
-      <p style="margin-top: 36px; color:rgba(255,255,255,0.65); font-size:14px;">The leadership team brings more than 60 cumulative years of enterprise integration experience. Aravind, Ajay, Maruthi, Kiran, and the practice heads each have 15-plus years individually.</p>
     </div>
     <script>
     (function(){
-      var counters = document.querySelectorAll('[data-counter] .js-counter');
-      function animate(el, target, suffix){
-        var dur = 1400, start = 0, t0 = performance.now();
-        function tick(t){
-          var p = Math.min(1, (t-t0)/dur);
-          var eased = 1 - Math.pow(1-p, 3);
-          var n = Math.floor(eased * target);
-          el.textContent = n + (suffix||'');
-          if(p < 1) requestAnimationFrame(tick);
-        }
-        requestAnimationFrame(tick);
+      var track = document.getElementById('carouselTrack');
+      if (!track) return;
+      var dots = document.querySelectorAll('.ab-carousel__dot');
+      var n = 3, cur = 0, timer;
+      function go(i) {
+        cur = (i + n) % n;
+        track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+        dots.forEach(function(d, j) { d.classList.toggle('ab-carousel__dot--active', j === cur); });
       }
-      var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
-          if(e.isIntersecting){
-            var card = e.target;
-            var num = parseInt(card.getAttribute('data-counter'),10);
-            var suf = card.getAttribute('data-suffix') || '';
-            var el = card.querySelector('.js-counter');
-            animate(el, num, suf);
-            io.unobserve(card);
-          }
-        });
-      }, {threshold: 0.35});
-      document.querySelectorAll('[data-counter]').forEach(function(c){ io.observe(c); });
+      function reset() { clearInterval(timer); timer = setInterval(function(){ go(cur+1); }, 5000); }
+      document.getElementById('carouselPrev').addEventListener('click', function(){ go(cur-1); reset(); });
+      document.getElementById('carouselNext').addEventListener('click', function(){ go(cur+1); reset(); });
+      dots.forEach(function(d, i){ d.addEventListener('click', function(){ go(i); reset(); }); });
+      var wrap = document.getElementById('testimonialCarousel');
+      wrap.addEventListener('mouseenter', function(){ clearInterval(timer); });
+      wrap.addEventListener('mouseleave', reset);
+      reset();
     })();
     </script>
   </section>
@@ -619,13 +686,38 @@
     <style>.ab-logo:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(10,24,40,0.10); border-color: #FFB454 !important; }</style>
   </section>
 
-  <!-- Section 9 — Mission/Vision/How we work -->
-  <section>
-    <div class="container">
-      <div class="grid grid--3">
-        <article class="card"><div class="card__eyebrow">Mission</div><p>To engineer integration, data, and AI-agent platforms that move enterprise programs from pilot to production with measurable outcomes.</p></article>
-        <article class="card"><div class="card__eyebrow">Vision</div><p>To be the integration and data architecture firm that AI-native enterprises rely on for foundational modernization at scale.</p></article>
-        <article class="card"><div class="card__eyebrow">How we work</div><p>Certified architects engaged from the first conversation through delivery, with diligence in the engineering and named customer references available on request.</p></article>
+  <!-- Mission / Vision / How we work — elevated -->
+  <section class="ab-mvw">
+    <div class="ab-mvw__inner">
+      <div class="ab-mvw__head">
+        <span class="ab-mvw__eyebrow">Who we are</span>
+        <h2 class="ab-mvw__title">Built by architects. Accountable for outcomes.</h2>
+      </div>
+      <div class="ab-mvw__grid">
+        <div class="ab-mvw__card">
+          <div class="ab-mvw__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="ab-mvw__rule"></div>
+          <p class="ab-mvw__label">Mission</p>
+          <p class="ab-mvw__body">To engineer integration, data, and AI-agent platforms that move enterprise programs from pilot to production with measurable outcomes.</p>
+        </div>
+        <div class="ab-mvw__card">
+          <div class="ab-mvw__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <div class="ab-mvw__rule"></div>
+          <p class="ab-mvw__label">Vision</p>
+          <p class="ab-mvw__body">To be the integration and data architecture firm that AI-native enterprises rely on for foundational modernization at scale.</p>
+        </div>
+        <div class="ab-mvw__card">
+          <div class="ab-mvw__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="ab-mvw__rule"></div>
+          <p class="ab-mvw__label">How we work</p>
+          <p class="ab-mvw__body">Certified architects engaged from the first conversation through delivery. Named engineers, published methodology, and customer references available on request — not after the proposal.</p>
+        </div>
       </div>
     </div>
   </section>
