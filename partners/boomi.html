@@ -190,6 +190,51 @@ body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif
 .reveal-on-scroll.visible{opacity:1;transform:translateY(0);}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0ms!important;transition-duration:0ms!important;}}
 
+/* ===== Hexagon hero visual ===== */
+.h-hero__hex{position:relative;width:100%;max-width:480px;aspect-ratio:1/1;margin-left:auto;animation:heroFade 1000ms 200ms cubic-bezier(.2,.7,.2,1) both;}
+.h-hero__hex-glow{position:absolute;inset:-5%;background:radial-gradient(ellipse 65% 65% at 50% 55%,rgba(255,180,84,.18) 0%,rgba(255,180,84,.05) 50%,transparent 100%);z-index:0;pointer-events:none;}
+.h-hero__hex-outline{position:absolute;inset:7% 2%;clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0% 50%);border:1.5px solid rgba(255,180,84,.25);z-index:1;pointer-events:none;}
+.h-hero__hex-shape{position:absolute;inset:10% 5%;clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0% 50%);overflow:hidden;z-index:2;}
+.h-hero__hex-shape img{width:100%;height:100%;object-fit:cover;filter:brightness(0.82) saturate(0.88) contrast(1.05);}
+.h-hero__hex-shape::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(5,11,20,.7) 100%);pointer-events:none;}
+.h-hero__hex-stat{position:absolute;z-index:4;background:rgba(255,255,255,.95);border-radius:12px;padding:10px 16px;box-shadow:0 12px 28px rgba(0,0,0,.3);backdrop-filter:blur(10px);}
+.h-hero__hex-stat--tl{top:14%;left:-8%;}
+.h-hero__hex-stat--br{bottom:14%;right:-8%;}
+.h-hero__hex-stat__num{font-size:20px;font-weight:700;color:#0A1828;line-height:1;letter-spacing:-.02em;}
+.h-hero__hex-stat__label{font-size:9px;font-weight:700;color:#6B7280;letter-spacing:.1em;text-transform:uppercase;margin-top:2px;}
+.h-hero__hex-chip{position:absolute;z-index:4;bottom:6%;left:50%;transform:translateX(-50%);background:rgba(255,180,84,.18);border:1px solid rgba(255,180,84,.4);border-radius:8px;padding:6px 14px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#FFB454;white-space:nowrap;}
+@media(max-width:900px){.h-hero__hex{display:none;}}
+
+/* ===== Proof / Delivery Evidence ===== */
+.pp-proof{background:#F8FAFC;padding:120px 32px;}
+.pp-proof__inner{max-width:1280px;margin:0 auto;}
+.pp-proof__head{text-align:center;max-width:760px;margin:0 auto 64px;}
+.pp-proof__eyebrow{display:inline-block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#94734A;font-weight:700;margin-bottom:18px;}
+.pp-proof__title{font-size:clamp(30px,3.5vw,44px);line-height:1.05;letter-spacing:-.02em;color:#0A1828;margin:0 0 16px;font-weight:560;}
+.pp-proof__intro{font-size:17px;line-height:1.65;color:#475569;max-width:580px;margin:0 auto;}
+.pp-proof__grid{display:grid;gap:20px;}
+.pp-proof__grid--3{grid-template-columns:repeat(3,1fr);}
+.pp-proof__grid--2{grid-template-columns:repeat(2,1fr);}
+@media(max-width:1024px){.pp-proof__grid--3,.pp-proof__grid--2{grid-template-columns:1fr 1fr;}}
+@media(max-width:640px){.pp-proof__grid--3,.pp-proof__grid--2{grid-template-columns:1fr;}}
+.pp-story{background:#fff;border-radius:18px;border:1px solid #E2E8F0;padding:36px;display:flex;flex-direction:column;gap:14px;transition:box-shadow 200ms,transform 200ms;}
+.pp-story:hover{box-shadow:0 12px 32px rgba(10,24,40,.08);transform:translateY(-3px);}
+.pp-story__tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;padding:5px 10px;border-radius:100px;align-self:flex-start;}
+.pp-story__tag--mfg{background:rgba(255,180,84,.12);color:#94734A;}
+.pp-story__tag--log{background:rgba(46,92,138,.12);color:#2E5C8A;}
+.pp-story__tag--hc{background:rgba(133,87,194,.1);color:#6B43A8;}
+.pp-story__tag--energy{background:rgba(255,107,107,.1);color:#C44848;}
+.pp-story__tag--scenario{background:rgba(100,116,139,.1);color:#475569;}
+.pp-story__tag--ai{background:rgba(4,120,87,.1);color:#047857;}
+.pp-story__metric{font-size:clamp(40px,4.5vw,58px);font-weight:700;color:#0A1828;line-height:1;letter-spacing:-.04em;margin:0;}
+.pp-story__metric em{font-style:normal;color:#2E5C8A;}
+.pp-story__headline{font-size:18px;font-weight:580;color:#0A1828;line-height:1.25;letter-spacing:-.01em;margin:0;}
+.pp-story__body{font-size:14.5px;line-height:1.6;color:#475569;margin:0;flex:1;}
+.pp-story__quote{font-size:15px;line-height:1.6;color:#1A1F2A;padding-left:16px;border-left:3px solid #FFB454;margin:0;}
+.pp-story__attribution{font-size:13px;color:#6B7280;margin:0;}
+.pp-story__attribution strong{color:#0A1828;font-weight:560;}
+.pp-story__scenario-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#94A3B8;font-weight:600;margin-top:auto;padding-top:14px;border-top:1px solid #F1F5F9;}
+
 </style>
 </head>
 <body>
@@ -269,12 +314,21 @@ body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif
         <a href="#offerings" class="h-hero__btn-ghost">See what we deliver</a>
       </div>
     </div>
-    <div class="h-hero__panel" aria-hidden="true">
-      <div class="h-hero__panel-badge">Boomi · Full-lifecycle delivery</div>
-      <div class="h-hero__panel-title">Implementation through migration.</div>
-      <div class="h-hero__panel-sub">B2Mule — tested accelerator for Boomi-to-MuleSoft.</div>
-      <div class="h-hero__panel-stats"><div class="h-hero__panel-stat"><div class="h-hero__panel-stat-num">B2Mule</div><div class="h-hero__panel-stat-label">Named accelerator</div></div><div class="h-hero__panel-stat"><div class="h-hero__panel-stat-num">Full</div><div class="h-hero__panel-stat-label">Platform lifecycle</div></div></div>
-      <div class="h-hero__panel-chips"><span class="h-hero__panel-chip">AtomSphere</span><span class="h-hero__panel-chip">API Management</span><span class="h-hero__panel-chip">Process Library</span><span class="h-hero__panel-chip">B2Mule</span><span class="h-hero__panel-chip">Architecture Review</span></div>
+    <div class="h-hero__hex" aria-hidden="true">
+      <div class="h-hero__hex-glow"></div>
+      <div class="h-hero__hex-outline"></div>
+      <div class="h-hero__hex-shape">
+        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80" alt="">
+      </div>
+      <div class="h-hero__hex-stat h-hero__hex-stat--tl">
+        <div class="h-hero__hex-stat__num">B2Mule</div>
+        <div class="h-hero__hex-stat__label">Named accelerator</div>
+      </div>
+      <div class="h-hero__hex-stat h-hero__hex-stat--br">
+        <div class="h-hero__hex-stat__num">Full</div>
+        <div class="h-hero__hex-stat__label">Platform lifecycle</div>
+      </div>
+      <div class="h-hero__hex-chip">Boomi · Implementation &amp; Migration</div>
     </div>
   </div>
 </section>
@@ -404,6 +458,41 @@ body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif
         <div class="pp-acc__card-desc">A 45-minute working session with a Boomi-experienced architect. Walk away with an honest platform assessment and your options clearly laid out.</div>
         <span class="pp-acc__card-cta">Schedule a Boomi assessment →</span>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="pp-proof">
+  <div class="pp-proof__inner">
+    <div class="pp-proof__head">
+      <span class="pp-proof__eyebrow">— How we deliver</span>
+      <h2 class="pp-proof__title">Three Boomi delivery shapes.</h2>
+      <p class="pp-proof__intro">Prowess Boomi programs cover the full implementation lifecycle — dependency mapping to production cutover. Built for long-term governance, not just initial connectivity.</p>
+    </div>
+    <div class="pp-proof__grid pp-proof__grid--3">
+
+      <div class="pp-story reveal-on-scroll">
+        <span class="pp-story__tag pp-story__tag--mfg">Scenario · Manufacturing</span>
+        <div class="pp-story__headline">SAP + Salesforce + Workday connectivity for global manufacturers</div>
+        <p class="pp-story__body">Prowess Boomi programs connect core enterprise systems — ERP, CRM, and HCM — with automated, governed data flows. Eliminating point-to-point connections that break under load, and manual processes that introduce latency and error between Sales, Finance, and Operations.</p>
+        <span class="pp-story__scenario-label">Representative delivery shape · Boomi practice</span>
+      </div>
+
+      <div class="pp-story reveal-on-scroll">
+        <span class="pp-story__tag pp-story__tag--hc">Scenario · Healthcare</span>
+        <div class="pp-story__headline">Patient data synchronisation across clinical and operational systems</div>
+        <p class="pp-story__body">Prowess Healthcare Boomi programs connect EMR, scheduling, billing, and patient engagement platforms. Structured data validation and governed API design — not just connector wiring. Built with HIPAA compliance requirements addressed in the integration layer from the start.</p>
+        <span class="pp-story__scenario-label">Representative delivery shape · Boomi practice</span>
+      </div>
+
+      <div class="pp-story reveal-on-scroll">
+        <span class="pp-story__tag pp-story__tag--scenario">Scenario · Modernisation</span>
+        <div class="pp-story__headline">Legacy middleware to Boomi — phased migration, zero-downtime cutover</div>
+        <p class="pp-story__body">Prowess handles the full Boomi implementation lifecycle: dependency mapping, integration inventory, phased migration, and production cutover. Reusable integration templates and structured data flows engineered for long-term governance — not a quick-start that becomes technical debt.</p>
+        <span class="pp-story__scenario-label">Representative delivery shape · Boomi practice</span>
+      </div>
+
     </div>
   </div>
 </section>
