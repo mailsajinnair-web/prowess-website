@@ -1861,6 +1861,47 @@ html { scroll-behavior: smooth; }
   transition: background 200ms ease, transform 200ms ease;
 }
 .p-prefooter__btn:hover { background: #FFC273; transform: translateY(-2px); }
+
+/* ===== Partners section ===== */
+.h-partners { background: #F8FAFC; padding: 120px 32px; }
+.h-partners__inner { max-width: 1280px; margin: 0 auto; }
+.h-partners__head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 56px; flex-wrap: wrap; gap: 20px; }
+.h-partners__title { font-size: clamp(36px,4.5vw,56px); font-weight: 560; color: #0A1828; margin: 0; letter-spacing: -0.02em; line-height: 1.05; max-width: 640px; }
+.h-partners__cta { font-size: 15px; font-weight: 540; color: #0A1828; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; border-bottom: 1px solid rgba(10,24,40,0.2); padding-bottom: 2px; transition: border-color 160ms; }
+.h-partners__cta:hover { border-color: #0A1828; }
+.h-partners__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 1024px) { .h-partners__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .h-partners__grid { grid-template-columns: 1fr; } }
+.h-partner-card {
+  background: #fff; border: 1px solid #E2E8F0; border-radius: 18px;
+  padding: 32px; text-decoration: none; color: inherit;
+  display: flex; flex-direction: column; gap: 0;
+  transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+}
+.h-partner-card:hover { border-color: rgba(46,92,138,0.35); box-shadow: 0 8px 28px rgba(10,24,40,0.09); transform: translateY(-3px); }
+.h-partner-card__icon {
+  width: 52px; height: 52px; border-radius: 13px;
+  display: grid; place-items: center; margin-bottom: 20px;
+  flex-shrink: 0;
+}
+.h-partner-card__tag { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; margin-bottom: 8px; }
+.h-partner-card__name { font-size: 22px; font-weight: 580; color: #0A1828; margin: 0 0 10px; letter-spacing: -0.01em; line-height: 1.2; }
+.h-partner-card__desc { font-size: 14.5px; line-height: 1.6; color: #475569; margin: 0 0 24px; flex: 1; }
+.h-partner-card__link { font-size: 13px; font-weight: 600; color: #2E5C8A; display: inline-flex; align-items: center; gap: 5px; transition: gap 160ms; }
+.h-partner-card:hover .h-partner-card__link { gap: 9px; }
+/* per-card accent colours */
+.h-partner-card--mulesoft .h-partner-card__icon { background: rgba(0,161,224,0.1); color: #00A1E0; }
+.h-partner-card--mulesoft .h-partner-card__tag { color: #0176D3; }
+.h-partner-card--informatica .h-partner-card__icon { background: rgba(255,102,0,0.1); color: #FF6600; }
+.h-partner-card--informatica .h-partner-card__tag { color: #C24E00; }
+.h-partner-card--agentforce .h-partner-card__icon { background: rgba(0,161,224,0.1); color: #00A1E0; }
+.h-partner-card--agentforce .h-partner-card__tag { color: #0176D3; }
+.h-partner-card--boomi .h-partner-card__icon { background: rgba(46,100,178,0.1); color: #2E64B2; }
+.h-partner-card--boomi .h-partner-card__tag { color: #2E64B2; }
+.h-partner-card--tibco .h-partner-card__icon { background: rgba(0,153,68,0.1); color: #009944; }
+.h-partner-card--tibco .h-partner-card__tag { color: #007A35; }
+.h-partner-card--workato .h-partner-card__icon { background: rgba(229,57,53,0.1); color: #E53935; }
+.h-partner-card--workato .h-partner-card__tag { color: #C62828; }
 </style>
 
 <script type="application/ld+json">
@@ -3066,6 +3107,79 @@ html { scroll-behavior: smooth; }
           <span class="h-industry-tile__back-cta">Explore Energy</span>
         </div>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Partners ====== -->
+<section class="h-partners">
+  <div class="h-partners__inner">
+    <div class="h-partners__head">
+      <h2 class="h-partners__title">Six platforms. A named practice for each.</h2>
+      <a href="services.html" class="h-partners__cta">View all services →</a>
+    </div>
+    <div class="h-partners__grid">
+
+      <a href="partners/mulesoft.html" class="h-partner-card h-partner-card--mulesoft reveal-on-scroll">
+        <div class="h-partner-card__icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+        </div>
+        <div class="h-partner-card__tag">Official Partner · 2× Partner of the Year</div>
+        <div class="h-partner-card__name">MuleSoft</div>
+        <div class="h-partner-card__desc">Anypoint Platform, CloudHub 2.0, Agent Fabric, and Mule 3.x exits. Two-time Above &amp; Beyond Partner of the Year — Americas.</div>
+        <span class="h-partner-card__link">Explore MuleSoft practice →</span>
+      </a>
+
+      <a href="partners/informatica.html" class="h-partner-card h-partner-card--informatica reveal-on-scroll">
+        <div class="h-partner-card__icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        </div>
+        <div class="h-partner-card__tag">Certified Partner · IDMC &amp; MDM</div>
+        <div class="h-partner-card__name">Informatica</div>
+        <div class="h-partner-card__desc">PowerCenter to IDMC, MDM implementation, Data Quality, and AI-ready data products. The data modernisation practice.</div>
+        <span class="h-partner-card__link">Explore Informatica practice →</span>
+      </a>
+
+      <a href="partners/agentforce.html" class="h-partner-card h-partner-card--agentforce reveal-on-scroll">
+        <div class="h-partner-card__icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M4 4l5 5M20 4l-5 5M4 20l5-5M20 20l-5-5"/></svg>
+        </div>
+        <div class="h-partner-card__tag">Summit Partner · Salesforce</div>
+        <div class="h-partner-card__name">Agentforce</div>
+        <div class="h-partner-card__desc">Agentforce implementation, Agent Fabric, and industry agent suites. Salesforce Summit Consulting Partner. Pilots that reach production.</div>
+        <span class="h-partner-card__link">Explore Agentforce practice →</span>
+      </a>
+
+      <a href="partners/boomi.html" class="h-partner-card h-partner-card--boomi reveal-on-scroll">
+        <div class="h-partner-card__icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+        </div>
+        <div class="h-partner-card__tag">Full-lifecycle delivery · B2Mule</div>
+        <div class="h-partner-card__name">Boomi</div>
+        <div class="h-partner-card__desc">Implementation, optimisation, architecture assessment, and B2Mule migration. Boomi architects across the full platform lifecycle.</div>
+        <span class="h-partner-card__link">Explore Boomi practice →</span>
+      </a>
+
+      <a href="partners/tibco.html" class="h-partner-card h-partner-card--tibco reveal-on-scroll">
+        <div class="h-partner-card__icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="h-partner-card__tag">Hackathon 2026 · 3rd Prize · T2Mule</div>
+        <div class="h-partner-card__name">TIBCO</div>
+        <div class="h-partner-card__desc">BusinessWorks, EMS, architecture reviews, and T2Mule migration. TIBCO Hackathon 2026 · 3rd Prize. Both sides of the TIBCO lifecycle.</div>
+        <span class="h-partner-card__link">Explore TIBCO practice →</span>
+      </a>
+
+      <a href="partners/workato.html" class="h-partner-card h-partner-card--workato reveal-on-scroll">
+        <div class="h-partner-card__icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </div>
+        <div class="h-partner-card__tag">Full-lifecycle delivery · WM2Mule</div>
+        <div class="h-partner-card__name">Workato</div>
+        <div class="h-partner-card__desc">Recipe implementation, platform governance, enterprise integration architecture, and WM2Mule migration. Workato at every stage.</div>
+        <span class="h-partner-card__link">Explore Workato practice →</span>
+      </a>
+
     </div>
   </div>
 </section>
