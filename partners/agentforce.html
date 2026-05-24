@@ -235,6 +235,44 @@ body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif
 .pp-story__attribution strong{color:#0A1828;font-weight:560;}
 .pp-story__scenario-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#94A3B8;font-weight:600;margin-top:auto;padding-top:14px;border-top:1px solid #F1F5F9;}
 
+/* ===== h-story customer evidence sections ===== */
+.h-story{padding:120px 32px;position:relative;overflow:hidden;}
+.h-story.bg-cream{background:#FBF9F2;}
+.h-story.bg-white{background:#fff;}
+.h-story__inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center;}
+.h-story__text{position:relative;max-width:540px;}
+.h-story__tag{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:6px 12px;border-radius:100px;margin-bottom:20px;}
+.h-story__tag.ai{background:rgba(4,120,87,.1);color:#047857;}
+.h-story__headline{font-size:clamp(32px,4vw,52px);line-height:1.04;letter-spacing:-.025em;font-weight:560;color:#0A1828;margin:0 0 24px;max-width:16ch;}
+.h-story__metric{display:inline-flex;align-items:baseline;gap:14px;margin-bottom:28px;}
+.h-story__metric-num{font-size:clamp(56px,6vw,80px);line-height:1;letter-spacing:-.04em;font-weight:600;color:#0A1828;}
+.h-story__metric-label{font-size:14px;color:#6B7280;max-width:20ch;line-height:1.4;}
+.h-story__attribution{font-size:14px;color:#6B7280;margin:0 0 32px;}
+.h-story__attribution strong{color:#0A1828;font-weight:560;}
+.h-story__visual{position:relative;aspect-ratio:5/4;width:100%;max-width:580px;border-radius:24px;overflow:hidden;}
+.sv-frame{position:absolute;inset:0;border-radius:24px;overflow:hidden;border:1px solid #E2E8F0;}
+.sv-frame.ai-v2{border-color:#E2E8F0;}
+.sv-frame.ai-v2 .collage__bg{background:linear-gradient(135deg,#F4F0FB 0%,#fff 100%);}
+.sv-frame.ai-v2 .collage__bg::before{content:"";position:absolute;top:-80px;right:-80px;width:320px;height:320px;background:radial-gradient(circle,rgba(133,87,194,.4),transparent 70%);filter:blur(50px);border-radius:50%;}
+.collage{position:absolute;inset:0;padding:32px;}
+.collage__bg{position:absolute;inset:0;}
+.collage__photo{position:absolute;z-index:3;overflow:hidden;background-size:cover;background-position:center;background-color:#475569;box-shadow:0 16px 40px rgba(10,24,40,.18);}
+.collage__photo.rect{border-radius:20px;}
+.collage__photo.circle{border-radius:50%;border:4px solid #fff;}
+.collage__photo.squircle{border-radius:32%;}
+.collage__ring{position:absolute;z-index:1;border-radius:50%;border:2px dashed rgba(255,180,84,.5);}
+.collage__stat-card{position:absolute;background:rgba(255,255,255,.98);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.6);border-radius:14px;padding:14px 18px;box-shadow:0 12px 32px rgba(10,24,40,.22);z-index:5;}
+.collage__stat-num{font-size:26px;font-weight:600;line-height:1;letter-spacing:-.02em;color:#0A1828;}
+.collage__stat-label{font-size:11px;color:#6B7280;margin-top:4px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;}
+.collage__badge{position:absolute;display:inline-flex;align-items:center;gap:8px;padding:6px 12px;background:#fff;border-radius:100px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#0A1828;box-shadow:0 4px 12px rgba(0,0,0,.15);z-index:6;}
+.collage__badge::before{content:"";width:6px;height:6px;border-radius:50%;background:#FFB454;animation:collagePulse 1.6s ease-in-out infinite;}
+@keyframes collagePulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(.7);}}
+@keyframes collageFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
+.collage__photo.float{animation:collageFloat 6s ease-in-out infinite;}
+.collage__photo.float-2{animation:collageFloat 7s ease-in-out infinite 1s;}
+.collage__photo.float-3{animation:collageFloat 8s ease-in-out infinite .5s;}
+@media(max-width:1024px){.h-story__inner{grid-template-columns:1fr;gap:48px;}.h-story__visual{margin:0 auto;}}
+
 </style>
 </head>
 <body>
@@ -463,21 +501,53 @@ body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif
 </section>
 
 <!-- PROOF -->
-<section class="pp-proof">
+
+<!-- Story 1: 20+ enterprises -->
+<section class="h-story bg-cream">
+  <div class="h-story__inner">
+    <div class="h-story__text">
+      <span class="h-story__tag ai">Customer evidence · Enterprise AI</span>
+      <h2 class="h-story__headline">MuleSoft Agent Fabric running in production across 20+ enterprises.</h2>
+      <div class="h-story__metric">
+        <span class="h-story__metric-num">20</span>
+        <span class="h-story__metric-label">+ production Agent Fabric deployments — not pilots · ERP, CRM, and operational system connectivity</span>
+      </div>
+      <p class="h-story__attribution"><strong>20+ Enterprise Programs</strong> — Agent Registry, Broker, Orchestration &amp; Observability deployed · 6-week sprint to production model</p>
+    </div>
+    <div class="h-story__visual" aria-hidden="true">
+      <div class="sv-frame ai-v2">
+        <div class="collage__bg"></div>
+        <div class="collage">
+          <div class="collage__photo rect float" style="top:28px;left:36px;width:60%;aspect-ratio:5/3;background-image:url('https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&q=80');"></div>
+          <div class="collage__photo circle float-2" style="top:22px;right:32px;width:108px;height:108px;background-image:url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80');"></div>
+          <div class="collage__photo squircle float-3" style="bottom:30px;left:44px;width:144px;height:144px;background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&q=80');"></div>
+          <div class="collage__photo circle float" style="bottom:84px;right:50px;width:88px;height:88px;background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&q=80');"></div>
+          <div class="collage__ring" style="top:4px;right:20px;width:140px;height:140px;border-color:rgba(133,87,194,.5);"></div>
+          <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path id="agentfabric" d="M 62 24 Q 78 12 88 20 Q 98 36 90 48 Q 98 64 86 74 Q 94 82 88 86 Q 57 94 24 78 Q 10 58 20 43 Q 34 30 62 24 Z" fill="none" stroke="rgba(133,87,194,0.5)" stroke-width="2" stroke-dasharray="6 5" vector-effect="non-scaling-stroke">
+              <animate attributeName="stroke-dashoffset" values="0;-22" dur="3s" repeatCount="indefinite"/>
+            </path>
+            <circle r="1" fill="#8557C2" vector-effect="non-scaling-stroke"><animateMotion dur="9s" repeatCount="indefinite"><mpath href="#agentfabric"/></animateMotion></circle>
+            <circle r="0.9" fill="#FFB454" vector-effect="non-scaling-stroke"><animateMotion dur="9s" repeatCount="indefinite" begin="-4.5s"><mpath href="#agentfabric"/></animateMotion></circle>
+          </svg>
+          <span class="collage__badge" style="top:22px;left:52px;">Agent Fabric · Production</span>
+          <div class="collage__stat-card" style="top:42%;right:22px;"><div class="collage__stat-num">20+</div><div class="collage__stat-label">Deployments</div></div>
+          <div class="collage__stat-card" style="bottom:22px;right:26px;"><div class="collage__stat-num">6 wks</div><div class="collage__stat-label">Sprint to live</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Delivery patterns — compact grid -->
+<section class="pp-proof" style="background:#fff;">
   <div class="pp-proof__inner">
     <div class="pp-proof__head">
-      <span class="pp-proof__eyebrow">— Delivery evidence</span>
-      <h2 class="pp-proof__title">Agent Fabric in production. 20+ enterprises.</h2>
-      <p class="pp-proof__intro">Prowess has implemented MuleSoft Agent Fabric as the AI connectivity layer across 20+ enterprise programs. A few delivery patterns we run.</p>
+      <span class="pp-proof__eyebrow">— Delivery patterns</span>
+      <h2 class="pp-proof__title">How Prowess structures Agentforce programs.</h2>
+      <p class="pp-proof__intro">Two delivery shapes we run repeatedly — from manufacturing agents to pilot-to-production paths.</p>
     </div>
-    <div class="pp-proof__grid pp-proof__grid--3">
-
-      <div class="pp-story reveal-on-scroll">
-        <span class="pp-story__tag pp-story__tag--ai">Enterprise AI</span>
-        <div class="pp-story__metric">20<em>+</em></div>
-        <div class="pp-story__headline">Agent Fabric running in production across 20+ enterprises</div>
-        <p class="pp-story__body">Prowess has implemented MuleSoft Agent Fabric — Agent Registry, Broker, Orchestration, and Observability — across 20+ enterprise programs. Not pilot deployments. Production agents connected to ERP, CRM, and operational systems via governed integration.</p>
-      </div>
+    <div class="pp-proof__grid pp-proof__grid--2">
 
       <div class="pp-story reveal-on-scroll">
         <span class="pp-story__tag pp-story__tag--mfg">Scenario · Manufacturing</span>

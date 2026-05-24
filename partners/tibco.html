@@ -235,6 +235,58 @@ body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif
 .pp-story__attribution strong{color:#0A1828;font-weight:560;}
 .pp-story__scenario-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#94A3B8;font-weight:600;margin-top:auto;padding-top:14px;border-top:1px solid #F1F5F9;}
 
+/* ===== h-story customer evidence sections ===== */
+.h-story{padding:120px 32px;position:relative;overflow:hidden;}
+.h-story.bg-cream{background:#FBF9F2;}
+.h-story.bg-white{background:#fff;}
+.h-story.bg-navy{background:linear-gradient(135deg,#0A1828 0%,#1E3A5F 100%);}
+.h-story__inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center;}
+.h-story__inner.reverse{direction:rtl;}
+.h-story__inner.reverse>*{direction:ltr;}
+.h-story__text{position:relative;max-width:540px;}
+.h-story__tag{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:6px 12px;border-radius:100px;margin-bottom:20px;}
+.h-story__tag.mfg{background:rgba(255,180,84,.12);color:#94734A;}
+.h-story__tag.log{background:rgba(46,92,138,.12);color:#2E5C8A;}
+.h-story__tag.mfg-on-dark,.h-story__tag.log-on-dark{background:rgba(255,180,84,.2);color:#FFB454;}
+.h-story__headline{font-size:clamp(32px,4vw,52px);line-height:1.04;letter-spacing:-.025em;font-weight:560;color:#0A1828;margin:0 0 24px;max-width:16ch;}
+.h-story__headline.on-dark{color:#fff;}
+.h-story__metric{display:inline-flex;align-items:baseline;gap:14px;margin-bottom:28px;}
+.h-story__metric-num{font-size:clamp(56px,6vw,80px);line-height:1;letter-spacing:-.04em;font-weight:600;color:#0A1828;}
+.h-story__metric-num.on-dark{color:#FFB454;}
+.h-story__metric-label{font-size:14px;color:#6B7280;max-width:20ch;line-height:1.4;}
+.h-story__metric-label.on-dark{color:rgba(255,255,255,.6);}
+.h-story__attribution{font-size:14px;color:#6B7280;margin:0 0 32px;}
+.h-story__attribution strong{color:#0A1828;font-weight:560;}
+.h-story__attribution.on-dark{color:rgba(255,255,255,.5);}
+.h-story__attribution.on-dark strong{color:#fff;}
+.h-story__visual{position:relative;aspect-ratio:5/4;width:100%;max-width:580px;border-radius:24px;overflow:hidden;}
+.sv-frame{position:absolute;inset:0;border-radius:24px;overflow:hidden;border:1px solid #E2E8F0;}
+.sv-frame.mfg-v2 .collage__bg{background:linear-gradient(135deg,#FBF9F2 0%,#fff 100%);}
+.sv-frame.mfg-v2 .collage__bg::before{content:"";position:absolute;top:-80px;right:-80px;width:320px;height:320px;background:radial-gradient(circle,rgba(255,180,84,.45),transparent 70%);filter:blur(50px);border-radius:50%;}
+.sv-frame.log-v2{background:linear-gradient(135deg,#0A1828 0%,#1E3A5F 100%);border-color:rgba(255,255,255,.05);}
+.collage{position:absolute;inset:0;padding:32px;}
+.collage__bg{position:absolute;inset:0;}
+.collage__photo{position:absolute;z-index:3;overflow:hidden;background-size:cover;background-position:center;background-color:#475569;box-shadow:0 16px 40px rgba(10,24,40,.18);}
+.collage__photo.rect{border-radius:20px;}
+.collage__photo.circle{border-radius:50%;border:4px solid #fff;}
+.collage__photo.squircle{border-radius:32%;}
+.collage__ring{position:absolute;z-index:1;border-radius:50%;border:2px dashed rgba(255,180,84,.5);}
+.collage__ring.white{border-color:rgba(255,255,255,.25);}
+.collage__stat-card{position:absolute;background:rgba(255,255,255,.98);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.6);border-radius:14px;padding:14px 18px;box-shadow:0 12px 32px rgba(10,24,40,.22);z-index:5;}
+.collage__stat-card.on-dark{background:rgba(10,24,40,.92);border-color:rgba(255,180,84,.4);}
+.collage__stat-num{font-size:26px;font-weight:600;line-height:1;letter-spacing:-.02em;color:#0A1828;}
+.collage__stat-card.on-dark .collage__stat-num{color:#FFB454;}
+.collage__stat-label{font-size:11px;color:#6B7280;margin-top:4px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;}
+.collage__stat-card.on-dark .collage__stat-label{color:rgba(255,255,255,.7);}
+.collage__badge{position:absolute;display:inline-flex;align-items:center;gap:8px;padding:6px 12px;background:#fff;border-radius:100px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#0A1828;box-shadow:0 4px 12px rgba(0,0,0,.15);z-index:6;}
+.collage__badge::before{content:"";width:6px;height:6px;border-radius:50%;background:#FFB454;animation:collagePulse 1.6s ease-in-out infinite;}
+@keyframes collagePulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(.7);}}
+@keyframes collageFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
+.collage__photo.float{animation:collageFloat 6s ease-in-out infinite;}
+.collage__photo.float-2{animation:collageFloat 7s ease-in-out infinite 1s;}
+.collage__photo.float-3{animation:collageFloat 8s ease-in-out infinite .5s;}
+@media(max-width:1024px){.h-story__inner{grid-template-columns:1fr;gap:48px;}.h-story__inner.reverse{direction:ltr;}.h-story__visual{margin:0 auto;}}
+
 </style>
 </head>
 <body>
@@ -463,29 +515,76 @@ body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif
 </section>
 
 <!-- PROOF -->
-<section class="pp-proof">
-  <div class="pp-proof__inner">
-    <div class="pp-proof__head">
-      <span class="pp-proof__eyebrow">— Delivery evidence</span>
-      <h2 class="pp-proof__title">Two TIBCO exits. Real metrics.</h2>
-      <p class="pp-proof__intro">Both are TIBCO-to-MuleSoft programs. Prowess held the architecture, ran the migration, and operates the platform after go-live.</p>
+
+<!-- Story 1: Aluminum manufacturer -->
+<section class="h-story bg-cream">
+  <div class="h-story__inner">
+    <div class="h-story__text">
+      <span class="h-story__tag mfg">Customer evidence · Manufacturing · Global</span>
+      <h2 class="h-story__headline">Eliminated operational delays across four continents.</h2>
+      <div class="h-story__metric">
+        <span class="h-story__metric-num">85</span>
+        <span class="h-story__metric-label">% reduction in operational delays — TIBCO to MuleSoft across North America, South America, Europe, Asia</span>
+      </div>
+      <p class="h-story__attribution"><strong>Global Aluminum Rolling &amp; Recycling Manufacturer</strong> — TIBCO exit program · MES, SAP, HR Operations, Finance, Transport &amp; Logistics integrated</p>
     </div>
-    <div class="pp-proof__grid pp-proof__grid--2">
-
-      <div class="pp-story reveal-on-scroll">
-        <span class="pp-story__tag pp-story__tag--mfg">Manufacturing · Global</span>
-        <div class="pp-story__metric">85<em>%</em></div>
-        <div class="pp-story__headline">85% reduction in operational delays — global aluminum manufacturer</div>
-        <p class="pp-story__body">A global aluminum rolling and recycling manufacturer running TIBCO Integration Services across North America, South America, Europe, and Asia migrated to MuleSoft. Prowess integrated Manufacturing Execution System, SAP, HR Operations, Finance, and Transport &amp; Logistics — eliminating operational delays and enabling reliable production workflows across all geographies.</p>
+    <div class="h-story__visual" aria-hidden="true">
+      <div class="sv-frame mfg-v2">
+        <div class="collage__bg"></div>
+        <div class="collage">
+          <div class="collage__photo rect float" style="top:28px;left:36px;width:60%;aspect-ratio:5/3;background-image:url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=900&q=80');"></div>
+          <div class="collage__photo circle float-2" style="top:22px;right:32px;width:108px;height:108px;background-image:url('https://images.unsplash.com/photo-1565043666747-69f6646db940?w=400&q=80');"></div>
+          <div class="collage__photo squircle float-3" style="bottom:30px;left:44px;width:144px;height:144px;background-image:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&q=80');"></div>
+          <div class="collage__photo circle float" style="bottom:84px;right:50px;width:88px;height:88px;background-image:url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=400&q=80');"></div>
+          <div class="collage__ring" style="top:4px;right:20px;width:140px;height:140px;"></div>
+          <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path id="aluminum" d="M 62 24 Q 78 12 88 20 Q 98 36 90 48 Q 98 64 86 74 Q 94 82 88 86 Q 57 94 24 78 Q 10 58 20 43 Q 34 30 62 24 Z" fill="none" stroke="rgba(255,180,84,0.6)" stroke-width="2" stroke-dasharray="6 5" vector-effect="non-scaling-stroke">
+              <animate attributeName="stroke-dashoffset" values="0;-22" dur="3s" repeatCount="indefinite"/>
+            </path>
+            <circle r="1" fill="#FFB454" vector-effect="non-scaling-stroke"><animateMotion dur="9s" repeatCount="indefinite"><mpath href="#aluminum"/></animateMotion></circle>
+            <circle r="0.9" fill="#B8D4FF" vector-effect="non-scaling-stroke"><animateMotion dur="9s" repeatCount="indefinite" begin="-4.5s"><mpath href="#aluminum"/></animateMotion></circle>
+          </svg>
+          <span class="collage__badge" style="top:22px;left:52px;">TIBCO → MuleSoft</span>
+          <div class="collage__stat-card" style="top:42%;right:22px;"><div class="collage__stat-num">4</div><div class="collage__stat-label">Continents</div></div>
+          <div class="collage__stat-card" style="bottom:22px;right:26px;"><div class="collage__stat-num">85%</div><div class="collage__stat-label">Delays eliminated</div></div>
+        </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="pp-story reveal-on-scroll">
-        <span class="pp-story__tag pp-story__tag--energy">Global Enterprise</span>
-        <div class="pp-story__metric">35<em>%</em></div>
-        <div class="pp-story__headline">35% opex reduction, 50% lower breach risk — TIBCO exit for global enterprise</div>
-        <p class="pp-story__body">A global leader in water, hygiene, and infection prevention migrated from TIBCO to MuleSoft Anypoint Partner Manager. Prowess delivered API-led B2B architecture with automated security protocols — 35% reduction in operational expenses, 50% decrease in data breach risks, and 30% faster trading partner onboarding and transaction processing.</p>
+<!-- Story 2: Water/hygiene global enterprise (reversed, navy) -->
+<section class="h-story bg-navy">
+  <div class="h-story__inner reverse">
+    <div class="h-story__text">
+      <span class="h-story__tag mfg-on-dark">Customer evidence · Global Enterprise</span>
+      <h2 class="h-story__headline on-dark">35% opex reduction. 50% lower breach risk. TIBCO B2B replaced.</h2>
+      <div class="h-story__metric">
+        <span class="h-story__metric-num on-dark">35</span>
+        <span class="h-story__metric-label on-dark">% operational expense reduction — global leader in water, hygiene &amp; infection prevention</span>
       </div>
-
+      <p class="h-story__attribution on-dark"><strong>Global Water, Hygiene &amp; Infection Prevention Enterprise</strong> — TIBCO to MuleSoft Anypoint Partner Manager · 50% breach risk reduction · 30% faster partner onboarding</p>
+    </div>
+    <div class="h-story__visual" aria-hidden="true">
+      <div class="sv-frame log-v2">
+        <div class="collage">
+          <div class="collage__photo rect float" style="top:28px;left:36px;width:60%;aspect-ratio:5/3;background-image:url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80');"></div>
+          <div class="collage__photo circle float-2" style="top:22px;right:32px;width:108px;height:108px;background-image:url('https://images.unsplash.com/photo-1563464782-238e3de7ae74?w=400&q=80');"></div>
+          <div class="collage__photo squircle float-3" style="bottom:30px;left:44px;width:144px;height:144px;background-image:url('https://images.unsplash.com/photo-1576086213369-97a306d36557?w=500&q=80');"></div>
+          <div class="collage__photo circle float" style="bottom:84px;right:50px;width:88px;height:88px;background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&q=80');"></div>
+          <div class="collage__ring white" style="top:4px;right:20px;width:140px;height:140px;"></div>
+          <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path id="water" d="M 60 26 Q 76 14 86 22 Q 96 38 88 50 Q 96 66 84 76 Q 92 84 86 88 Q 55 96 22 80 Q 8 60 18 45 Q 32 32 60 26 Z" fill="none" stroke="rgba(184,212,255,0.5)" stroke-width="2" stroke-dasharray="6 5" vector-effect="non-scaling-stroke">
+              <animate attributeName="stroke-dashoffset" values="0;-22" dur="3s" repeatCount="indefinite"/>
+            </path>
+            <circle r="1" fill="#B8D4FF" vector-effect="non-scaling-stroke"><animateMotion dur="9s" repeatCount="indefinite"><mpath href="#water"/></animateMotion></circle>
+            <circle r="0.9" fill="#FFB454" vector-effect="non-scaling-stroke"><animateMotion dur="9s" repeatCount="indefinite" begin="-4.5s"><mpath href="#water"/></animateMotion></circle>
+          </svg>
+          <span class="collage__badge" style="top:22px;left:52px;">TIBCO → MuleSoft B2B</span>
+          <div class="collage__stat-card on-dark" style="top:42%;right:22px;"><div class="collage__stat-num">50%</div><div class="collage__stat-label">Breach risk reduction</div></div>
+          <div class="collage__stat-card on-dark" style="bottom:22px;right:26px;"><div class="collage__stat-num">30%</div><div class="collage__stat-label">Faster onboarding</div></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

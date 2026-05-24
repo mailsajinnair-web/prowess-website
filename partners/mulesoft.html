@@ -235,6 +235,63 @@ body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif
 .pp-story__attribution strong{color:#0A1828;font-weight:560;}
 .pp-story__scenario-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#94A3B8;font-weight:600;margin-top:auto;padding-top:14px;border-top:1px solid #F1F5F9;}
 
+/* ===== h-story customer evidence sections ===== */
+.h-story{padding:120px 32px;position:relative;overflow:hidden;}
+.h-story.bg-cream{background:#FBF9F2;}
+.h-story.bg-white{background:#fff;}
+.h-story.bg-navy{background:linear-gradient(135deg,#0A1828 0%,#1E3A5F 100%);}
+.h-story__inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center;}
+.h-story__inner.reverse{direction:rtl;}
+.h-story__inner.reverse>*{direction:ltr;}
+.h-story__text{position:relative;max-width:540px;}
+.h-story__tag{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:6px 12px;border-radius:100px;margin-bottom:20px;}
+.h-story__tag.mfg{background:rgba(255,180,84,.12);color:#94734A;}
+.h-story__tag.log{background:rgba(46,92,138,.12);color:#2E5C8A;}
+.h-story__tag.ai{background:rgba(4,120,87,.1);color:#047857;}
+.h-story__tag.mfg-on-dark,.h-story__tag.log-on-dark{background:rgba(255,180,84,.2);color:#FFB454;}
+.h-story__headline{font-size:clamp(32px,4vw,52px);line-height:1.04;letter-spacing:-.025em;font-weight:560;color:#0A1828;margin:0 0 24px;max-width:16ch;}
+.h-story__headline.on-dark{color:#fff;}
+.h-story__metric{display:inline-flex;align-items:baseline;gap:14px;margin-bottom:28px;}
+.h-story__metric-num{font-size:clamp(56px,6vw,80px);line-height:1;letter-spacing:-.04em;font-weight:600;color:#0A1828;}
+.h-story__metric-num.on-dark{color:#FFB454;}
+.h-story__metric-label{font-size:14px;color:#6B7280;max-width:20ch;line-height:1.4;}
+.h-story__metric-label.on-dark{color:rgba(255,255,255,.6);}
+.h-story__quote{font-size:17px;line-height:1.65;color:#1A1F2A;margin:0 0 24px;padding-left:20px;border-left:3px solid #FFB454;}
+.h-story__attribution{font-size:14px;color:#6B7280;margin:0 0 32px;}
+.h-story__attribution strong{color:#0A1828;font-weight:560;}
+.h-story__attribution.on-dark{color:rgba(255,255,255,.5);}
+.h-story__attribution.on-dark strong{color:#fff;}
+.h-story__visual{position:relative;aspect-ratio:5/4;width:100%;max-width:580px;border-radius:24px;overflow:hidden;}
+.sv-frame{position:absolute;inset:0;border-radius:24px;overflow:hidden;border:1px solid #E2E8F0;}
+.sv-frame.mfg-v2 .collage__bg{background:linear-gradient(135deg,#FBF9F2 0%,#fff 100%);}
+.sv-frame.mfg-v2 .collage__bg::before{content:"";position:absolute;top:-80px;right:-80px;width:320px;height:320px;background:radial-gradient(circle,rgba(255,180,84,.45),transparent 70%);filter:blur(50px);border-radius:50%;}
+.sv-frame.log-v2{background:linear-gradient(135deg,#0A1828 0%,#1E3A5F 100%);border-color:rgba(255,255,255,.05);}
+.sv-frame.ai-v2{border-color:#E2E8F0;}
+.sv-frame.ai-v2 .collage__bg{background:linear-gradient(135deg,#F4F0FB 0%,#fff 100%);}
+.sv-frame.ai-v2 .collage__bg::before{content:"";position:absolute;top:-80px;right:-80px;width:320px;height:320px;background:radial-gradient(circle,rgba(133,87,194,.4),transparent 70%);filter:blur(50px);border-radius:50%;}
+.collage{position:absolute;inset:0;padding:32px;}
+.collage__bg{position:absolute;inset:0;}
+.collage__photo{position:absolute;z-index:3;overflow:hidden;background-size:cover;background-position:center;background-color:#475569;box-shadow:0 16px 40px rgba(10,24,40,.18);}
+.collage__photo.rect{border-radius:20px;}
+.collage__photo.circle{border-radius:50%;border:4px solid #fff;}
+.collage__photo.squircle{border-radius:32%;}
+.collage__ring{position:absolute;z-index:1;border-radius:50%;border:2px dashed rgba(255,180,84,.5);}
+.collage__ring.white{border-color:rgba(255,255,255,.25);}
+.collage__stat-card{position:absolute;background:rgba(255,255,255,.98);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.6);border-radius:14px;padding:14px 18px;box-shadow:0 12px 32px rgba(10,24,40,.22);z-index:5;}
+.collage__stat-card.on-dark{background:rgba(10,24,40,.92);border-color:rgba(255,180,84,.4);}
+.collage__stat-num{font-size:26px;font-weight:600;line-height:1;letter-spacing:-.02em;color:#0A1828;}
+.collage__stat-card.on-dark .collage__stat-num{color:#FFB454;}
+.collage__stat-label{font-size:11px;color:#6B7280;margin-top:4px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;}
+.collage__stat-card.on-dark .collage__stat-label{color:rgba(255,255,255,.7);}
+.collage__badge{position:absolute;display:inline-flex;align-items:center;gap:8px;padding:6px 12px;background:#fff;border-radius:100px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#0A1828;box-shadow:0 4px 12px rgba(0,0,0,.15);z-index:6;}
+.collage__badge::before{content:"";width:6px;height:6px;border-radius:50%;background:#FFB454;animation:collagePulse 1.6s ease-in-out infinite;}
+@keyframes collagePulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(.7);}}
+@keyframes collageFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
+.collage__photo.float{animation:collageFloat 6s ease-in-out infinite;}
+.collage__photo.float-2{animation:collageFloat 7s ease-in-out infinite 1s;}
+.collage__photo.float-3{animation:collageFloat 8s ease-in-out infinite .5s;}
+@media(max-width:1024px){.h-story__inner{grid-template-columns:1fr;gap:48px;}.h-story__inner.reverse{direction:ltr;}.h-story__visual{margin:0 auto;}}
+
 </style>
 </head>
 <body>
@@ -463,38 +520,111 @@ body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif
 </section>
 
 <!-- PROOF -->
-<section class="pp-proof">
-  <div class="pp-proof__inner">
-    <div class="pp-proof__head">
-      <span class="pp-proof__eyebrow">— Delivery evidence</span>
-      <h2 class="pp-proof__title">Real programs. Named outcomes.</h2>
-      <p class="pp-proof__intro">120+ new MuleSoft clients onboarded in 2024. Preferred partner for the MuleSoft UNIFY migration program. A few of the programs behind those numbers.</p>
+
+<!-- Story 1: Novelis -->
+<section class="h-story bg-cream">
+  <div class="h-story__inner">
+    <div class="h-story__text">
+      <span class="h-story__tag mfg">Customer evidence · Manufacturing</span>
+      <h2 class="h-story__headline">API-led integration at the core of Novelis's digital strategy.</h2>
+      <blockquote class="h-story__quote">"Significantly shorten development timelines and build a solid architectural foundation for the Novelis data integration layer, a key component of our digital strategy."</blockquote>
+      <p class="h-story__attribution"><strong>Twinkle Khanna Rajendran</strong>, Senior Manager, Novelis</p>
     </div>
-    <div class="pp-proof__grid pp-proof__grid--3">
-
-      <div class="pp-story reveal-on-scroll">
-        <span class="pp-story__tag pp-story__tag--mfg">Manufacturing</span>
-        <div class="pp-story__headline">API-led digital strategy foundation for Novelis</div>
-        <p class="pp-story__body">ProwessSoft delivered the MuleSoft migration using the X2M Accelerator with API-led Composable architecture — shortening development timelines and building the integration layer at the core of Novelis's digital strategy.</p>
-        <blockquote class="pp-story__quote">"Significantly shorten development timelines and build a solid architectural foundation for the Novelis data integration layer, a key component of our digital strategy."</blockquote>
-        <p class="pp-story__attribution"><strong>Twinkle Khanna Rajendran</strong>, Senior Manager, Novelis</p>
+    <div class="h-story__visual" aria-hidden="true">
+      <div class="sv-frame mfg-v2">
+        <div class="collage__bg"></div>
+        <div class="collage">
+          <div class="collage__photo rect float" style="top:28px;left:36px;width:60%;aspect-ratio:5/3;background-image:url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=900&q=80');"></div>
+          <div class="collage__photo circle float-2" style="top:22px;right:32px;width:108px;height:108px;background-image:url('https://images.unsplash.com/photo-1565043666747-69f6646db940?w=400&q=80');"></div>
+          <div class="collage__photo squircle float-3" style="bottom:30px;left:44px;width:144px;height:144px;background-image:url('https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=500&q=80');"></div>
+          <div class="collage__photo circle float" style="bottom:84px;right:50px;width:88px;height:88px;background-image:url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80');"></div>
+          <div class="collage__ring" style="top:4px;right:20px;width:140px;height:140px;"></div>
+          <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path id="novelis" d="M 62 24 Q 78 12 88 20 Q 98 36 90 48 Q 98 64 86 74 Q 94 82 88 86 Q 57 94 24 78 Q 10 58 20 43 Q 34 30 62 24 Z" fill="none" stroke="rgba(255,180,84,0.6)" stroke-width="2" stroke-dasharray="6 5" vector-effect="non-scaling-stroke">
+              <animate attributeName="stroke-dashoffset" values="0;-22" dur="3s" repeatCount="indefinite"/>
+            </path>
+            <circle r="1" fill="#FFB454" vector-effect="non-scaling-stroke"><animateMotion dur="9s" repeatCount="indefinite"><mpath href="#novelis"/></animateMotion></circle>
+            <circle r="0.9" fill="#B8D4FF" vector-effect="non-scaling-stroke"><animateMotion dur="9s" repeatCount="indefinite" begin="-4.5s"><mpath href="#novelis"/></animateMotion></circle>
+          </svg>
+          <span class="collage__badge" style="top:22px;left:52px;">Novelis · API-led core</span>
+          <div class="collage__stat-card" style="top:42%;right:22px;"><div class="collage__stat-num">X2M</div><div class="collage__stat-label">Accelerator</div></div>
+          <div class="collage__stat-card" style="bottom:22px;right:26px;"><div class="collage__stat-num">API-led</div><div class="collage__stat-label">Architecture</div></div>
+        </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="pp-story reveal-on-scroll">
-        <span class="pp-story__tag pp-story__tag--log">Maritime Logistics</span>
-        <div class="pp-story__metric">2.5<em>mo</em></div>
-        <div class="pp-story__headline">Rescued an 18-month stalled B2B migration</div>
-        <p class="pp-story__body">A global maritime logistics enterprise's B2B migration had made no progress in 18 months. Prowess redesigned the architecture, applied AI-assisted DataWeave conversion, and delivered in 2.5 months — 50+ EDI transactions migrated, 2,500+ trading partners at enterprise scale, ~70% improvement in data transformation efficiency.</p>
+<!-- Story 2: Maritime B2B (reversed, navy) -->
+<section class="h-story bg-navy">
+  <div class="h-story__inner reverse">
+    <div class="h-story__text">
+      <span class="h-story__tag mfg-on-dark">Customer evidence · Maritime Logistics</span>
+      <h2 class="h-story__headline on-dark">Rescued an 18-month stalled B2B migration in 2.5 months.</h2>
+      <div class="h-story__metric">
+        <span class="h-story__metric-num on-dark">2.5</span>
+        <span class="h-story__metric-label on-dark">months to deliver what 18 months couldn't — 50+ EDI transactions, 2,500+ trading partners</span>
       </div>
-
-      <div class="pp-story reveal-on-scroll">
-        <span class="pp-story__tag pp-story__tag--log">Logistics</span>
-        <div class="pp-story__headline">Integration COE delivery for CEVA Logistics</div>
-        <p class="pp-story__body">Prowess serves as CEVA Logistics' delivery partner for MuleSoft integration programs — operating as an extension of their internal Integration COE, with certified architects on every engagement.</p>
-        <blockquote class="pp-story__quote">"The partnership with Prowess Software Services has matured in many ways and is making waves in delivering customer implementations with diligence and high quality."</blockquote>
-        <p class="pp-story__attribution"><strong>Pratap Pillai</strong>, Integration COE Delivery Manager, CEVA Logistics</p>
+      <p class="h-story__attribution on-dark"><strong>Global Maritime Logistics Enterprise</strong> — B2B migration program</p>
+    </div>
+    <div class="h-story__visual" aria-hidden="true">
+      <div class="sv-frame log-v2">
+        <div class="collage">
+          <div class="collage__photo rect float" style="top:28px;left:36px;width:60%;aspect-ratio:5/3;background-image:url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&q=80');"></div>
+          <div class="collage__photo circle float-2" style="top:22px;right:32px;width:108px;height:108px;background-image:url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=400&q=80');"></div>
+          <div class="collage__photo squircle float-3" style="bottom:30px;left:44px;width:144px;height:144px;background-image:url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=500&q=80');"></div>
+          <div class="collage__photo circle float" style="bottom:84px;right:50px;width:88px;height:88px;background-image:url('https://images.unsplash.com/photo-1494412519320-aa613dfb7738?w=400&q=80');"></div>
+          <div class="collage__ring white" style="top:4px;right:20px;width:140px;height:140px;"></div>
+          <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path id="maritime" d="M 60 26 Q 76 14 86 22 Q 96 38 88 50 Q 96 66 84 76 Q 92 84 86 88 Q 55 96 22 80 Q 8 60 18 45 Q 32 32 60 26 Z" fill="none" stroke="rgba(184,212,255,0.5)" stroke-width="2" stroke-dasharray="6 5" vector-effect="non-scaling-stroke">
+              <animate attributeName="stroke-dashoffset" values="0;-22" dur="3s" repeatCount="indefinite"/>
+            </path>
+            <circle r="1" fill="#B8D4FF" vector-effect="non-scaling-stroke"><animateMotion dur="9s" repeatCount="indefinite"><mpath href="#maritime"/></animateMotion></circle>
+            <circle r="0.9" fill="#FFB454" vector-effect="non-scaling-stroke"><animateMotion dur="9s" repeatCount="indefinite" begin="-4.5s"><mpath href="#maritime"/></animateMotion></circle>
+          </svg>
+          <span class="collage__badge" style="top:22px;left:52px;">B2B · 2.5-month delivery</span>
+          <div class="collage__stat-card on-dark" style="top:42%;right:22px;"><div class="collage__stat-num">2,500<span style="font-size:16px">+</span></div><div class="collage__stat-label">Trading partners</div></div>
+          <div class="collage__stat-card on-dark" style="bottom:22px;right:26px;"><div class="collage__stat-num">70%</div><div class="collage__stat-label">Efficiency gain</div></div>
+        </div>
       </div>
+    </div>
+  </div>
+</section>
 
+<!-- Story 3: CEVA Logistics -->
+<section class="h-story bg-cream">
+  <div class="h-story__inner">
+    <div class="h-story__text">
+      <span class="h-story__tag log">Customer evidence · Logistics</span>
+      <h2 class="h-story__headline">CEVA Logistics runs a multi-region API platform with Prowess.</h2>
+      <div class="h-story__metric">
+        <span class="h-story__metric-num">3</span>
+        <span class="h-story__metric-label">regions live · embedded inside CEVA's own Integration CoE for multi-year delivery</span>
+      </div>
+      <blockquote class="h-story__quote">"Prowess architects operate as an extension of our own Integration CoE — same standards, same governance, same delivery cadence across geographies."</blockquote>
+      <p class="h-story__attribution"><strong>Pratap Pillai</strong>, Integration Leader, CEVA Logistics</p>
+    </div>
+    <div class="h-story__visual" aria-hidden="true">
+      <div class="sv-frame mfg-v2">
+        <div class="collage__bg"></div>
+        <div class="collage">
+          <div class="collage__photo rect float" style="top:30px;left:38px;width:58%;aspect-ratio:5/3;background-image:url('https://images.unsplash.com/photo-1494412519320-aa613dfb7738?w=900&q=80');"></div>
+          <div class="collage__photo circle float-2" style="top:24px;right:36px;width:108px;height:108px;background-image:url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=400&q=80');"></div>
+          <div class="collage__photo squircle float-3" style="bottom:32px;left:48px;width:148px;height:148px;background-image:url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=500&q=80');"></div>
+          <div class="collage__photo circle float" style="bottom:88px;right:54px;width:88px;height:88px;background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&q=80');"></div>
+          <div class="collage__ring" style="top:6px;right:22px;width:140px;height:140px;"></div>
+          <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path id="ceva-ms" d="M 60 26 Q 76 14 86 22 Q 96 38 88 50 Q 96 66 84 76 Q 92 84 86 88 Q 55 96 22 80 Q 8 60 18 45 Q 32 32 60 26 Z" fill="none" stroke="rgba(255,180,84,0.6)" stroke-width="2" stroke-dasharray="6 5" vector-effect="non-scaling-stroke">
+              <animate attributeName="stroke-dashoffset" values="0;-22" dur="3s" repeatCount="indefinite"/>
+            </path>
+            <circle r="1" fill="#FFB454" vector-effect="non-scaling-stroke"><animateMotion dur="9s" repeatCount="indefinite"><mpath href="#ceva-ms"/></animateMotion></circle>
+            <circle r="0.9" fill="#B8D4FF" vector-effect="non-scaling-stroke"><animateMotion dur="9s" repeatCount="indefinite" begin="-4.5s"><mpath href="#ceva-ms"/></animateMotion></circle>
+          </svg>
+          <span class="collage__badge" style="top:24px;left:54px;">CEVA · 3 regions live</span>
+          <div class="collage__stat-card" style="top:44%;right:24px;"><div class="collage__stat-num">3</div><div class="collage__stat-label">Regions live</div></div>
+          <div class="collage__stat-card" style="bottom:24px;right:28px;"><div class="collage__stat-num">24×7</div><div class="collage__stat-label">Operations</div></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
